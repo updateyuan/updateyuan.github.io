@@ -1,0 +1,786 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>8.华为1+X-WLAN技术 | 渊</title><meta name="keywords" content="基础教程,华为1+X"><meta name="author" content="渊"><meta name="copyright" content="渊"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="8.华为1+X-WLAN技术"><meta name="application-name" content="8.华为1+X-WLAN技术"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="8.华为1+X-WLAN技术"><meta property="og:url" content="http://example.com/2021/12/19/华为1+X/8.华为1+X-WLAN技术/index.html"><meta property="og:site_name" content="渊"><meta property="og:description" content="华为1+X-WLAN技术 无线的基本概念无线应用概况1、无线网络的概念无线网络（Wireless Network）是采用无线通信技术实现的网络。无线网络既包括允许用户建立远距离无线连接的全球语音和数据网络，也包括对近距离无线连接进行优化的红外线技术及射频技术。无线网络与有线网络的用途十分类似，最大的"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta property="article:author" content="渊"><meta property="article:tag" content="天若有情天亦老 大道无情情至公"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta name="description" content="华为1+X-WLAN技术 无线的基本概念无线应用概况1、无线网络的概念无线网络（Wireless Network）是采用无线通信技术实现的网络。无线网络既包括允许用户建立远距离无线连接的全球语音和数据网络，也包括对近距离无线连接进行优化的红外线技术及射频技术。无线网络与有线网络的用途十分类似，最大的"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2021/12/19/%E5%8D%8E%E4%B8%BA1+X/8.%E5%8D%8E%E4%B8%BA1+X-WLAN%E6%8A%80%E6%9C%AF/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":10,"position":"top","messagePrev":"距离上次更新已经","messageNext":"天了，文章的内容可能已经过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 渊","link":"链接: ","source":"来源: 渊","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '渊',
+  title: '8.华为1+X-WLAN技术',
+  postAI: '',
+  pageFillDescription: '无线的基本概念, 无线应用概况, 无线协议标准, 无线射频与AP天气, 常见的无线网络, WLAN的基础配置, WLAN的工作原理, FAT AP的网络组建, FAT AP的基础配置, WLAN的安全配置, WLAN的安全问题, WLAN的安全对策, WLAN的安全标准, WLAN的安全配置华为技术无线的基本概念无线应用概况无线网络的概念无线网络是采用无线通信技术实现的网络无线网络既包括允许用户建立远距离无线连接的全球语音和数据网络也包括对近距离无线连接进行优化的红外线技术及射频技术无线网络与有线网络的用途十分类似最大的不同在于传输媒介不同它利用无线电技术取代网线无线网络相比有线网络具有以下特点高灵活性可扩展性强无线网络是采用无线通信技术实现的网络无线网络既包括允许用户建立远距离无线连接的全球语音和数据网络也包括对近距离无线连接进行优化的红外线技术及射频技术无线网络与有线网络的用途十分类似最大的不同在于传输媒介不同它利用无线电技术取代网线无线网络相比有线网络具有以下特点高灵活性无线网络使用无线信号通信网络接入更加灵活只要有信号的地方都可以随时随地将网络设备接入网络可扩展性强无线网络终端设备接入数量限制更少相比有线网络一个接口对应一个设备无线路由器容许多个无线终端设备同时接入无线网络因此在网络规模升级时无线网络优势更加明显无线网络现状与发展趋势据统计目前中国网民数量约占全国人口的而通过无线上网的用户超过成国家将加快构建高速移动安全泛在的新一代信息基础设施推进信息网络技术广泛运用形成万物互联人机交互天地一体的网络空间在城镇热点公共区域推广免费高速无线局域网接入目前无线网络在机场地铁客运站等公共交通领域医疗机构教育园区产业园区商城等公共区域实现了重点城市的全覆盖下一阶段将实现城镇级别的公共区域全覆盖无线网络规模将持续增长无线网络摆脱了有线网络的束缚可以在家里花园户外商城等任何一个角落抱着笔记本电脑手机等移动设备享受网络带来的便捷据统计目前中国网民数量约占全国人口的而通过无线上网的用户超过成可见无线网络正改变着人们的工作生活和学习习惯人们对无线的依赖性越来越强国家十三五规划明确要求加快构建高速移动安全泛在的新一代信息基础设施推进信息网络技术广泛运用形成万物互联人机交互天地一体的网络空间在城镇热点公共区域推广免费高速无线局域网接入目前无线网络在机场地铁客运站等公共交通领域医疗机构教育园区产业园区商城等公共区域实现了重点城市的全覆盖下一阶段将实现城镇级别的公共区域全覆盖无线网络规模将持续增长无线局域网的概念无线局域网络是指以无线信道作传输媒介的计算机局域网计算机无线联网方式是有线联网方式的一种补充它是在有线网的基础上发展起来的使网上的计算机具有可移动性能快速方便地解决以有线方式不易实现的网络信道的连通问题协议簇是由电气和电子工程师协会所定义的无线网络通信的标准无线局域网基于协议工作无线局域网络是指以无线信道作传输媒介的计算机局域网计算机无线联网方式是有线联网方式的一种补充它是在有线网的基础上发展起来的使网上的计算机具有可移动性能快速方便地解决以有线方式不易实现的网络信道的连通问题协议簇是由电气和电子工程师协会所定义的无线网络通信的标准无线局域网基于协议工作无线局域网的概念大家经常说那么和有什么关系采用技术的如果询问一般用户什么是无线网络他们可能会感到迷惑和不解因为多数人习惯将这项技术称为是一个市场术语世界各地的人们使用作为无线网络的代名词无线协议标准工作在频段最大的数据传输速率物理层速率可达传输层可达载波调制技术无线网络标准指定最大的数据传输速率和的工作频段的传输技术为多载波调制技术标准是已在办公室家庭宾馆机场等众多场合得到广泛应用的无线联网标准的后续标准它工作在频带物理层速率可达传输层可达可提供的无线接口和的以太网无线帧结构接口支持语音数据图像业务一个扇区可接入多个用户每个用户可带多个用户终端工作在频段的时候中国工作的频率范围是在此频率范围内又划分出个信道每个信道的中心频率相隔运作模式基本分为两种点对点模式基本模式工作在频段数据速率扩展的标准的调制运作模式基本分为两种点对点模式和基本模式点对点模式是指站点如无线网卡和站点之间的通信方式它提供传输速率扩展的用标准的调制数据速率工作在支持个信道个不重叠信道工作在频段使用正交频分复用调制技术数据传输速率提高到以上保障了后向兼容性工作组近年来开始定义新的物理层标准与以前的协议标准相比草案有以下两个特点在频段使用正交频分复用调制技术使数据传输速率提高到以上能够与的系统互联互通可共存于同一的网络里从而保障了后向兼容性这样原有的系统可以平滑地向高速过渡延长了产品的使用寿命降低了用户的投资年月工作组批准了草案该标准成为人们关注的新焦点工作在频段最大传输速率调制技术技术协议兼容向下兼容协议是在和之上发展起来的一项技术最大的特点是速率提升理论速率最高可达目前业界主流为可工作在和两个频段可向后兼容工作在频段最大传输速率调制技术技术运行模式极高吞吐率兼容性继续工作在频段上以保证向下兼容性但数据传输通道会大大扩充的基础上增至或者甚至有可能达到是的继承者它采用并扩展了源自的空中接口概念包括更宽的带宽提升至更多的空间流增加到多用户的以及更高阶的调制达到也称为高效无线网络标准在物理层导入了多项大幅变更依旧可向下兼容于与设备也称为高效无线网络通过一系列系统特性和多种机制增加系统容量通过更好的一致覆盖和减少空口介质拥塞来改善网络的工作方式使用户获得最佳体验尤其在密集用户环境中为更多的用户提供一致和可靠的数据吞吐量其目标是将用户的平均吞吐量提高至少倍也就是说基于的网络意味着前所未有的高容量和高效率标准在物理层导入了多项大幅变更然而它依旧可向下兼容于与设备正因如此能与旧有进行数据传送和接收旧有客户端也能解调和译码封包表头虽然不是整个封包并于传输期间进行轮询协议的频率最大传输速率表协议兼容性频率理论最高速率兼容兼容或兼容兼容或无线射频与天气频段当工作在频段的时候工作的频率范围是在此频率范围内又划分出个信道每个信道的中心频率相隔每个信道可供占用的带宽为频段当工作在频段的时候中国工作的频率范围是在此频率范围内又划分出个信道每个信道的中心频率相隔频段信道与频率表全向天线全向天线即在水平方向图上表现为都均匀辐射也就是平常所说的无方向性在垂直方向图上表现为有一定宽度的波束一般情况下波瓣宽度越小增益越大全向天线即在水平方向图上表现为都均匀辐射如图所示也就是平常所说的无方向性在垂直方向图上表现为有一定宽度的波束一般情况下波瓣宽度越小增益越大全向天线在移动通信系统中一般应用于郊县大区制的站型覆盖范围大定向天线定向天线在水平方向图上表现为一定角度范围辐射也就是平常所说的有方向性它同全向天线一样波瓣宽度越小增益越大吸顶天线吸顶天线的内部结构虽然尺寸很小但由于是在天线宽带理论的基础上借助计算机的辅助设计以及使用网络分析仪进行调试因此能很好地满足在非常宽的工作频带内的驻波比要求吸顶天线的内部结构虽然尺寸很小但由于是在天线宽带理论的基础上借助计算机的辅助设计以及使用网络分析仪进行调试因此能很好地满足在非常宽的工作频带内的驻波比要求按照国家标准在很宽的频带内工作的天线其驻波比指标为当然能达到更好顺便指出室内吸顶天线属于低增益天线一般为在室内由于建筑物材料固有的屏蔽作用增加了无线信号的穿透损耗影响了网络的信号接收和通话质量如隔墙的阻挡楼层的阻挡以上家具及其它障碍物的阻挡室外全向天线和室外全向天线外观与参考参数向天线即在水平方向图上表现为都均匀辐射也就是平常所说的无方向性在垂直方向图上表现为有一定宽度的波束一般情况下波瓣宽度越小增益越大全向天线在移动通信系统中一般应用于郊县大区制的站型覆盖范围大和室外全向天线外观与参考参数分别如图所示抛物面天线由抛物面反射器和位于其焦点处的馈源组成的面状天线叫抛物面天线抛物面天线的主要优势是它的高方向性它的功能类似于一个探照灯或手电筒反射器向一个特定的方向汇聚无线电波到狭窄的波束或从一个特定的方向接收无线电波由抛物面反射器和位于其焦点处的馈源组成的面状天线叫抛物面天线抛物面天线的主要优势是它的高方向性它的功能类似于一个探照灯或手电筒反射器向一个特定的方向汇聚无线电波到狭窄的波束或从一个特定的方向接收无线电波抛物面天线有一些最高的收益也就是说它们可以生产最窄波束宽度不论天线的类型为了实现窄波束宽度抛物面反射器必须远远大于所使用的无线电波的波长所以抛物面天线适用于高频无线电频谱的一部分和在这个频段波长小到可以使用反射面反射是抛物线的焦点是抛物线的口径与馈源的方向角是从属关系也就是说只有馈源的方向角确定以后才能确定所要制作的抛物面天线的直径及焦距作为一个业余爱好者只知道是不够的如何才能使一条天线与馈源配套即采用合适的这个问题很重要它直接影响天线系统的效率及信噪比等室外抛物面和天线外观与参考参数如图所示功率在无线应用中我们经常听到的功率单位是而不是或者用于标识一个相对值是一个纯计数单位当计算的功率相比于大或者小多少个时可按计算公式计算例如功率比功率大一倍那么也就是说的功率比的功率大分贝毫瓦指的是计算公式为功率值为什么使用能把一个很大后面跟一长串的或者很小前面有一长串的的数比较简短地表示出来如功率换算举例例如果发射功率为折算为后为例对于的功率按单位进行折算后的值应为无线传输质量无线与距离的关系干扰源主要类型无线信号的传输方式无线与距离的关系当无线信号与用户之间距离越来越远那么无线信号强度会越来越弱可以根据用户需求调整无线设备干扰源主要类型无线信号干扰源主要是无线设备间的同频干扰例如蓝牙和无线频段无线信号的传输方式的无线信号传递主要通过两种方式即辐射和传导无线信号辐射是指的信号通过天线将信号传递到空气中去如图该的信号直接通过六根天线传输无线数据无线信号的传导是指无线信号在线缆等介质内进行无线信号传递如图所示的室分系统中无线和天线间通过同轴电缆连接无线信号从天线接收后将通过电缆传导到常见的无线网络常见的无线网络设备无线控制器无线接入点室内室外场景化产品系列无线控制器提供口满供能力或者口供电能力可直接接入提供丰富灵活的用户策略管理及权限控制能力设备可通过网管网管命令行进行维护无线控制器是一种网络设备用来集中化控制无线是一个无线网络的核心负责管理无线网络中的所有无线对的管理包括下发配置修改相关配置参数射频智能管理接入安全控制等系列简称是华为推出的无线接入控制器提供大容量高性能高可靠性易安装易维护的无线数据控制业务具有组网灵活绿色节能等优势位于整个网络的汇聚层提供高速安全可靠的业华为的无线控制器如图所示具有以下特点和性能无线接入点无线从功能上可分为胖瘦其中胖拥有独立的操作系统可以进行单独配置和管理而瘦则无法单独进行配置和管理操作需要借助无线网络控制器进行统一的管理和配置是网络中的重要组成部分其工作机制类似有线网络中的集线器无线终端可以通过进行终端之间的数据传输也可以通过的口与有线网络互通无线从功能上可分为胖和瘦两种其中胖拥有独立的操作系统可以进行单独配置和管理而瘦则无法单独进行配置和管理操作需要借助无线网络控制器进行统一的管理和配置胖可以自主完成包括无线接入安全加密设备配置等在内的多项任务不需要其他设备的协助适合用于构建中小型规模无线局域网胖可以自主完成包括无线接入安全加密设备配置等在内的多项任务不需要其他设备的协助适合用于构建中小型规模无线局域网胖组网的优点是无须改变现有有线网络结构配置简单缺点是无法统一管理和配置因为需要对每台单独进行配置费时费力当部署大规模的网络时部署和维护成本高面对小型公司办公室家庭等无线覆盖场景它仅需要少量的即可实现无线网络覆盖目前被广泛使用和熟知的产品就是无线路由器如图所示瘦又称轻型无线必须借助无线网络控制器进行配置和管理无线接入点支持标准和条空间流同时支持和协议可使无线网络带宽突破千兆极大地增强用户对无线网络的使用体验适合部署在中小型企业机场车站体育场馆咖啡厅休闲中心等场景华为的无线接入点如图所示的基础配置的工作原理标准的帧结构层负责客户端与之间的通信包括扫描认证接入加密漫游等针对帧的不同功能可将中的帧细分为以下类控制帧管理帧数据帧层负责客户端与之间的通信包括扫描认证接入加密漫游等针对帧的不同功能可将中的帧细分为以下类控制帧用于竟争期间的握手通信和正向确认结束非竞争期等管理帧主要用于与之间协商关系的控制如关联认证同步等数据帧用于在竞争期和非竞争期传输数据通用帧格式通用帧格式帧控制结构持续时间标识部分序列控制域帧主体帧检验序列帧控制结构如图所示图帧控制报文结构协议版本通常为与类型与次类型用来制定所使用的帧类型就是上文提到的控制帧管理帧数据帧值定义如下管理帧控制帧数据帧保留与用于表示帧是由工作站发起还是需要工作站接收的数据帧所有管理与控制帧非基础型数据帧基础网络里无线工作站所收到的数据帧基础网络里无线工作站所发送的数据帧无线桥接器上的数据帧用于说明长帧被分段的情况如果还有其他帧该位被置重传帧位重传的帧会将此位置网卡为了提高电池的使用时间通常可以关闭网卡以节省电力此位用来指定传送端在完成目前的基本帧交换之后是否进入省电模式代表工作站即将进入省电模式而则代表工作站一直保持清醒状态基站发出去的帧该位必为为服务处于省电模式的工作站基站会将这些由传输系统接收而来的帧加以暂存基站如果设定此位代表至少有一个帧待传送给休眠的工作站如果帧受到链路层安全协议的保护该位置序号域在长帧分段传输时该位置表示接受者应该严格按照顺序处理该帧否则设置为持续时间标识表明该帧和它的确认帧将会占用信道多长时间值用于网络分配向量计算部分一个帧最多可以包含个地址帧类型的不同这些地址也有所差异基本上代表接受端代表传送端代表接受端拿过来的过滤地址序列控制域用来过滤重复帧即用来重组帧片段以及丢弃重复帧帧主体帧主体又称数据位负责在工作站间传送上层数据在最初的指定的规格中帧最多可以传送字节的数据标头具有八个字节所以最多可以传送个字节防止分段必须在协议层加以处理帧检验序列通常被视为循环冗余码因为底层的数学运算相同计算范围涵盖标头里所有位以及帧主体如果有误随即丢弃并且不进行应答帧控制报文结构帧控制结构协议版本通常为与类型与次类型与用于表示帧是由工作站发起还是需要工作站接收的数据帧用于说明长帧被分段的情况如果还有其他帧该位被置重传帧位重传的帧会将此位置用来指定传送端在完成目前的基本帧交换之后是否进入省电模式为服务处于省电模式的基站会将这些由接收而来的帧加以暂存如果帧受到链路层安全协议的保护该位置序号域在长帧分段传输时该位置表示接受者应该严格按照顺序处理该帧协议版本通常为与类型与次类型用来制定所使用的帧类型就是上文提到的控制帧管理帧数据帧值定义如下管理帧控制帧数据帧保留与用于表示帧是由工作站发起还是需要工作站接收的数据帧所有管理与控制帧非基础型数据帧基础网络里无线工作站所收到的数据帧基础网络里无线工作站所发送的数据帧无线桥接器上的数据帧用于说明长帧被分段的情况如果还有其他帧该位被置重传帧位重传的帧会将此位置网卡为了提高电池的使用时间通常可以关闭网卡以节省电力此位用来指定传送端在完成目前的基本帧交换之后是否进入省电模式代表工作站即将进入省电模式而则代表工作站一直保持清醒状态基站发出去的帧该位必为为服务处于省电模式的工作站基站会将这些由传输系统接收而来的帧加以暂存基站如果设定此位代表至少有一个帧待传送给休眠的工作站如果帧受到链路层安全协议的保护该位置序号域在长帧分段传输时该位置表示接受者应该严格按照顺序处理该帧否则设置为层工作原理的协议与相似考虑到无线局域网中无线电波传输距离受限不是所有的节点都能监听到信号且无线网卡工作在半双工模式一旦发生碰撞重新发送数据会降低吞吐量因此对进行了一些修改采用了载波监听多路访问冲突退避机制来避免冲突的发送工作原理首先检测信道是否有在使用如果信道空闲则等待时间后就发送数据如果检测到信道正在使用根据退避算法将冻结退避计时器经过时间后继续监听只要信道空闲退避计时器就进行倒计时当退避计时器减少到零时这是信道可能是空闲的就发送帧并等待确认目标如果正确收到该帧则经过时间后向源发送确认帧如果源收到帧确定数据正确传输在经过时间间隔后会出现一段空闲时间叫做争用窗口各进入争用信道情况然后重复如果源没有收到则需要重新发送原数据帧直到收到确认为止或经过若干次重传失败后放弃发送备注短的帧间间隔用来分隔开属于一次对话的各帧长度一般为或分布协调功能的帧间间隔用来发送数据帧和管理帧长度为时隙不同厂商规定不同是一个非常短的时间协调功能帧间隙长度为的功能信道管理连接管理服务质量功率控制安全时间同步特性信道管理包括信道扫描信道测量信道切换等连接管理包括认证断开认证建立连接重新连接断开连接开始网络点对点连接请求直接连接管理等服务质量包括交通流管理接口调度变更通知等功率控制包括电源管理发送功率通知等安全包括密钥管理迈克尔失败事件帧密钥错误丢弃通知等时间同步包括时间同步高层同步支持等特性包括合并帧管理发行商特有管理等的网络组建的网络组建通过有线网络接入互联网每个都是一个单独的节点需要独立配置其信道功率安全策略等常见的应用场景有家庭无线网络办公室无线网等一个园区无线网络的典型拓扑如图所示的配置有线部分的配置创建业务接入后从该关联的地址池中获取地址配置接口地址用户可以通过这个地址对进行远程管理配置以太网接口为上联接口通过封装相应的使这些中的数据可以通过以太网接口转发到上联设备无线部分的配置创建模板配置用户可以通过搜索加入相应的中中文含义为服务集标识用来区分不同的无线网络例如当我们在笔记本电脑上搜索可接入无线网络时显示出来的无线网络名称就是由最多个字符组成且区分大小写配置在所有与的无线射频卡中创建安全模板为接入配置加密加密后用户需要通过输入预共享密钥才能加入中安全模板为选配项若不进行配置则为开放式网络创建模板模板中指定的业务并引用模板和安全模板的参数配置配置引用模板的配置引用模板后开始工作并发射出对应用户关联到后会通过业务获取地址的基础配置案例的基础配置通过有线方式接入通过无线方式连接终端公司为了保证工作人员可以随时随地的访问公司网络需要通过部署基本业务实现移动办公提供名为的无线网络作为服务器和网关为工作人员分配地址仅做报文的二层透传案例相关数据准备项目数据业务服务器地址池模板名称名称模板名称业务引用模板模板案例配置思路配置与上层网络设备互通配置作为服务器为分配地址配置业务参数应用参数到无线射频卡案例配置步骤配置与上层网络设备互通案例配置步骤配置作为服务器为分配地址案例配置步骤配置参数创建名为的模板配置名称为创建名为的模板配置业务为配置模板引用模板案例配置步骤应用参数到无线射频卡配置引用名为的模板案例验证可以在上使用命令查看信息案例验证在上查找无线信号并接入案例验证连接成功后使用命令测试连通性省略部分显示内容的安全配置的安全问题安全问题以无线信道作为传输媒介利用电磁波在空气中收发数据实现了传统有线局域网的功能然而由于传输媒介的特殊性和其固有的安全缺陷用户的数据面临被窃听和篡改的威胁网络常见的安全威胁有以下几个方面未经授权使用网络服务非法数据安全拒绝服务攻击以无线信道作为传输媒介利用电磁波在空气中收发数据实现了传统有线局域网的功能和传统的有线接入方式相比网络布放和实施相对简单维护成本也相对低廉因此应用前景十分广阔然而由于传输媒介的特殊性和其固有的安全缺陷用户的数据面临被窃听和篡改的威胁因此的安全问题成为制约其推广的最大问题网络常见的安全威胁有以下几个方面未经授权使用网络服务最常见的安全威胁就是未经授权的用户非法使用网络非法用户未经授权使用网络同授权用户共享带宽会影响合法用户的使用体验甚至可能泄露当前用户的用户信息非法非法是未经授权部署在企业网络里且干扰网络正常运行的例如攻击如果该非法配置了正确的有线等效保密密钥还可以捕获客户端数据经过配置后非法可为未授权用户提供接入服务可让未授权用户捕获和伪装数据包最糟糕的是允许未经授权用户访问服务器和文件数据安全相对于以前的有线局域网网络采用无线通信技术用户的各类信息在无线中传输更容易被窃听获取拒绝服务攻击这种攻击方式不以获取信息为目的黑客只是想让目标机器停止提供服务因为采用微波传输数据理论上只要在有信号的范围内攻击者就可以发起攻击这种攻击方式隐蔽性好实现容易防范困难是黑客的终极攻击方式的安全对策的安全对策开放系统认证共享密钥认证隐藏黑白名单认证地址认证认证加密技术开放系统认证开放系统认证不对用户身份做任何验证整个认证过程中通信双方仅需交换两个认证帧站点向发送一个认证帧以此帧的源地址作为发送端的身份证明随即返回一个认证帧并建立和客户端的连接开放系统认证不对用户身份做任何验证整个认证过程中通信双方仅需交换两个认证帧站点向发送一个认证帧以此帧的源地址作为发送端的身份证明随即返回一个认证帧并建立和客户端的连接因此开放系统认证不要求用户提供任何身份凭证通过这种简单的认证后就能与建立关联进而获得访问网络资源的权限开放系统认证是唯一的要求必备的认证方法是最简单的认证方式对于需要允许设备快速进入网络的场景可以使用开放系统认证开放系统认证主要用于公共区域或热点区域如机场酒店等为用户提供无线接入服务适合用户众多的运营商部署大规模的网络共享密钥认证共享密钥认证要求用户设备必须支持有线等效加密用户设备与必须配置匹配的静态密钥共享密钥认证过程中采用共享密钥认证的无线接口之间需要交换质询与响应消息通信双方总共需要交换个认证帧共享密钥认证要求用户设备必须支持有线等效加密用户设备与必须配置匹配的静态密钥如果双方的静态密钥不匹配用户设备也无法通过认证共享密钥认证过程中采用共享密钥认证的无线接口之间需要交换质询与响应消息通信双方总共需要交换个认证帧如图所示用户设备向发送认证请求数据帧向用户设备返回包含明文质询消息的第二个认证帧质询消息长度为字节由密钥流生成器利用随机密钥和初始向量产生用户设备使用静态密钥将质询消息加密并通过认证帧发给收到认证帧后将使用静态密钥对其中的质询消息进行解密并与原始质询消息进行比较若二者匹配将会向用户设备发送第四个也是最后一个认证帧确认用户设备成功通过认证若二者不匹配或无法解密质询消息将拒绝用户设备的认证请求用户设备成功通过共享密钥认证后将采用同一静态密钥加密随后的数据帧与通信共享密钥认证的安全性看似比开放系统认证要高但是实际上前者存在着巨大的安全漏洞如果入侵者截获发送的明文质询消息以及用户设备返回的加密质询消息就可能从中提取出静态密钥入侵者一旦掌握静态密钥就可以解密所有数据帧网络对入侵者将再无秘密可言因此共享秘钥认证方式难以为企业无线局域网提供有效保护隐藏隐藏可将无线网络的逻辑名隐藏起来启用隐藏后信标帧中的字段被置为空服务集标识隐藏可将无线网络的逻辑名隐藏起来启用隐藏后信标帧中的字段被置为空无线客户端通过被动扫描侦听信标帧的用户设备将无法获得信息因此无线终端必须手动设置与相同的才能与进行关联如果用户设备出示的与的不同那么将拒绝它接入隐藏适用于某些企业或机构需要支持大量访客接入的场景企业园区无线网络可能存在多个如员工财务访客等为减少访客连错网络的问题园区通常会隐藏员工财务的同时广播访客此时访客尝试连接无线网络时只能看到访客从而减少了连接到员工和财务人员网络的情况尽管隐藏可以在一定程度上防止业余黑客与普通用户搜索到无线网络但只要入侵者使用二层无线协议分析软件拦截到任何合法终端用户发送的帧就能获得以明文形式传输的因此只使用隐藏策略来保证无线局域网安全是不行的黑白名单认证地址认证白名单的概念与黑名单相对应黑名单启用后被列入黑名单的用户不能通过设立了白名单则在白名单中的用户会允许通过没有在白名单列出的用户将被拒绝访问白名单的概念与黑名单相对应黑名单启用后被列入黑名单的用户不能通过如果设立了白名单则在白名单中的用户会允许通过没有在白名单列出的用户将被拒绝访问黑白名单认证是一种基于端口和地址对用户的网络访问权限进行控制的认证方法不需要用户安装任何客户端软件设备都具有唯一的地址因此可以通过检验设备数据分组的源地址来判断其合法性过滤不合法的地址仅允许特定的用户设备发送的数据分组通过地址过滤要求预先在或胖中输入合法的地址列表只有当用户设备的地址和合法地址列表中的地址匹配才允许用户设备与之通信实现物理地址过滤如图所示用户设备的地址不在的合法地址列表中因而不能接入而用户设备和分别与合法地址列表中的第四个第三个地址完全匹配因而可以接入然而由于很多无线网卡支持重新配置地址地址很容易被伪造或复制只要将地址伪装成某个出现在允许列表中的用户设备的地址就能轻易绕过地址过滤为所有设备配置地址过滤的工作量较大而地址又易于伪造这使地址过滤无法成为一种可靠的无线安全解决方案认证认证要求用户使用一个简单的字符串个字符长度称为密码短语作为密钥客户端和服务端通过能否成功解密协商的消息来确定本端配置的预共享密钥是否和对端配置的预共享密钥相同从而完成服务端和客户端的相互认证认证有很多别称如以及预共享密钥等它要求用户使用一个简单的字符串个字符长度称为密码短语作为密钥客户端和服务端通过能否成功解密协商的消息来确定本端配置的预共享密钥是否和对端配置的预共享密钥相同从而完成服务端和客户端的相互认证个人版定义的认证方法是一种弱认证方法很容易受到暴力字典的攻击同时由于密码是静态的认证也容易受到社会工程学攻击虽然这种简单的认证是为小型无线网络设计的但实际上很多企业也使用个人版由于所有设备上的都是相同的如果用户不小心将泄露给黑客的安全性将受到威胁为保证安全所有设备就必须重新配置一个新的加密技术采用的加密技术主要有加密临时密钥完整性协议加密计数器模式密码块链信息认证码协议加密在用户通过认证并被赋予访问权限后网络必须保护用户所传送的数据不被泄露其主要方法是对数据报文进行加密采用的加密技术主要有加密临时密钥完整性协议加密和计数器模式密码块链信息认证码协议加密等的安全标准安全标准有线等效加密算法加密密钥长度有位和位两种安全策略包括链路认证机制数据加密机制链路认证分为开放系统认证和共享密钥认证如果选择开放系统认证方式链路认证过程不需要加密如果选择共享密钥认证方式链路认证过程中完成了密钥协商有线等效加密协议是由标准定义的用来保护无线局域网中的授权用户所传输的数据的安全性防止这些数据被窃听的核心是采用算法加密密钥长度有位和位两种其中有的初始向量是由系统产生的所以服务端和客户端上配置的密钥长度是位或位加密采用静态的密钥接入同一下的所有使用相同的密钥访问无线网络链路认证阶段仅支持开放式系统认证接入认证阶段分为企业版和个人版支持和两种加密算法加密算法动态密钥协商信息完整性校验机制加密算法高级加密标准由于共享密钥认证采用的是基于对称流的加密算法需要预先配置相同的静态密钥无论从加密机制还是从加密算法本身都很容易受到安全威胁为了解决这个问题在标准没有正式推出安全性更高的安全策略之前联盟推出了针对改良的认证方式的核心加密算法还是采用并在基础上提出了临时密钥完整性协议加密算法随后安全标准又推出区别于采用了的身份验证框架支持等认证方式采用安全性更高的区块密码锁链信息真实性检查码协议加密算法为了实现更好的兼容性在目前的实现中和都可以使用的接入认证或的加密算法他们之间的不同主要表现在协议报文格式上在安全性上几乎没有差别链路认证阶段仅支持开放式系统认证接入认证阶段分为企业版和个人版企业版采用的接入认证方式使用服务器和可扩展认证协议进行认证用户提供认证所需的凭证如用户名和密码通过特定的用户认证服务器一般是服务器来实现对用户的接入认证在大型企业网络中通常采用企业版的认证方式支持和两种加密算法加密算法区别于共用一个共享密钥采用一套动态密钥协商和管理方法每个无线用户都会动态地协商一套密钥保证了每个用户使用独立的密钥每个用户的密钥是由密钥协商阶段协商出来的发送方的地址和报文序列号计算生成的通过这种密钥混合的防护方式来防范针对的攻击采用信息完整性校验机制一方面保证接收端接收报文的完整性另一方面保证接收端和发送端数据的合法性信息完整性校验码是通过密钥协商阶段协商出来的目的地址源地址和数据包计算生成的加密算法区别于和采用的流密码机制采用了以高级加密标准的块密码为基础的安全协议这种基于块密码的加密技术克服了算法本身的缺陷安全性更高无线局域网鉴别与保密基础结构是中国提出的以无线协议为基础的无线安全标准无线局域网鉴别基础结构用于无线局域网中身份鉴别和密钥管理的安全方案无线局域网保密基础结构用于无线局域网中数据传输保护的安全方案包括数据加密数据鉴别和重放保护等功能采用了基于公钥密码体制的椭圆曲线密码算法和对称密码体制的分组密码算法分别用于无线设备的数字证书证书鉴别密钥协商和传输数据的加解密从而实现设备的身份鉴别链路验证访问控制和用户信息的加密保护的优势双向身份鉴别双向鉴别机制既可以防止非法的接入网络同时也可以杜绝非法的设备伪装成合法的设备数字证书身份凭证有独立的证书服务器使用数字证书作为和设备的身份凭证提升了安全性完善的鉴别协议在中使用数字证书作为用户身份凭证在鉴别过程中采用椭圆曲线签名算法并使用安全的消息杂凑算法保障消息的完整性攻击者难以对进行鉴别的信息进行修改和伪造所以安全等级高的安全配置案例的安全配置以公司为例公司对办公室进行无线覆盖出于安全考虑配置无线信号连接时需要输入密码提供名为的安全无线网络密码为作为服务器和网关为工作人员分配地址仅做报文的二层透传案例相关数据准备项目数据业务服务器地址池模板名称名称安全模板名称安全策略密码模板名称业务引用模板模板案例配置思路配置与上层网络设备互通配置作为服务器为分配地址配置业务参数应用参数到无线射频卡案例配置步骤配置与上层网络设备互通案例配置步骤配置作为服务器为分配地址案例配置步骤配置参数创建名为的安全模板配置安全协议为认证方式采用密钥为加密方式为引用名为的安全模板案例配置步骤应用参数到无线射频卡案例案例验证配置完成后可以在上使用命令查看信息案例案例验证在上查找无线信号案例案例验证接入时需要输入密码案例案例验证连接成功后使用命令测试连通性省略部分显示内容',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-03-31 19:33:25',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">渊</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 1.05rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 1.05rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 1.05rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 1.05rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 1.05rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 1.05rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 1.05rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 1.05rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.05rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 1.05rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 1.05rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 1.05rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.05rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.05rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 1.05rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 1.05rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 1.05rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 1.05rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 1.05rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>基础教程</span></a><a class="article-meta__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>华为1+X</span></a></span></div></div><h1 class="post-title" itemprop="name headline">8.华为1+X-WLAN技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2021-12-19T03:35:43.000Z" title="发表于 2021-12-19 11:35:43">2021-12-19</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.438Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">14.4k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>48分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="8.华为1+X-WLAN技术"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为西安"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>西安</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://s4.ax1x.com/2021/12/23/TGe4nf.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2021/12/19/%E5%8D%8E%E4%B8%BA1+X/8.%E5%8D%8E%E4%B8%BA1+X-WLAN%E6%8A%80%E6%9C%AF/"><header><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">基础教程</a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url">华为1+X</a><h1 id="CrawlerTitle" itemprop="name headline">8.华为1+X-WLAN技术</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">渊</span><time itemprop="dateCreated datePublished" datetime="2021-12-19T03:35:43.000Z" title="发表于 2021-12-19 11:35:43">2021-12-19</time><time itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.438Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></header><p>华为1+X-WLAN技术</p>
+<h1 id="无线的基本概念"><a href="#无线的基本概念" class="headerlink" title="无线的基本概念"></a>无线的基本概念</h1><h2 id="无线应用概况"><a href="#无线应用概况" class="headerlink" title="无线应用概况"></a>无线应用概况</h2><p><strong>1、无线网络的概念</strong><br>无线网络（Wireless Network）是采用无线通信技术实现的网络。无线网络既包括允许用户建立远距离无线连接的全球语音和数据网络，也包括对近距离无线连接进行优化的红外线技术及射频技术。无线网络与有线网络的用途十分类似，最大的不同在于传输媒介不同，它利用无线电技术取代网线。无线网络相比有线网络具有以下特点：<br>高灵活性<br>可扩展性强</p>
+<p>无线网络（Wireless Network）是采用无线通信技术实现的网络。无线网络既包括允许用户建立远距离无线连接的全球语音和数据网络，也包括对近距离无线连接进行优化的红外线技术及射频技术。无线网络与有线网络的用途十分类似，最大的不同在于传输媒介不同，它利用无线电技术取代网线。无线网络相比有线网络具有以下特点：<br>高灵活性<br>无线网络使用无线信号通信，网络接入更加灵活，只要有信号的地方都可以随时随地将网络设备接入网络。<br>可扩展性强<br>无线网络终端设备接入数量限制更少，相比有线网络一个接口对应一个设备，无线路由器容许多个无线终端设备同时接入无线网络，因此在网络规模升级时无线网络优势更加明显。</p>
+<p><strong>2、无线网络现状与发展趋势</strong><br>据统计，目前中国网民数量约占全国人口的50%，而通过无线上网的用户超过9成。<br>国家将加快构建高速、移动、安全、泛在的新一代信息基础设施，推进信息网络技术广泛运用，形成万物互联、人机交互、天地一体的网络空间，在城镇热点公共区域推广免费高速无线局域网（WLAN）接入。<br>目前，无线网络在机场、地铁、客运站等公共交通领域、医疗机构、教育园区、产业园区、商城等公共区域实现了重点城市的全覆盖，下一阶段将实现城镇级别的公共区域全覆盖，无线网络规模将持续增长。</p>
+<p>无线网络摆脱了有线网络的束缚，可以在家里、花园、户外、商城等任何一个角落，抱着笔记本电脑、Pad、手机等移动设备，享受网络带来的便捷。据统计，目前中国网民数量约占全国人口的50%，而通过无线上网的用户超过9成，可见，无线网络正改变着人们的工作、生活和学习习惯，人们对无线的依赖性越来越强。<br>国家“十三五”规划明确要求：“加快构建高速、移动、安全、泛在的新一代信息基础设施，推进信息网络技术广泛运用，形成万物互联、人机交互、天地一体的网络空间”，“在城镇热点公共区域推广免费高速无线局域网（WLAN）接入”。目前，无线网络在机场、地铁、客运站等公共交通领域、医疗机构、教育园区、产业园区、商城等公共区域实现了重点城市的全覆盖，下一阶段将实现城镇级别的公共区域全覆盖，无线网络规模将持续增长。</p>
+<p><strong>3、无线局域网的概念</strong><br>无线局域网络是指以无线信道作传输媒介的计算机局域网(Wireless Local Area Network，WLAN)。<br>计算机无线联网方式是有线联网方式的一种补充，它是在有线网的基础上发展起来的，使网上的计算机具有可移动性，能快速、方便地解决以有线方式不易实现的网络信道的连通问题。<br>IEEE802.11协议簇是由电气和电子工程师协会（Institute of Electrical and ElectroSTAs Engineers；IEEE）所定义的无线网络通信的标准，无线局域网基于IEEE802.11协议工作。</p>
+<p>无线局域网络是指以无线信道作传输媒介的计算机局域网(Wireless Local Area Network，WLAN)。<br>计算机无线联网方式是有线联网方式的一种补充，它是在有线网的基础上发展起来的，使网上的计算机具有可移动性，能快速、方便地解决以有线方式不易实现的网络信道的连通问题。<br>IEEE802.11协议簇是由电气和电子工程师协会（Institute of Electrical and ElectroSTAs Engineers；IEEE）所定义的无线网络通信的标准，无线局域网基于IEEE802.11协议工作。</p>
+<p><strong>4、无线局域网的概念</strong></p>
+<p>大家经常说Wi-Fi，那么Wi-Fi和WLAN有什么关系？</p>
+<p>Wi-Fi＝采用IEEE802.11技术的WLAN</p>
+<p>如果询问一般用户什么是IEEE802.11无线网络，他们可能会感到迷惑和不解，因为多数人习惯将这项技术称为Wi-Fi。Wi-Fi是一个市场术语，世界各地的人们使用“Wi-Fi”作为801.11无线网络的代名词。</p>
+<h2 id="无线协议标准"><a href="#无线协议标准" class="headerlink" title="无线协议标准"></a>无线协议标准</h2><p><strong>1、IEEE802.11a</strong><br>工作在5.8GHz频段<br>最大 54Mbit&#x2F;s 的数据传输速率<br>物理层速率可达54Mbit&#x2F;s<br>传输层可达25Mbit&#x2F;s<br>载波调制技术</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFsh2q"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFsh2q.png" alt="TFsh2q.png"></a></p>
+<p>IEEE 无线网络标准，指定最大 54Mbit&#x2F;s 的数据传输速率和 5.8GHz 的工作频段。IEEE802.11a的传输技术为多载波调制技术。IEEE802.11a标准是已在办公室、家庭、宾馆、机场等众多场合得到广泛应用的IEEE802.11b无线联网标准的后续标准。它工作在5.8GHz频带，物理层速率可达54Mb&#x2F;s，传输层可达25Mbit&#x2F;s，可提供25Mbit&#x2F;s的无线ATM接口和10Mbit&#x2F;s的以太网无线帧结构接口；支持语音、数据、图像业务；一个扇区可接入多个用户，每个用户可带多个用户终端。<br>工作在5.8GHz频段的时候，中国WLAN工作的频率范围是5.725.8GHz~5.850GHz。在此频率范围内又划分出5个信道,每个信道的中心频率相隔20MHz。</p>
+<p><strong>2、IEEE802.11b</strong><br>IEEE802.11b 运作模式基本分为两种：<br>点对点模式(AD-HOC Mode)<br>基本模式（Infrastructure Mode）。<br>工作在 2.4GHz频段<br>1、 2、5.5 &amp; 11Mbit&#x2F;s 数据速率<br>扩展的 Direct Sequencing Spread Spectrum (DSSS)<br>标准的 Complementary Code Keying (CCK) 调制 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFsba4"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFsba4.png" alt="TFsba4.png"></a></p>
+<p>IEEE802.11b 运作模式基本分为两种：点对点模式(AD-HOC Mode)和基本模式（Infrastructure Mode）。点对点模式是指站点（如无线网卡）和站点之间的通信方式。它提供 11Mbit&#x2F;s 传输速率，扩展的 Direct Sequencing Spread Spectrum (DSSS) ，用标准的 Complementary Code Keying (CCK) 调制 ，1、 2、5.5 &amp; 11Mbit&#x2F;s 数据速率，工作在 2.4GHz，支持13个信道、3个不重叠信道(1、6、11)。</p>
+<p><strong>3、IEEE802.11g</strong><br>工作在2.4GHz频段<br>使用正交频分复用（OFDM）调制技术<br>数据传输速率提高到20Mbit&#x2F;s以上<br>保障了后向兼容性</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFykid"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFykid.png" alt="TFykid.png"></a></p>
+<p>IEEE802.11工作组近年来开始定义新的物理层标准IEEE802.11g。与以前的IEEE802.11协议标准相比，IEEE802.11g草案有以下两个特点：在2.4GHz频段使用正交频分复用（OFDM）调制技术，使数据传输速率提高到20Mbit&#x2F;s以上；能够与IEEE802.11b的WiFi系统互联互通，可共存于同一AP的网络里，从而保障了后向兼容性。这样原有的WLAN系统可以平滑地向高速WLAN过渡，延长了IEEE802.11b产品的使用寿命，降低了用户的投资。2003年7月IEEE802.11工作组批准了IEEE802.11g草案，该标准成为人们关注的新焦点。</p>
+<p><strong>4、IEEE802.11n</strong><br>工作在2.4GHz、5.8GHz频段<br>最大传输速率300~600Mbit&#x2F;s<br>OFDM调制技术<br>MIMO技术（Multiple Input Multiple Output）<br>协议兼容<br>向下兼容IEEE802.11b&#x2F;g&#x2F;a协议</p>
+<p>IEEE802.11n是在IEEE802.11g和IEEE802.11a之上发展起来的一项技术，最大的特点是速率提升，理论速率最高可达600Mbit&#x2F;s（目前业界主流为300Mbit&#x2F;s）。IEEE802.11n可工作在2.4GHz和5.8GHz两个频段，可向后兼容IEEE802.11a&#x2F;b&#x2F;g。</p>
+<p><strong>5、IEEE802.11ac</strong><br>工作在5.8GHz频段<br>最大传输速率6933Mbit&#x2F;s<br>OFDM调制技术<br>MIMO技术（Multiple Input Multiple Output）<br>运行模式：极高吞吐率（Very High Throughput）<br>兼容性<br>继续工作在5.0GHz频段上以保证向下兼容性，但数据传输通道会大大扩充，20MHz的基础上增至40MHz或者80MHz，甚至有可能达到160MHz</p>
+<p>IEEE802.11ac是IEEE802.11n的继承者。它采用并扩展了源自IEEE802.11n的空中接口（Air Interface）概念，包括更宽的RF带宽（提升至160MHz）、更多的MIMO空间流（Spatial Streams）（增加到 8）、多用户的 MIMO，以及更高阶的调制（Modulation）（达到 256QAM）。</p>
+<p><strong>6、IEEE802.11ax</strong><br/>也称为高效无线网络(High-Efficiency Wireless-HEW)<br>IEEE802.11ax标准在物理层导入了多项大幅变更<br>依旧可向下兼容于IEEE802.11a&#x2F;b&#x2F;g&#x2F;n与ac设备</p>
+<p>IEEE802.11ax，也称为高效无线网络(High-Efficiency Wireless-HEW)，通过一系列系统特性和多种机制增加系统容量，通过更好的一致覆盖和减少空口介质拥塞来改善Wi-Fi网络的工作方式，使用户获得最佳体验;尤其在密集用户环境中，为更多的用户提供一致和可靠的数据吞吐量，其目标是将用户的平均吞吐量提高至少4倍。也就是说基于IEEE802.11ax的Wi-Fi网络意味着前所未有的高容量和高效率。<br>IEEE802.11ax标准在物理层导入了多项大幅变更。然而，它依旧可向下兼容于IEEE802.11a&#x2F;b&#x2F;g&#x2F;n与ac设备。正因如此，IEEE802.11ax STA能与旧有STA进行数据传送和接收，旧有客户端也能解调和译码IEEE802.11ax封包表头(虽然不是整个IEEE802.11ax封包)，并于IEEE802.11ax STA传输期间进行轮询。</p>
+<p><strong>7、EEE802.11协议的频率、最大传输速率表</strong></p>
+<table>
+<thead>
+<tr>
+<th>协议</th>
+<th>兼容性</th>
+<th>频率</th>
+<th>理论最高速率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IEEE802.11a</td>
+<td></td>
+<td>5.8GHz</td>
+<td>54Mbit&#x2F;s</td>
+</tr>
+<tr>
+<td>IEEE802.11b</td>
+<td></td>
+<td>2.4GHz</td>
+<td>11 Mbit&#x2F;s</td>
+</tr>
+<tr>
+<td>IEEE802.11g</td>
+<td>兼容IEEE802.11b</td>
+<td>2.4GHz</td>
+<td>54 Mbit&#x2F;s</td>
+</tr>
+<tr>
+<td>IEEE802.11n</td>
+<td>兼容IEEE802.11a&#x2F;b&#x2F;g</td>
+<td>2.4GHz或5.8GHz</td>
+<td>600 Mbit&#x2F;s</td>
+</tr>
+<tr>
+<td>IEEE802.11ac</td>
+<td>兼容IEEE802.11a&#x2F;n</td>
+<td>5.8GHz</td>
+<td>6.9Gbit&#x2F;s</td>
+</tr>
+<tr>
+<td>IEEE802.11ax</td>
+<td>兼容IEEE802.11a&#x2F;b&#x2F;g&#x2F;n&#x2F;ac</td>
+<td>2.4GHz或5.8GHz</td>
+<td>9.6Gbit&#x2F;s</td>
+</tr>
+</tbody></table>
+<h2 id="无线射频与AP天气"><a href="#无线射频与AP天气" class="headerlink" title="无线射频与AP天气"></a>无线射频与AP天气</h2><p><strong>1、2.4GHz频段</strong><br>当AP工作在2.4GHz频段的时候，AP工作的频率范围是2.4GHz~2.4835.8GHz。在此频率范围内又划分出14个信道。每个信道的中心频率相隔5MHz，每个信道可供占用的带宽为22MHz。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFy5Yd"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFy5Yd.png" alt="TFy5Yd.png"></a></p>
+<p><strong>2、5.8GHz频段</strong><br>当AP工作在5.8GHz频段的时候，中国WLAN工作的频率范围是5.725.8GHz~5.850GHz。在此频率范围内又划分出5个信道，每个信道的中心频率相隔20MHz。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFyvkQ"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFyvkQ.png" alt="TFyvkQ.png"></a></p>
+<p><strong>3、5.8GHz频段信道与频率表</strong></p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Transmit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>149</td>
+<td>5.745 GHz</td>
+</tr>
+<tr>
+<td>153</td>
+<td>5.765 GHz</td>
+</tr>
+<tr>
+<td>157</td>
+<td>5.785 GHz</td>
+</tr>
+<tr>
+<td>161</td>
+<td>5.805 GHz</td>
+</tr>
+<tr>
+<td>165</td>
+<td>5.825 GHz</td>
+</tr>
+</tbody></table>
+<p><strong>4、全向天线</strong><br>全向天线，即在水平方向图上表现为360°都均匀辐射也就是平常所说的无方向性，在垂直方向图上表现为有一定宽度的波束，一般情况下波瓣宽度越小，增益越大。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TF6A7F"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TF6A7F.png" alt="TF6A7F.png"></a></p>
+<p>全向天线，即在水平方向图上表现为360°都均匀辐射，如图3-3所示，也就是平常所说的无方向性，在垂直方向图上表现为有一定宽度的波束，一般情况下波瓣宽度越小，增益越大。全向天线在移动通信系统中一般应用于郊县大区制的站型，覆盖范围大。</p>
+<p><strong>5、定向天线</strong><br>定向天线，在水平方向图上表现为一定角度范围辐射，也就是平常所说的有方向性。它同全向天线一样，波瓣宽度越小，增益越大。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TF6act"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TF6act.png" alt="TF6act.png"></a></p>
+<p><strong>6、吸顶天线</strong><br>吸顶天线的内部结构，虽然尺寸很小，但由于是在天线宽带理论的基础上，借助计算机的辅助设计，以及使用网络分析仪进行调试，因此能很好地满足在非常宽的工作频带内的驻波比要求。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFcWPH"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFcWPH.png" alt="TFcWPH.png"></a></p>
+<p>吸顶天线的内部结构，虽然尺寸很小，但由于是在天线宽带理论的基础上，借助计算机的辅助设计，以及使用网络分析仪进行调试，因此能很好地满足在非常宽的工作频带内的驻波比要求。按照国家标准，在很宽的频带内工作的天线其驻波比指标为VSWR ≤ 2 。当然，能达到VSWR ≤ 1.5 更好。顺便指出，室内吸顶天线属于低增益天线, 一般为G &#x3D; 2dBi。<br>在室内，由于建筑物材料固有的屏蔽作用，增加了无线信号的穿透损耗，影响了网络的信号接收和通话质量，如隔墙的阻挡5<del>20dB、楼层的阻挡20dB以上、家具及其它障碍物的阻挡2</del>15dB。</p>
+<p><strong>7、室外全向天线</strong><br>2.4GHz和5.8GHz室外全向天线外观与参考参数</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFgeQ1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFgeQ1.png" alt="TFgeQ1.png"></a></p>
+<p>向天线，即在水平方向图上表现为360°都均匀辐射，也就是平常所说的无方向性，在垂直方向图上表现为有一定宽度的波束，一般情况下波瓣宽度越小，增益越大。全向天线在移动通信系统中一般应用于郊县大区制的站型，覆盖范围大。2.4GHz和5.8GHz室外全向天线外观与参考参数分别如图所示。</p>
+<p><strong>8、抛物面天线</strong><br>由抛物面反射器和位于其焦点处的馈源组成的面状天线叫抛物面天线。<br>抛物面天线的主要优势是它的高方向性。它的功能类似于一个探照灯或手电筒反射器，向一个特定的方向汇聚无线电波到狭窄的波束,或从一个特定的方向接收无线电波。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFgWwT"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFgWwT.png" alt="TFgWwT.png"></a></p>
+<p>由抛物面反射器和位于其焦点处的馈源组成的面状天线叫抛物面天线。<br>抛物面天线的主要优势是它的高方向性。它的功能类似于一个探照灯或手电筒反射器，向一个特定的方向汇聚无线电波到狭窄的波束,或从一个特定的方向接收无线电波。抛物面天线有一些最高的收益,也就是说,它们可以生产最窄波束宽度,不论天线的类型。为了实现窄波束宽度,抛物面反射器必须远远大于所使用的无线电波的波长,所以抛物面天线适用于高频无线电频谱的一部分（UHF和SHF）,在这个频段，波长小到可以使用反射面反射。<br>F&#x2F;D（F是抛物线的焦点，D是抛物线的口径）与馈源的方向角Q是从属关系，也就是说只有馈源的方向角确定以后才能确定所要制作的抛物面天线的直径及焦距。作为一个业余爱好者只知道F&#x2F;D&#x3D;0.3~0.5是不够的，如何才能使一条天线与馈源配套即采用合适的F&#x2F;D，这个问题很重要，它直接影响天线系统的效率及信噪比等。室外抛物面5.8GHz和2.4GHz天线外观与参考参数如图所示。</p>
+<p><strong>9、功率</strong><br>在无线应用中，我们经常听到的功率单位是dBm而不是W或者mW。<br>dB用于标识一个相对值，是一个纯计数单位，当计算A的功率相比于B大或者小多少个dB时，可按计算公式:dB&#x3D;10<em>lg（A&#x2F;B）计算。<br>例如：A功率比B功率大一倍，那么10</em>lg(A&#x2F;B)&#x3D;10<em>lg2&#x3D;3dB。也就是说，A的功率比B的功率大3dB。<br>dBm（分贝毫瓦）指的是milliwatt，0dBm&#x3D;1mW，<br>计算公式为：10</em>lg P（功率值&#x2F;1mW）。</p>
+<p><strong>10、为什么使用dB</strong><br>dB能把一个很大（后面跟一长串0的）或者很小（前面有一长串0的）的数比较简短地表示出来。如：<br>X &#x3D; 1000000000000000&#x3D; 10logX &#x3D; 150 dB<br>X &#x3D; 0.000000000000001 &#x3D; 10logX &#x3D; -150 dB</p>
+<p><strong>11、功率换算举例</strong><br>例1：如果发射功率P为1mW，折算为dBm后为0dBm。</p>
+<p>例2：对于40W的功率，按0dBm单位进行折算后的值应为：		10<em>lg(40W&#x2F;1mW)&#x3D;10</em>lg(40000)&#x3D;10<em>lg(4</em>10^4)&#x3D;40+10*lg4&#x3D;460dBm。</p>
+<p><strong>12、无线传输质量</strong><br>1）	无线与距离的关系<br>2）	干扰源主要类型<br>3）	无线信号的传输方式</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFgzfH"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFgzfH.png" alt="TFgzfH.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TF2JNF"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TF2JNF.png" alt="TF2JNF.png"></a></p>
+<p>（1）无线与距离的关系<br>当无线信号与用户之间距离越来越远，那么无线信号强度会越来越弱，可以根据用户需求调整无线设备。<br>（2）干扰源主要类型<br>无线信号干扰源主要是无线设备间的同频干扰，例如蓝牙和无线2.4GHz频段。<br>（3）无线信号的传输方式<br>AP的无线信号传递主要通过两种方式，即辐射和传导。AP无线信号辐射是指AP的信号通过天线将信号传递到空气中去，如图8-10，该AP的信号直接通过六根天线传输无线数据。<br>AP无线信号的传导是指无线信号在线缆等介质内进行无线信号传递，如图8-11所示的室分系统中，无线AP和天线间通过同轴电缆连接，无线信号从天线接收后将通过电缆传导到AP。</p>
+<h2 id="常见的无线网络"><a href="#常见的无线网络" class="headerlink" title="常见的无线网络"></a>常见的无线网络</h2><p><strong>1、常见的无线网络设备</strong><br>无线控制器（Access Controller；AC）<br>无线接入点（Access Point；AP）<br>室内AP<br>室外AP<br>场景化产品系列AP</p>
+<p><strong>2、无线控制器AC6003</strong><br>提供8口PoE（15.4W）满供能力或者4口PoE+（30W）供电能力，可直接接入AP。<br>提供丰富灵活的用户策略管理及权限控制能力。<br>设备可通过网管eSight、WEB网管、命令行（CLI）进行维护。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TF24DP"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TF24DP.png" alt="TF24DP.png"></a></p>
+<p>无线控制器是一种网络设备，用来集中化控制无线AP，是一个无线网络的核心，负责管理无线网络中的所有无线AP。对AP的管理包括下发配置、修改相关配置参数、射频智能管理、接入安全控制等。<br>AC6005系列（简称AC6005）是华为推出的无线接入控制器，提供大容量、高性能、高可靠性、易安装、易维护的无线数据控制业务，具有组网灵活、绿色节能等优势。AC6005位于整个网络的汇聚层，提供高速、安全、可靠的WLAN业。华为的无线控制器AC6005如图8-12所示。AC6005具有以下特点和性能：</p>
+<p><strong>3、无线接入点</strong><br>无线AP从功能上可分为：<br>“胖”AP<br>“瘦”AP<br>其中，“胖”AP拥有独立的操作系统，可以进行单独配置和管理，而“瘦”AP则无法单独进行配置和管理操作，需要借助无线网络控制器进行统一的管理和配置。</p>
+<p>AP是WLAN网络中的重要组成部分，其工作机制类似有线网络中的集线器（HUB），无线终端可以通过AP进行终端之间的数据传输，也可以通过AP的“WAN”口与有线网络互通。<br>无线AP从功能上可分为“胖”AP和“瘦”AP两种。其中，“胖”AP拥有独立的操作系统，可以进行单独配置和管理，而“瘦”AP则无法单独进行配置和管理操作，需要借助无线网络控制器进行统一的管理和配置。</p>
+<p><strong>4、FAT AP</strong><br>“胖”AP可以自主完成包括无线接入、安全加密、设备配置等在内的多项任务，不需要其他设备的协助，适合用于构建中、小型规模无线局域网。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFRPC4"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFRPC4.png" alt="TFRPC4.png"></a></p>
+<p>“胖”AP可以自主完成包括无线接入、安全加密、设备配置等在内的多项任务，不需要其他设备的协助，适合用于构建中、小型规模无线局域网。“胖”AP组网的优点是无须改变现有有线网络结构，配置简单;缺点是无法统一管理和配置，因为需要对每台AP单独进行配置，费时、费力，当部署大规模的WLAN网络时，部署和维护成本高。<br>面对小型公司、办公室、家庭等无线覆盖场景，它仅需要少量的AP即可实现无线网络覆盖，目前被广泛使用和熟知的产品就是无线路由器，如图所示。</p>
+<p><strong>5、FIT AP</strong><br>“瘦”AP又称轻型无线AP，必须借助无线网络控制器进行配置和管理。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFRGrt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFRGrt.png" alt="TFRGrt.png"></a></p>
+<p>AP4050DN无线接入点支持802.11ac wave 2标准、2×2MIMO和2条空间流，同时支持11n和11ac协议，可使无线网络带宽突破千兆，极大地增强用户对无线网络的使用体验，适合部署在中小型企业、机场车站、体育场馆、咖啡厅、休闲中心等场景。华为的无线接入点AP4050DN如图8-13所示。</p>
+<h1 id="WLAN的基础配置"><a href="#WLAN的基础配置" class="headerlink" title="WLAN的基础配置"></a>WLAN的基础配置</h1><h2 id="WLAN的工作原理"><a href="#WLAN的工作原理" class="headerlink" title="WLAN的工作原理"></a>WLAN的工作原理</h2><p><strong>1、IEEE802.11标准的帧结构</strong><br>IEEE802.11 MAC层负责客户端与AP之间的通信，包括扫描、认证、接入、加密、漫游等；针对帧的不同功能，可将IEEE802.11中的MAC帧细分为以下3类：<br>控制帧<br>管理帧<br>数据帧</p>
+<p>IEEE802.11 MAC层负责客户端与AP之间的通信，包括扫描、认证、接入、加密、漫游等；针对帧的不同功能，可将IEEE802.11中的MAC帧细分为以下3类：<br>控制帧：用于竟争期间的握手通信和正向确认、结束非竞争期等<br>管理帧：主要用于STA与AP之间协商、关系的控制，如关联、认证、同步等<br>数据帧：用于在竞争期和非竞争期传输数据</p>
+<p><strong>2、IEEE802.11通用帧格式</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFRHZ6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFRHZ6.png" alt="TFRHZ6.png"></a></p>
+<p><strong>3、IEEE802.11通用帧格式</strong><br>（1）帧控制结构（Frame Control）<br>（2）Duration&#x2F;ID(持续时间&#x2F;标识)<br>（3）Address 部分<br>（4）Seq Ctl ：Sequence Control，序列控制域<br>（5）Frame Body：帧主体<br>（6）FCS：帧检验序列</p>
+<p>（1）帧控制结构（Frame Control）如图8-13所示：<br>图8-13 帧控制报文结构<br>Protocol version：  协议版本，通常为0。<br>Type与Sub Type：类型与次类型，用来制定所使用的帧类型，就是上文提到的控制帧、管理帧、数据帧。Type值定义如下：<br>00 管理帧；<br>01  控制帧；<br>10  数据帧；<br>11  保留。<br>To DS 与 From DS：用于表示帧是由工作站发起还是需要工作站接收的数据帧；<br>00  所有管理与控制帧IBSS(非基础型数据帧)；<br>01  基础网络里无线工作站所收到的数据帧；<br>10  基础网络里无线工作站所发送的数据帧；<br>11  无线桥接器上的数据帧。<br>More Fragment：用于说明长帧被分段的情况，如果还有其他帧，该位被置1。<br>Retry：重传帧位，重传的帧会将此位置1。<br>Power Management：IEEE802.11网卡为了提高电池的使用时间，通常可以关闭网卡以节省电力。此位用来指定传送端在完成目前的基本帧交换之后是否进入省电模式，1代表工作站即将进入省电模式，而0则代表工作站一直保持清醒状态。基站发出去的帧该位必为0。<br>More Data：为服务处于省电模式的工作站，基站会将这些由“传输系统”接收而来的帧加以暂存。基站如果设定此位，代表至少有一个帧待传送给休眠的工作站。<br>Protected Frame：如果帧受到链路层安全协议的保护，该位置1。<br>Order：序号域，在长帧分段传输时，该位置1，表示接受者应该严格按照顺序处理该帧，否则设置为0。<br>（2）Duration&#x2F;ID(持续时间&#x2F;标识)<br>表明该帧和它的确认帧将会占用信道多长时间，Duration值用于网络分配向量(NAV)计算。<br>（3）Address 部分<br>一个IEEE802.11帧最多可以包含4个地址，帧类型的不同，这些地址也有所差异，基本上，Address1代表接受端，Address2代表传送端、Address3代表接受端拿过来的过滤地址。<br>（4）Seq ctl ：Sequence Control，序列控制域<br>用来过滤重复帧，即用来重组帧片段以及丢弃重复帧。<br>（5）Frame Body：帧主体<br>帧主体（Frame Body）又称数据位。负责在工作站间传送上层数据（Payload）。在最初的指定的规格中，IEEE802.11帧最多可以传送2034字节的数据。802.2LLC标头具有八个字节，所以最多可以传送2296个字节。防止分段必须在协议层加以处理。<br>（6）FCS：帧检验序列<br>FCS通常被视为循环冗余码（Cyclic Redundancy Check，CRC），因为底层的数学运算相同。FCS计算范围涵盖MAC标头里所有位以及帧主体。如果FCS有误，随即丢弃。并且不进行应答。</p>
+<p><strong>4、帧控制报文结构</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFWeQs"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFWeQs.png" alt="TFWeQs.png"></a></p>
+<p><strong>5、帧控制结构</strong><br>Protocol version：  协议版本，通常为0。<br>Type与Sub Type：类型与次类型，<br>To DS 与 From DS：用于表示帧是由工作站发起还是需要工作站接收的数据帧；<br>More Fragment：用于说明长帧被分段的情况，如果还有其他帧，该位被置1。<br>Retry：重传帧位，重传的帧会将此位置1。<br>Power Management：用来指定传送端在完成目前的基本帧交换之后是否进入省电模式，<br>More Data：为服务处于省电模式的STA，基站会将这些由“AP”接收而来的帧加以暂存。<br>Protected Frame：如果帧受到链路层安全协议的保护，该位置1。<br>Order：序号域，在长帧分段传输时，该位置1，表示接受者应该严格按照顺序处理该帧。</p>
+<p>Protocol version：  协议版本，通常为0。<br>Type与Sub Type：类型与次类型，用来制定所使用的帧类型，就是上文提到的控制帧、管理帧、数据帧。Type值定义如下：<br>00 管理帧；<br>01  控制帧；<br>10  数据帧；<br>11  保留。<br>To DS 与 From DS：用于表示帧是由工作站发起还是需要工作站接收的数据帧；<br>00  所有管理与控制帧IBSS(非基础型数据帧)；<br>01  基础网络里无线工作站所收到的数据帧；<br>10  基础网络里无线工作站所发送的数据帧；<br>11  无线桥接器上的数据帧。<br>More Fragment：用于说明长帧被分段的情况，如果还有其他帧，该位被置1。<br>Retry：重传帧位，重传的帧会将此位置1。<br>Power Management：IEEE802.11网卡为了提高电池的使用时间，通常可以关闭网卡以节省电力。此位用来指定传送端在完成目前的基本帧交换之后是否进入省电模式，1代表工作站即将进入省电模式，而0则代表工作站一直保持清醒状态。基站发出去的帧该位必为0。<br>More Data：为服务处于省电模式的工作站，基站会将这些由“传输系统”接收而来的帧加以暂存。基站如果设定此位，代表至少有一个帧待传送给休眠的工作站。<br>Protected Frame：如果帧受到链路层安全协议的保护，该位置1。<br>Order：序号域，在长帧分段传输时，该位置1，表示接受者应该严格按照顺序处理该帧，否则设置为0。</p>
+<p><strong>6、MAC层工作原理</strong><br>IEEE 802.11的MAC协议与IEEE 802.3相似，考虑到无线局域网中，无线电波传输距离受限，不是所有的节点都能监听到信号，且无线网卡工作在半双工模式，一旦发生碰撞，重新发送数据会降低吞吐量。因此，IEEE 802.11对CSMA&#x2F;CD进行了一些修改，采用了CSMA&#x2F;CA（载波监听多路访问&#x2F;冲突退避机制）来避免冲突的发送。</p>
+<p><strong>7、CSMA&#x2F;CA工作原理</strong><br>首先检测信道是否有STA在使用，如果信道空闲，则等待DIFS时间后，就发送数据；<br>如果检测到信道正在使用，根据CSMA&#x2F;CA退避算法，STA将冻结退避计时器。经过DIFS时间后，继续监听，只要信道空闲，退避计时器就进行倒计时，当退避计时器减少到零时（这是信道可能是空闲的），STA就发送帧并等待确认。<br>目标STA如果正确收到该帧，则经过SIFS时间后，向源STA发送ACK确认帧；如果源STA收到ACK帧，确定数据正确传输，在经过DIFS时间间隔后，会出现一段空闲时间，叫做争用窗口，各STA进入争用信道情况，然后重复①；<br>如果源STA没有收到ACK，则需要重新发送原数据帧，直到收到确认为止或经过若干次重传失败后放弃发送。</p>
+<p>备注：<br>SIFS： 短的帧间间隔，用来分隔开属于一次对话的各帧，长度一般为9或20us。<br>DIFS：分布协调功能的帧间间隔，用来发送数据帧和管理帧，长度为SIFS+（2*Slot time）。<br>Slot time：时隙，不同厂商规定不同，是一个非常短的时间。<br>PIFS：AP协调功能帧间隙，长度为SIFS+Slot time。</p>
+<p><strong>8、IEEE 802.11 MAC的功能</strong><br>信道管理<br>连接管理<br>服务质量<br>功率控制<br>安全<br>时间同步<br>特性</p>
+<p>①信道管理：包括信道扫描（MLME-SCAN）、信道测量（MLME-MREQUEST、MLME-MEASURE、MLME-MREPORT）、信道切换（MLME-CHANNELSWITCH）等。<br>②连接管理：包括认证（MLME-AUTHENTICATE）、断开认证（MLME-DEAUTHENTICATE）、建立连接（MLME-ASSOCIATE）、重新连接（MLME-REASSOCIATE）、断开连接（MLME-DEASSOCIATE）、开始网络（MLME-START）、点对点连接请求（MLME-PeerKeySTART）、直接连接管理（MLME-DLS、MLME-DLSTearDown）等。<br>③服务质量（QoS）：包括交通流（TS）管理接口（MLME-ADDTS、MLME-DELTS）、Qos调度变更通知（MLME-SCHEDULE）等。<br>④功率控制：包括电源管理（MLME-POWERMGT）、发送功率通知（MLME-TPCADAPT）等。<br>⑤安全：包括密钥管理（MLME-SETKEYS、MLME-DELETEKEYS）、迈克尔失败事件（MLME-MICHAELMICFAILURE）、EAPOL（MLME-EAPOL）、帧密钥错误丢弃通知（MLME-PROTECTEDFRAMEDROPPED）等。<br>⑥时间同步：包括时间同步（MLME-JOIN）、高层同步支持（MLME-HL-SYNC）等。<br>⑦特性：包括合并ACK帧管理（MLME-ADDBA、MLME-DELBA）、发行商特有（MLME-VSPECIFIC）、MIB管理（MLME-SET、MLME-GET）等。</p>
+<h2 id="FAT-AP的网络组建"><a href="#FAT-AP的网络组建" class="headerlink" title="FAT AP的网络组建"></a>FAT AP的网络组建</h2><p><strong>1、FAT AP的网络组建</strong><br>AP通过有线网络接入互联网，每个AP都是一个单独的节点，需要独立配置其信道、功率、安全策略等。常见的应用场景有家庭无线网络、办公室无线网等，一个园区无线网络的典型拓扑如图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFWRmt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFWRmt.png" alt="TFWRmt.png"></a></p>
+<p><strong>2、AP的配置</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFWbXn"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFWbXn.png" alt="TFWbXn.png"></a></p>
+<p>（1）有线部分的配置<br>①创建业务VLAN，STA接入WLAN后从该VLAN关联的DHCP地址池中获取IP地址。<br>②配置VLANIF接口IP地址，用户可以通过这个IP地址对AP进行远程管理。<br>③配置AP以太网接口为上联接口，通过封装相应的VLAN使这些VLAN中的数据可以通过以太网接口转发到上联设备。<br>（2）无线部分的配置<br>①创建SSID模板，配置SSID，用户可以通过搜索SSID加入相应的WLAN中。<br>SSID（Service Set Identifier）中文含义为服务集标识，用来区分不同的无线网络。例如，当我们在笔记本电脑上搜索可接入无线网络时，显示出来的无线网络名称就是SSID。SSID由最多32个字符组成，且区分大小写，配置在所有AP与STA的无线射频卡中。<br>②创建安全模板，为WLAN接入配置加密，WLAN加密后，用户需要通过输入预共享密钥才能加入WLAN中。安全模板为选配项，若不进行配置，则为开放式网络。<br>③创建VAP模板，VAP模板中指定STA的业务VLAN，并引用SSID模板和安全模板的参数。<br>④配置WLAN-radio，配置WLAN-ID引用VAP模板的配置，引用VAP模板后，WLAN开始工作并发射出对应SSIS，用户关联到SSID后会通过业务VLAN获取IP地址。</p>
+<h2 id="FAT-AP的基础配置"><a href="#FAT-AP的基础配置" class="headerlink" title="FAT AP的基础配置"></a>FAT AP的基础配置</h2><p><strong>3、案例8-1FAT AP的基础配置</strong><br>FAT AP通过有线方式接入Internet，通过无线方式连接终端。Jan16公司为了保证工作人员可以随时随地的访问公司网络，需要通过部署WLAN基本业务实现移动办公。<br>提供名为“Jan16”的无线网络。<br>SW作为DHCP服务器和网关，为工作人员分配IP地址，AP仅做DHCP报文的二层透传。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TFfu1H"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/TFfu1H.png" alt="TFfu1H.png"></a></p>
+<p><strong>4、案例相关数据准备</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>STA业务VLAN</td>
+<td>VLAN 10</td>
+</tr>
+<tr>
+<td>DHCP服务器</td>
+<td>SW</td>
+</tr>
+<tr>
+<td>STA地址池</td>
+<td>NET:192.168.10.0&#x2F;24GATEWAY:192.168.10.254</td>
+</tr>
+<tr>
+<td>SSID模板</td>
+<td>名称：SSID1SSID名称：jan16</td>
+</tr>
+<tr>
+<td>VAP模板</td>
+<td>名称：VAP1业务VLAN：VLAN 10引用模板：SSID模板SSID1</td>
+</tr>
+</tbody></table>
+<p><strong>5、案例配置思路</strong><br>（1）配置AP与上层网络设备互通。<br>（2）配置SW作为DHCP服务器，为STA分配IP地址。<br>（3）配置WLAN业务参数。<br>（4）应用WLAN参数到无线射频卡。</p>
+<p><strong>6、案例8-1配置步骤1</strong><br>配置AP与上层网络设备互通。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]sysname AP</span><br><span class="line">[AP]vlan 10</span><br><span class="line">[AP-vlan10]name USER </span><br><span class="line">[AP-vlan10]quit</span><br><span class="line">[AP]interface Vlanif 10</span><br><span class="line">[AP-Vlanif10]ip address 192.168.10.253 24</span><br><span class="line">[AP-Vlanif10]quit</span><br><span class="line">[AP] interface gigabitethernet 0/0/0</span><br><span class="line">[AP-GigabitEthernet0/0/0] port link-type trunk</span><br><span class="line">[AP-GigabitEthernet0/0/0] port trunk allow-pass vlan 10</span><br><span class="line">[AP-GigabitEthernet0/0/0] quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>7、案例8-1配置步骤2</strong><br>配置SW作为DHCP服务器，为STA分配IP地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">&lt;Huawei&gt;sysname SW</span><br><span class="line">[SW]vlan 10</span><br><span class="line">[SW-vlan10]name USER </span><br><span class="line">[SW-vlan10]quit</span><br><span class="line">[SW] interface gigabitethernet 0/0/1</span><br><span class="line">[SW-GigabitEthernet0/0/1] port link-type trunk</span><br><span class="line">[SW-GigabitEthernet0/0/1] port trunk allow-pass vlan 10</span><br><span class="line">[SW-GigabitEthernet0/0/1] quit</span><br><span class="line">[SW]dhcp enable</span><br><span class="line">[SW]interface Vlanif 10</span><br><span class="line">[SW-Vlanif10]ip address 192.168.10.254 24</span><br><span class="line">[Router-GigabitEthernet1/0/0] dhcp select interface</span><br><span class="line">[Router-GigabitEthernet0/0/1] dhcp server excluded-ip-address 192.168.10.253</span><br><span class="line">[SW-Vlanif10]quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>8、案例8-1配置步骤3</strong><br>配置WLAN参数；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[AP]wlan </span><br><span class="line">[AP-wlan-view]ssid-profile name SSID1    // 创建名为“SSID1”的SSID模板</span><br><span class="line">[AP-wlan-ssid-prof-SSID1]ssid jan16    //配置SSID名称为“jan16”</span><br><span class="line">[AP-wlan-ssid-prof-SSID1]quit</span><br><span class="line">[AP-wlan-view]vap-profile name VAP1    //创建名为“VAP1”的VAP模板</span><br><span class="line">[AP-wlan-vap-prof-VAP1]service-vlan vlan-id 10    //配置业务VLAN为vlan 10</span><br><span class="line">[AP-wlan-vap-prof-VAP1]ssid-profile SSID1    //配置VAP模板引用SSID模板</span><br><span class="line">[AP-wlan-vap-prof-VAP1]quit</span><br><span class="line">[AP-wlan-view]quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>9、案例8-1配置步骤4</strong><br>应用WLAN参数到无线射频卡；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[AP]interface Wlan-Radio 0/0/0</span><br><span class="line">[AP-Wlan-Radio0/0/0]vap-profile VAP1 wlan 2   //配置WLAN-ID 2引用名为“VAP1”的VAP模板</span><br><span class="line">[AP-Wlan-Radio0/0/0]quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>10、案例8-1验证1</strong><br>可以在AP上使用【display vap ssid VAP1】命令查看VAP信息，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[AP]display vap ssid VAP1</span><br><span class="line">Info: This operation may take a few seconds, please wait.</span><br><span class="line">WID : WLAN ID            </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">AP MAC         RfID WID  BSSID          Status  Auth type  STA   SSID       </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">c4b8-b469-32e0 0    2    C4B8-B469-32E1 ON      Open       0     jan16   </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">Total: 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>11、案例8-1验证2</strong><br>在PC上查找无线信号jan16并接入。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TAYJsJ"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/18/TAYJsJ.png" alt="TAYJsJ.png"></a></p>
+<p><strong>12、案例8-1验证3</strong><br>连接成功后使用【ping】命令测试连通性。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PC&gt;ping 192.168.10.254</span><br><span class="line"></span><br><span class="line">Ping 192.168.10.254: 32 data bytes, Press Ctrl_C to break</span><br><span class="line">From 192.168.10.254: bytes=32 seq=1 ttl=128 time=63 ms</span><br><span class="line">From 192.168.10.254: bytes=32 seq=2 ttl=128 time=62 ms</span><br><span class="line">---省略部分显示内容---</span><br></pre></td></tr></table></figure>
+
+<h1 id="WLAN的安全配置"><a href="#WLAN的安全配置" class="headerlink" title="WLAN的安全配置"></a>WLAN的安全配置</h1><h2 id="WLAN的安全问题"><a href="#WLAN的安全问题" class="headerlink" title="WLAN的安全问题"></a>WLAN的安全问题</h2><p><strong>1、WLAN安全问题</strong><br>WLAN以无线信道作为传输媒介，利用电磁波在空气中收发数据实现了传统有线局域网的功能。然而由于WLAN传输媒介的特殊性和其固有的安全缺陷，用户的数据面临被窃听和篡改的威胁，WLAN网络常见的安全威胁有以下几个方面。<br>未经授权使用网络服务<br>非法AP<br>数据安全<br>拒绝服务攻击</p>
+<hr>
+<p><strong>tip：</strong></p>
+<p>WLAN以无线信道作为传输媒介，利用电磁波在空气中收发数据实现了传统有线局域网的功能。和传统的有线接入方式相比，WLAN网络布放和实施相对简单，维护成本也相对低廉，因此应用前景十分广阔。然而由于WLAN传输媒介的特殊性和其固有的安全缺陷，用户的数据面临被窃听和篡改的威胁，因此WLAN的安全问题成为制约其推广的最大问题。WLAN网络常见的安全威胁有以下几个方面。<br>未经授权使用网络服务<br>最常见的WLAN安全威胁就是未经授权的用户非法使用WLAN网络。非法用户未经授权使用WLAN网络，同授权用户共享带宽，会影响合法用户的使用体验，甚至可能泄露当前用户的用户信息。<br>非法AP<br>非法AP是未经授权部署在企业WLAN网络里，且干扰网络正常运行的AP（例如DoS攻击）。如果该非法AP配置了正确的WEP（Wired Equivalent Privacy，有线等效保密）密钥，还可以捕获客户端数据。经过配置后，非法AP可为未授权用户提供接入服务，可让未授权用户捕获和伪装数据包，最糟糕的是允许未经授权用户访问服务器和文件。<br>数据安全<br>相对于以前的有线局域网，WLAN网络采用无线通信技术，用户的各类信息在无线中传输，更容易被窃听、获取。<br>拒绝服务攻击<br>这种攻击方式不以获取信息为目的，黑客只是想让目标机器停止提供服务。因为WLAN采用微波传输数据，理论上只要在有信号的范围内攻击者就可以发起攻击，这种攻击方式隐蔽性好，实现容易，防范困难，是黑客的终极攻击方式。</p>
+<hr>
+<h2 id="WLAN的安全对策"><a href="#WLAN的安全对策" class="headerlink" title="WLAN的安全对策"></a>WLAN的安全对策</h2><p><strong>1、WLAN的安全对策</strong><br>开放系统认证<br>共享密钥认证<br>SSID隐藏<br>黑白名单认证（MAC地址认证）<br>PSK认证<br>WLAN加密技术</p>
+<p><strong>1、开放系统认证</strong><br>开放系统认证不对用户身份做任何验证，整个认证过程中，通信双方仅需交换两个认证帧：<br>站点向AP发送一个认证帧，AP以此帧的源MAC地址作为发送端的身份证明，<br>AP随即返回一个认证帧，并建立AP和客户端的连接。</p>
+<p>开放系统认证不对用户身份做任何验证，整个认证过程中，通信双方仅需交换两个认证帧：站点向AP发送一个认证帧，AP以此帧的源MAC地址作为发送端的身份证明，AP随即返回一个认证帧，并建立AP和客户端的连接。因此，开放系统认证不要求用户提供任何身份凭证，通过这种简单的认证后就能与 AP建立关联，进而获得访问网络资源的权限。<br>开放系统认证是唯一的IEEE802.11要求必备的认证方法，是最简单的认证方式，对于需要允许设备快速进入网络的场景，可以使用开放系统认证。开放系统认证主要用于公共区域或热点区域（如机场、酒店等）为用户提供无线接入服务，适合用户众多的运营商部署大规模的WLAN网络。</p>
+<p><strong>2、共享密钥认证</strong><br>共享密钥认证要求用户设备必须支持有线等效加密，用户设备与AP必须配置匹配的静态WEP密钥。共享密钥认证过程中，采用共享密钥认证的无线接口之间需要交换质询与响应消息，通信双方总共需要交换4个认证帧：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TAYqwn"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/18/TAYqwn.png" alt="TAYqwn.png"></a></p>
+<p>共享密钥认证要求用户设备必须支持有线等效加密，用户设备与AP必须配置匹配的静态WEP密钥。如果双方的静态WEP密钥不匹配，用户设备也无法通过认证。共享密钥认证过程中，采用共享密钥认证的无线接口之间需要交换质询与响应消息，通信双方总共需要交换4个认证帧，如图8-15所示。<br>用户设备向AP发送认证请求数据帧。<br>AP向用户设备返回包含明文质询消息的第二个认证帧，质询消息长度为128字节，由WEP密钥流生成器利用随机密钥和初始向量产生。<br>用户设备使用静态 WEP 密钥将质询消息加密，并通过认证帧发给AP。<br>AP收到认证帧后，将使用静态WEP密钥对其中的质询消息进行解密，并与原始质询消息进行比较。若二者匹配，AP 将会向用户设备发送第四个也是最后一个认证帧，确认用户设备成功通过认证；若二者不匹配或AP无法解密质询消息，AP将拒绝用户设备的认证请求。<br>用户设备成功通过共享密钥认证后，将采用同一静态WEP密钥加密随后的IEEE802.11数据帧与AP通信。<br>共享密钥认证的安全性看似比开放系统认证要高，但是实际上前者存在着巨大的安全漏洞。如果入侵者截获 AP 发送的明文质询消息以及用户设备返回的加密质询消息，就可能从中提取出静态WEP密钥。入侵者一旦掌握静态WEP密钥，就可以解密所有数据帧，网络对入侵者将再无秘密可言。因此，WEP共享秘钥认证方式难以为企业无线局域网提供有效保护。</p>
+<p><strong>3、SSID隐藏</strong><br>SSID隐藏，可将无线网络的逻辑名隐藏起来。<br>AP启用SSID隐藏后，信标帧中的SSID字段被置为空</p>
+<p>SSID（Service Set Identifier，服务集标识）隐藏，可将无线网络的逻辑名隐藏起来。<br>AP启用SSID隐藏后，信标帧中的SSID字段被置为空，无线客户端通过被动扫描侦听信标帧的用户设备将无法获得SSID信息。因此，无线终端必须手动设置与AP相同的SSID才能与AP进行关联，如果用户设备出示的SSID与AP的SSID不同，那么AP将拒绝它接入。<br>SSID 隐藏适用于某些企业或机构需要支持大量访客接入的场景。企业园区无线网络可能存在多个SSID，如员工、财务、访客等。为减少访客连错网络的问题，园区通常会隐藏员工、财务的SSID，同时广播访客SSID，此时访客尝试连接无线网络时只能看到访客SSID，从而减少了连接到员工和财务人员网络的情况。<br>尽管 SSID 隐藏可以在一定程度上防止业余黑客与普通用户搜索到无线网络，但只要入侵者使用二层无线协议分析软件拦截到任何合法终端用户发送的帧，就能获得以明文形式传输的SSID。因此，只使用SSID隐藏策略来保证无线局域网安全是不行的。</p>
+<p><strong>4、黑白名单认证（MAC地址认证）</strong><br>白名单的概念与“黑名单”相对应。<br>黑名单启用后，被列入黑名单的用户不能通过。<br>设立了白名单，则在白名单中的用户会允许通过，没有在白名单列出的用户将被拒绝访问。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TAtMmd"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/18/TAtMmd.png" alt="TAtMmd.png"></a></p>
+<p>白名单的概念与“黑名单”相对应。黑名单启用后，被列入黑名单的用户不能通过。如果设立了白名单，则在白名单中的用户会允许通过，没有在白名单列出的用户将被拒绝访问。<br>黑白名单认证是一种基于端口和MAC地址对用户的网络访问权限进行控制的认证方法，不需要用户安装任何客户端软件。IEEE802.11设备都具有唯一的MAC地址，因此可以通过检验IEEE802.11 设备数据分组的源MAC 地址来判断其合法性，过滤不合法的MAC地址，仅允许特定的用户设备发送的数据分组通过。MAC 地址过滤要求预先在AC 或“胖”AP中输入合法的MAC地址列表，只有当用户设备的MAC地址和合法MAC地址列表中的地址匹配，AP才允许用户设备与之通信，实现物理地址过滤。如图8-16所示，用户设备STA1的MAC地址不在AC的合法MAC地址列表中，因而不能接入AP；而用户设备STA2和STA3分别与合法MAC地址列表中的第四个、第三个MAC地址完全匹配，因而可以接入AP。<br>然而，由于很多无线网卡支持重新配置MAC地址，MAC地址很容易被伪造或复制。只要将 MAC 地址伪装成某个出现在允许列表中的用户设备的MAC 地址，就能轻易绕过MAC地址过滤。为所有设备配置MAC地址过滤的工作量较大，而MAC地址又易于伪造，这使MAC地址过滤无法成为一种可靠的无线安全解决方案。</p>
+<p><strong>5、PSK认证</strong><br>PSK（Pre-shared Key，PSK）认证<br>要求用户使用一个简单的ASCII字符串（8～63个字符长度，称为密码短语）作为密钥。<br>客户端和服务端通过能否成功解密协商的消息来确定本端配置的预共享密钥是否和对端配置的预共享密钥相同，从而完成服务端和客户端的相互认证。</p>
+<p>PSK（Preshared Key，PSK）认证有很多别称，如WPA&#x2F;WPA2-Passphrase、WPA&#x2F;WPA2-PSK以及WPA&#x2F;WPA2预共享密钥等，它要求用户使用一个简单的ASCⅡ字符串（8～63个字符长度，称为密码短语）作为密钥。客户端和服务端通过能否成功解密协商的消息来确定本端配置的预共享密钥是否和对端配置的预共享密钥相同，从而完成服务端和客户端的相互认证。<br>WPA&#x2F;WPA2个人版定义的PSK认证方法是一种弱认证方法，很容易受到暴力字典的攻击。同时，由于密码是静态的，PSK认证也容易受到社会工程学攻击。虽然这种简单的PSK认证是为小型无线网络设计的，但实际上很多企业也使用 WPA&#x2F;WPA2 个人版。由于所有WLAN设备上的PSK都是相同的，如果用户不小心将PSK泄露给黑客，WLAN的安全性将受到威胁。为保证安全，所有设备就必须重新配置一个新的PSK。</p>
+<p>6、WLAN加密技术<br>WLAN采用的加密技术主要有：<br>WEP加密<br>临时密钥完整性协议（Temporal Key Integrity Protocol，TKIP）加密<br>计数器模式密码块链信息认证码协议（Counter Mode with Cipher-Block Chaining Message Authentication Code Protocol，CCMP）加密</p>
+<p>在WLAN 用户通过认证并被赋予访问权限后，网络必须保护用户所传送的数据不被泄露，其主要方法是对数据报文进行加密。WLAN采用的加密技术主要有：WEP加密、临时密钥完整性协议（Temporal Key Integrity Protocol，TKIP）加密和计数器模式密码块链信息认证码协议（Counter Mode with Cipher-Block Chaining Message Authentication Code Protocol，CCMP）加密等。</p>
+<h2 id="WLAN的安全标准"><a href="#WLAN的安全标准" class="headerlink" title="WLAN的安全标准"></a>WLAN的安全标准</h2><p><strong>1、WLAN安全标准</strong><br>WEP<br>WPA&#x2F;WPA2<br>WAPI</p>
+<p><strong>2、WEP</strong><br>有线等效加密WEP（Wired Equivalent Privacy）<br>RC4算法<br>加密密钥长度有64位和128位两种<br>WEP安全策略包括：<br>链路认证机制<br>数据加密机制<br>链路认证分为开放系统认证和共享密钥认证。<br>如果选择开放系统认证方式，链路认证过程不需要WEP加密。<br>如果选择共享密钥认证方式，链路认证过程中完成了密钥协商。</p>
+<p>有线等效加密WEP（Wired Equivalent Privacy）协议是由IEEE802.11标准定义的，用来保护无线局域网中的授权用户所传输的数据的安全性，防止这些数据被窃听。WEP的核心是采用RC4算法，加密密钥长度有64位和128位两种，其中有24bit的IV（初始向量）是由系统产生的，所以WLAN服务端和WLAN客户端上配置的密钥长度是40位或104位。WEP加密采用静态的密钥，接入同一SSID下的所有STA使用相同的密钥访问无线网络。</p>
+<p><strong>3、WPA&#x2F;WPA2</strong><br>链路认证阶段，WPA&#x2F;WPA2仅支持开放式系统认证。<br>接入认证阶段，WPA&#x2F;WPA2分为企业版和个人版。<br>WPA&#x2F;WPA2支持TKIP和CCMP两种加密算法。<br>TKIP加密算法：动态密钥协商、信息完整性校验机制，<br>CCMP加密算法：高级加密标准AES（Advanced Encryption Standard）</p>
+<p>由于WEP共享密钥认证采用的是基于RC4对称流的加密算法，需要预先配置相同的静态密钥，无论从加密机制还是从加密算法本身，都很容易受到安全威胁。为了解决这个问题，在IEEE802.11i标准没有正式推出安全性更高的安全策略之前，Wi-Fi联盟推出了针对WEP改良的认证方式—WPA（Wi-Fi Protected Access）。WPA的核心加密算法还是采用RC4，并在WEP基础上提出了临时密钥完整性协议TKIP（Temporal Key Integrity Protocol）加密算法。随后IEEE802.11i安全标准又推出WPA2，区别于WPA，WPA2采用了802.1X的身份验证框架，支持EAP-PEAP、EAP-TLS等认证方式；采用安全性更高的区块密码锁链-信息真实性检查码协议CCMP（Counter Mode with CBC-MAC Protocol）加密算法。<br>为了实现更好的兼容性，在目前的实现中，WPA和WPA2都可以使用802.1X的接入认证、TKIP或CCMP的加密算法，他们之间的不同主要表现在协议报文格式上，在安全性上几乎没有差别。<br>链路认证阶段，WPA&#x2F;WPA2仅支持开放式系统认证。<br>接入认证阶段，WPA&#x2F;WPA2分为企业版和个人版。WPA&#x2F;WPA2企业版：采用WPA&#x2F;WPA2-802.1X的接入认证方式，使用RADIUS服务器和可扩展认证协议EAP（Extensible Authentication Protocol）进行认证。用户提供认证所需的凭证，如用户名和密码，通过特定的用户认证服务器（一般是RADIUS服务器）来实现对用户的接入认证。在大型企业网络中，通常采用WPA企业版的认证方式。<br>WPA&#x2F;WPA2支持TKIP和CCMP两种加密算法。<br>TKIP加密算法<br>区别于WEP共用一个共享密钥，TKIP采用一套动态密钥协商和管理方法，每个无线用户都会动态地协商一套密钥，保证了每个用户使用独立的密钥。每个用户的密钥是由密钥协商阶段协商出来的PTK、发送方的MAC地址和报文序列号计算生成的，通过这种密钥混合的防护方式来防范针对WEP的攻击。<br>TKIP采用信息完整性校验机制，一方面保证接收端接收报文的完整性；另一方面保证接收端和发送端数据的合法性。信息完整性校验码是通过密钥协商阶段协商出来的MIC Key、目的MAC地址、源MAC地址和数据包计算生成的。<br>CCMP加密算法<br>区别于WEP和TKIP采用的流密码机制，CCMP采用了以高级加密标准AES（Advanced Encryption Standard）的块密码为基础的安全协议。这种基于块密码的加密技术克服了RC4算法本身的缺陷，安全性更高。</p>
+<p><strong>4、WAPI</strong><br>无线局域网鉴别与保密基础结构WAPI（WLAN Authentication and Privacy Infrastructure）是中国提出的、以IEEE802.11无线协议为基础的无线安全标准。<br>无线局域网鉴别基础结构WAI（WLAN Authentication Infrastructure）：用于无线局域网中身份鉴别和密钥管理的安全方案；<br>无线局域网保密基础结构WPI（WLAN Privacy Infrastructure）：用于无线局域网中数据传输保护的安全方案，包括数据加密、数据鉴别和重放保护等功能。</p>
+<p>WAPI采用了基于公钥密码体制的椭圆曲线密码算法和对称密码体制的分组密码算法，分别用于无线设备的数字证书、证书鉴别、密钥协商和传输数据的加解密，从而实现设备的身份鉴别、链路验证、访问控制和用户信息的加密保护。</p>
+<p><strong>5、WAPI的优势</strong><br>（1）双向身份鉴别：<br>双向鉴别机制既可以防止非法的STA接入WLAN网络，同时也可以杜绝非法的WLAN设备伪装成合法的设备。<br>（2）数字证书身份凭证：<br>WAPI有独立的证书服务器，使用数字证书作为STA和WLAN设备的身份凭证，提升了安全性。<br>（3）完善的鉴别协议：<br>在WAPI中使用数字证书作为用户身份凭证，在鉴别过程中采用椭圆曲线签名算法，并使用安全的消息杂凑算法保障消息的完整性，攻击者难以对进行鉴别的信息进行修改和伪造，所以安全等级高。</p>
+<h2 id="WLAN的安全配置-1"><a href="#WLAN的安全配置-1" class="headerlink" title="WLAN的安全配置"></a>WLAN的安全配置</h2><p><strong>1、案例8-2：WLAN的安全配置</strong><br>以Jan16公司为例，公司对办公室进行无线覆盖，出于安全考虑，配置无线信号连接时需要输入密码。<br>提供名为“Jan16”的安全无线网络，密码为12345678。<br>SW作为DHCP服务器和网关，为工作人员分配IP地址，AP仅做DHCP报文的二层透传。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TAtWnJ"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/18/TAtWnJ.png" alt="TAtWnJ.png"></a></p>
+<p><strong>2、案例相关数据准备</strong></p>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>数据</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>STA业务VLAN</td>
+<td>VLAN 10</td>
+</tr>
+<tr>
+<td>DHCP服务器</td>
+<td>SW</td>
+</tr>
+<tr>
+<td>STA地址池</td>
+<td>NET:192.168.10.0&#x2F;24GATEWAY:192.168.10.254</td>
+</tr>
+<tr>
+<td>SSID模板</td>
+<td>名称：SSID1SSID名称：jan16</td>
+</tr>
+<tr>
+<td>安全模板</td>
+<td>名称：wpa2安全策略：WPA2+PSK+AES密码：12345678</td>
+</tr>
+<tr>
+<td>VAP模板</td>
+<td>名称：VAP1业务VLAN：VLAN 10引用模板：SSID模板SSID1</td>
+</tr>
+</tbody></table>
+<p><strong>3、案例配置思路</strong><br>（1）配置AP与上层网络设备互通。<br>（2）配置SW作为DHCP服务器，为STA分配IP地址。<br>（3）配置WLAN业务参数。<br>（4）应用WLAN参数到无线射频卡。</p>
+<p><strong>4、案例8-2配置步骤1</strong><br>配置AP与上层网络设备互通。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]sysname AP</span><br><span class="line">[AP]vlan 10</span><br><span class="line">[AP-vlan10]name USER </span><br><span class="line">[AP-vlan10]quit</span><br><span class="line">[AP]interface Vlanif 10</span><br><span class="line">[AP-Vlanif10]ip address 192.168.10.253 24</span><br><span class="line">[AP-Vlanif10]quit</span><br><span class="line">[AP] interface gigabitethernet 0/0/0</span><br><span class="line">[AP-GigabitEthernet0/0/0] port link-type trunk</span><br><span class="line">[AP-GigabitEthernet0/0/0] port trunk allow-pass vlan 10</span><br><span class="line">[AP-GigabitEthernet0/0/0] quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>5、案例8-2配置步骤2</strong><br>配置SW作为DHCP服务器，为STA分配IP地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">&lt;Huawei&gt;sysname SW</span><br><span class="line">[SW]vlan 10</span><br><span class="line">[SW-vlan10]name USER </span><br><span class="line">[SW-vlan10]quit</span><br><span class="line">[SW] interface gigabitethernet 0/0/1</span><br><span class="line">[SW-GigabitEthernet0/0/1] port link-type trunk</span><br><span class="line">[SW-GigabitEthernet0/0/1] port trunk allow-pass vlan 10</span><br><span class="line">[SW-GigabitEthernet0/0/1] quit</span><br><span class="line">[SW]dhcp enable</span><br><span class="line">[SW]interface Vlanif 10</span><br><span class="line">[SW-Vlanif10]ip address 192.168.10.254 24</span><br><span class="line">[Router-GigabitEthernet1/0/0] dhcp select interface</span><br><span class="line">[Router-GigabitEthernet0/0/1] dhcp server excluded-ip-address 192.168.10.253</span><br><span class="line">[SW-Vlanif10]quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>6、案例8-2配置步骤3</strong><br>配置WLAN参数；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[AP]wlan </span><br><span class="line">[AP-wlan-view]ssid-profile name SSID1</span><br><span class="line">[AP-wlan-ssid-prof-SSID1]ssid jan16</span><br><span class="line">[AP-wlan-ssid-prof-SSID1]quit</span><br><span class="line">[AP-wlan-view]security-profile name wpa2     //创建名为“wpa2”的安全模板</span><br><span class="line">[AP-wlan-sec-prof-wpa2]security wpa2 psk pass-phrase 12345678 aes   //配置安全协议为“WPA2”,认证方式采用psk，密钥为“12345678”，加密方式为AES。</span><br><span class="line">[AP-wlan-vap-prof-wpa2]quit</span><br><span class="line">[AP-wlan-view]vap-profile name VAP1</span><br><span class="line">[AP-wlan-vap-prof-VAP1]service-vlan vlan-id 10</span><br><span class="line">[AP-wlan-vap-prof-VAP1]ssid-profile SSID1</span><br><span class="line">[AP-wlan-vap-prof-VAP1]security-profile wpa2    //引用名为“wpa2”的安全模板</span><br><span class="line">[AP-wlan-vap-prof-VAP1]quit</span><br><span class="line">[AP-wlan-view]quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>7、案例8-2配置步骤4</strong><br>应用WLAN参数到无线射频卡；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[AP]interface Wlan-Radio 0/0/0</span><br><span class="line">[AP-Wlan-Radio0/0/0]vap-profile VAP1 wlan 2 </span><br><span class="line">[AP-Wlan-Radio0/0/0]quit</span><br></pre></td></tr></table></figure>
+
+<p><strong>8、案例8-2案例验证1</strong><br>配置完成后，可以在AP上使用【display vap ssid VAP1】命令查看VAP信息，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[AP]display vap ssid VAP1</span><br><span class="line">Info: This operation may take a few seconds, please wait.</span><br><span class="line">WID : WLAN ID            </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">AP MAC         RfID WID  BSSID          Status  Auth type  STA   SSID       </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">c4b8-b469-32e0 0    2    C4B8-B469-32E1 ON      WPA2-PSK    0     jan16     </span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">Total: 1</span><br></pre></td></tr></table></figure>
+
+<p><strong>9、案例8-2案例验证2</strong><br>在PC上查找无线信号jan16。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TANeNq"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/18/TANeNq.png" alt="TANeNq.png"></a></p>
+<p><strong>10、案例8-2案例验证2</strong><br>接入时需要输入密码。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TANQvF"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/18/TANQvF.png" alt="TANQvF.png"></a></p>
+<p><strong>11、案例8-2案例验证4</strong><br>连接成功后使用【ping】命令测试连通性，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PC&gt;ping 192.168.10.254</span><br><span class="line"></span><br><span class="line">Ping 192.168.10.254: 32 data bytes, Press Ctrl_C to break</span><br><span class="line">From 192.168.10.254: bytes=32 seq=1 ttl=128 time=63 ms</span><br><span class="line">From 192.168.10.254: bytes=32 seq=2 ttl=128 time=62 ms</span><br><span class="line">---省略部分显示内容---</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">渊</div><div class="post-copyright__author_desc">乖乖，我永远希望你能开心</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2021/12/19/%E5%8D%8E%E4%B8%BA1+X/8.%E5%8D%8E%E4%B8%BA1+X-WLAN%E6%8A%80%E6%9C%AF/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2021/12/19/华为1+X/8.华为1+X-WLAN技术/')">8.华为1+X-WLAN技术</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/"><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2021/12/19/%E5%8D%8E%E4%B8%BA1+X/8.%E5%8D%8E%E4%B8%BA1+X-WLAN%E6%8A%80%E6%9C%AF/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=8.华为1+X-WLAN技术&amp;url=http://example.com/2021/12/19/%E5%8D%8E%E4%B8%BA1+X/8.%E5%8D%8E%E4%B8%BA1+X-WLAN%E6%8A%80%E6%9C%AF/&amp;pic=https://s4.ax1x.com/2021/12/23/TGe4nf.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">渊</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__category-list"><a class="post-meta__box__categoryes" href="/categories/%E5%8D%8E%E4%B8%BA1-X/"><span class="categoryes-punctuation"> <i class="anzhiyufont anzhiyu-icon-inbox"></i></span>华为1+X<span class="categoryesPageCount">8</span></a></div><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>基础教程<span class="tagsPageCount">33</span></a><a class="post-meta__box__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>华为1+X<span class="tagsPageCount">8</span></a></div></div><div class="post_share"><div class="social-share" data-image="/img/default_cover1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/18/%E5%8D%8E%E4%B8%BA1+X/7.%E5%8D%8E%E4%B8%BA1+X-IPV6%E5%8D%8F%E8%AE%AE/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">7.华为1+X-IPV6协议</div></div></a></div><div class="next-post pull-right"><a href="/2022/01/02/hexo%E7%BE%8E%E5%8C%96/hexo%E5%A2%9E%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2022/01/02/Toe4Qx.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">hexo增加搜索功能</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&IP/" title="1.华为1+X&#x2F;TCP&amp;IP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-11</div><div class="title">1.华为1+X&#x2F;TCP&amp;IP</div></div></a></div><div><a href="/2021/12/13/%E5%8D%8E%E4%B8%BA1+X/2.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/" title="2.华为1+X&#x2F;网络交换技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-13</div><div class="title">2.华为1+X&#x2F;网络交换技术</div></div></a></div><div><a href="/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/" title="3.华为1+X-路由技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-14</div><div class="title">3.华为1+X-路由技术</div></div></a></div><div><a href="/2021/12/15/%E5%8D%8E%E4%B8%BA1+X/4.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%8F%AF%E9%9D%A0%E6%80%A7/" title="4.华为1+X-网络可靠性"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-15</div><div class="title">4.华为1+X-网络可靠性</div></div></a></div><div><a href="/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/" title="5.华为1+X-广域网技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-16</div><div class="title">5.华为1+X-广域网技术</div></div></a></div><div><a href="/2021/12/17/%E5%8D%8E%E4%B8%BA1+X/6.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="6.华为1+X-网络安全技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-17</div><div class="title">6.华为1+X-网络安全技术</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">落魄谷中寒风吹,春秋蝉鸣少年归 荡魂山处石人泪,定仙游走魔向北 逆流河上万仙退,爱情不敌坚持泪 宿命天成命中败,仙尊悔而我不悔</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">渊</h1><div class="author-info__desc">乖乖，我永远希望你能开心</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/updateyuan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1807133884" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">天若有情天亦老,大道无情情至公</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">无线的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E5%BA%94%E7%94%A8%E6%A6%82%E5%86%B5"><span class="toc-number">1.1.</span> <span class="toc-text">无线应用概况</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E5%8D%8F%E8%AE%AE%E6%A0%87%E5%87%86"><span class="toc-number">1.2.</span> <span class="toc-text">无线协议标准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E7%BA%BF%E5%B0%84%E9%A2%91%E4%B8%8EAP%E5%A4%A9%E6%B0%94"><span class="toc-number">1.3.</span> <span class="toc-text">无线射频与AP天气</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E6%97%A0%E7%BA%BF%E7%BD%91%E7%BB%9C"><span class="toc-number">1.4.</span> <span class="toc-text">常见的无线网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WLAN%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">WLAN的基础配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WLAN%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">2.1.</span> <span class="toc-text">WLAN的工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAT-AP%E7%9A%84%E7%BD%91%E7%BB%9C%E7%BB%84%E5%BB%BA"><span class="toc-number">2.2.</span> <span class="toc-text">FAT AP的网络组建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FAT-AP%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">FAT AP的基础配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#WLAN%E7%9A%84%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">3.</span> <span class="toc-text">WLAN的安全配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#WLAN%E7%9A%84%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98"><span class="toc-number">3.1.</span> <span class="toc-text">WLAN的安全问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WLAN%E7%9A%84%E5%AE%89%E5%85%A8%E5%AF%B9%E7%AD%96"><span class="toc-number">3.2.</span> <span class="toc-text">WLAN的安全对策</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WLAN%E7%9A%84%E5%AE%89%E5%85%A8%E6%A0%87%E5%87%86"><span class="toc-number">3.3.</span> <span class="toc-text">WLAN的安全标准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WLAN%E7%9A%84%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE-1"><span class="toc-number">3.4.</span> <span class="toc-text">WLAN的安全配置</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浏览器页面切换快捷键"/></a><div class="content"><a class="title" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键">浏览器页面切换快捷键</a><time datetime="2024-01-29T10:31:51.596Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/hello-world1/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/01/29/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-01-29T10:31:51.589Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/31/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/10/31/hello-world/" title="Hello World">Hello World</a><time datetime="2022-10-31T09:40:41.000Z" title="发表于 2022-10-31 17:40:41">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文章"/></a><div class="content"><a class="title" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章">文章</a><time datetime="2022-06-27T09:29:00.000Z" title="发表于 2022-06-27 17:29:00">2022-06-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2022/01/02/Toe4Qx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo添加徽标"/></a><div class="content"><a class="title" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标">hexo添加徽标</a><time datetime="2022-03-13T08:58:50.000Z" title="发表于 2022-03-13 16:58:50">2022-03-13</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="渊" target="_blank">渊</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">76</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">21</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 0.88rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 0.88rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 0.88rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 0.88rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 0.88rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 0.88rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 0.88rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 0.88rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 0.88rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 0.88rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 0.88rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 0.88rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 0.88rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 0.88rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.88rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 0.88rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.88rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 0.88rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 0.88rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 0.88rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 渊 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2021 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.cbd.int/mathjax@3.2.2/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

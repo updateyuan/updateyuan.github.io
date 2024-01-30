@@ -1,0 +1,639 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>5.华为1+X-广域网技术 | 渊</title><meta name="keywords" content="基础教程,华为1+X"><meta name="author" content="渊"><meta name="copyright" content="渊"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="5.华为1+X-广域网技术"><meta name="application-name" content="5.华为1+X-广域网技术"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="5.华为1+X-广域网技术"><meta property="og:url" content="http://example.com/2021/12/16/华为1+X/5.华为1+X-广域网技术/index.html"><meta property="og:site_name" content="渊"><meta property="og:description" content="华为1+X-广域网技术 广域网概述广域网基本概念广域网的概念：广域网（Wide Area Network）简称WAN，是指跨越很大地域范围的数据通信网络。广域网通常使用因特网服务提供商（ISP）提供的设备作为信息传输平台，对网络通信的要求较高。广域网对应的OSI三层模型，如下图所示：   tip："><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta property="article:author" content="渊"><meta property="article:tag" content="天若有情天亦老 大道无情情至公"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta name="description" content="华为1+X-广域网技术 广域网概述广域网基本概念广域网的概念：广域网（Wide Area Network）简称WAN，是指跨越很大地域范围的数据通信网络。广域网通常使用因特网服务提供商（ISP）提供的设备作为信息传输平台，对网络通信的要求较高。广域网对应的OSI三层模型，如下图所示：   tip："><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":10,"position":"top","messagePrev":"距离上次更新已经","messageNext":"天了，文章的内容可能已经过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 渊","link":"链接: ","source":"来源: 渊","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '渊',
+  title: '5.华为1+X-广域网技术',
+  postAI: '',
+  pageFillDescription: '广域网概述, 广域网基本概念, 广域网接入, 点对点协议-PPP, PPP基本概念, 以太网上的点对点协议-PPPoE, PPPoE基本概念, PPPoE配置华为广域网技术广域网概述广域网基本概念广域网的概念广域网简称是指跨越很大地域范围的数据通信网络广域网通常使用因特网服务提供商提供的设备作为信息传输平台对网络通信的要求较高广域网对应的三层模型如下图所示主要被设计用来在支持全双工的同异步链路上进行点到点之间的数据传输是一个适用于通过调制解调器点到点专线比特串行线路和其他物理层的多协议帧机制它支持错误检测选项商定头部压缩等机制在当今的网络中得到普遍的应用在物理上可使用各种不同的传输介质包括双绞线光纤及无线传输介质在数据链路层提供了一套解决链路建立维护拆除和上层协议协商认证等问题的方案协议支持同步串行连接异步串行连接连接连接等连接类型具有以下特性能够控制数据链路的建立能够对地址进行分配和使用允许同时采用多种网络层协议能够配置和测试数据链路能够进行错误检测有协商选项能够对网络层的地址和数据压缩等进行协商广域网的链路类型广域网的链路类型可以分为宽带广域网和窄带广域网宽带广域网包括异步传输模式网和同步数字系列窄带广域网包括综合业务数字网数字数据网帧中继公用分组交换网和公共交换电话网广域网的协议概述广域网协议通常是指在因特网上负责路由器之间连接的数据链路层协议广域网数据封装协议包括点到点型的协议和协议也包括逐渐被淘汰的电路交换型协议和分组交换型的帧中继协议广域网的接口类型主要包括同步和异步串口同步串口有和两种工作方式可以支持多种链路层协议可以支持网络层的和协议也可以支持多种类型的线缆异步串口分为手工设置的异步串口和专用异步串口可以设置为专线方式和拨号方式其中称为高级数据链路控制协议工作在数据链路层是国际标准化组织以公司系统网络架构的协议作为基础开发出来的协议和协议将在本章中进行详细介绍广域网接入接入是数字数据网的简称它由光纤数字微波或卫星等数字传输通道和数字交叉复用设备组成为用户提供高质量的数据传输通道传送各种数据业务电缆调制解调器远程接入电缆调制解调器运行在有线电视的铜轴电缆上可以提供比传统电话线更高的传输速率公共电话网接入公共电话网的优点是覆盖区域广易于使用价格较低缺点是网络线路质量较差传输速率较低远程接入称为数字用户线路远程接入方式是通过调制解调器实现用户数据在传统电话线上的高速传输技术常见的类型包括和等其中已经成为广域网接入的主要技术点对点协议基本概念的基本概念是的简称也叫做目前是网络中最重要的点到点数据链路层协议在点对点中的应用如下图所示的成员协议主要包括链路控制协议和网络控制协议链路控制协议主要用于数据链路连接的建立拆除和监控主要完成最大传输单元质量协议验证协议魔术字协议域压缩地址和控制域压缩协商等参数的协商网络层控制协议族主要用于协商在该链路上所传输的数据包的格式与类型建立和配置不同网络层协议配置帧格式关于帧格式中各字段的含义描述如下图所示字段该字段的长度为标识一个物理帧的起始和结束帧都是以开始的字段该字段的长度为字节固定值为该字段并非是一个地址它表明主从端的状态都为接收状态可以理解为所有的接口帧是在一条单一的链路上固定地从此接口传输到对端接口因此帧不像以太帧那样包含了源地址和目的地址这些信息事实上接口根本就不需要属于自己的地址地址对于接口来说毫无意义字段该字段的长度为取值固定为该字段并没有什么特别的作用表明为无序号帧字段该字段的长度为是告知在信息字段中使用的是哪类分组针对及其他协议定义了相应的代码例如当字段的取值为时就表明字段是一个报文当字段的取值为时就表明字段是一个报文字段该字段是帧的载荷数据其长度是可变的信息字段包含协议字段中指定协议的数据包数据字段的默认最大长度不包括协议字段称为最大接收单元的默认值为字节是的缩写该字段的长度为其作用是对帧进行差错校验的基本建链过程在建立链路之前要进行一些列的协商过程大致可以分为如下几个阶段链路不可行阶段链路建立阶段验证阶段网络层协议阶段链路终止阶段如图所示链路的建立是通过一些列的协商完成的其中链路控制协议除了用于建立拆除和监控数据链路还主要进行数据链路层特性的协商如验证方式等网络层控制协议族主要用于协商在该数据链路上所传输的数据的格式和类型如地址链路不可用阶段链路必须从这个阶段开始和结束当一个外部事件如一个载波信号或网络管理员配置检测到物理层可用就会进入到阶段在阶段状态机有两个状态和从这个状态迁移到状态会给状态机送一个事件当断开连接后链路会自动的回到这个状态在一般情况下这个阶段是很短的仅仅只是检测到设备在线在链路建立阶段该阶段链路将进行参数协商协商内容包括最大接收单元认证方式魔术字等选项参数协商成功后会进入状态表示底层链路已经建立验证阶段某些链路可能要求对端验证自己之后才允许网络层协议数据包在链路上传输在默认值中验证是不要求的如果某个应用要求对端采用特定的验证协议进行验证则必须在链路建立阶段发出使用这种协议的请求只有当验证通过时才可以进入网络层协议阶段如果验证不通过则应继续验证而不是转到链路终止阶段在这个阶段只允许链路控制协议验证协议和链路质量检测的数据包进行传输其他的数据报都应丢弃网络层协议阶段该阶段链路将进行协商通过协商来选择和配置一个网络层协议及相关参数只有相应的网络层协议协商成功后才可以通过这条链路发送报文协商成功后链路将保持通信状态链路终止阶段终止链路这可能是由于载波信号的丢失验证不通过链路质量不好定时器超时或管理员关闭链路通过交换终止链路的数据包来关闭链路当交换结束时应用就会告诉物理层拆除连接从而强行终止链路但验证失败时发出终止请求的一方必须等到收到终止应答或者重起计数器超过最大终止计数次数才断开连接收到终止请求的一方必须等对方先断开连接而且在发送终止应答之后必须等至少一次重起计数器超时之后才能断开连接之后回到链路不可用状态的身份认证包含了通信双方身份验证的安全性协议即在网络层协商地址之前首先必须通过身份验证的身份验证有两种方式和验证协议是两次握手协议它通过用户名及口令来进行用户的验证其过程如下当开始验证阶段时被验证方首先将自己的用户名及口令发送到验证方验证方根据本端的用户数据库或服务器察看是否有此用户口令是否正确如果正确则发送报文通知对端进入下一阶段协商否则发送报文通知对端验证失败是在网络上以明文的方式传送用户名及口令所以安全性不高验证为三次握手协议它只在网络上传用户名而不传口令因此安全性比高其验证过程为首先验证方向被验证方发送一些随机的报文并加上自己的主机名被验证方收到验证方的验证请求通过收到的主机名和本端的用户数据库查找用户口令字密钥如果找到用户数据库中和验证方主机名相同的用户便利用接收到的随机报文此用户的密钥和报文用加密算法生成应答随后将应答和自己的主机名送回验证方收到此应答后利用对端的用户名在本端的用户数据库中查找本方保留的口令字用本方保留的用户的口令字密钥随机报文和报文用加密算法生成结果与被验证方的应答比较相同则返回否则返回其报文交互过程如图所示不仅在连接建立阶段进行在以后的数据传输阶段也可以按随机间隔继续进行但每次验证方和被验证方的随机数据都应不同以防被第三方猜出密钥如果验证方发现结果不一致将立即切断线路它的特点是只在网络上传输用户名而并不传输用户口令因此它的安全性要比高案例的基本配置案例背景与要求根据如图所示的网络拓扑要求完成两台路由器的通信配置实现和互通案例配置思路在路由器和的串行连接接口上启用对拓扑的所有设备上配置地址案例配置过程配置路由器的串口和配置路由器的串口和案例验证在路由器的接口上输入命令测试封装情况测试结果如下省略部分内容上面的回显信息中表示路由器的接口的地址为表示路由器的接口的数据链路层协议为表示和协商已经成功注意既然采用的是就说明链路上已经可以传递报文了案例认证通信的配置案例背景与要求根据下图所示的网络拓扑要求完成两台路由器的认证通信配置认证的用户名为密码为采用加密方式密文方式案例配置思路配置路由器和的接口在路由器上配置认证的账号和密码并制定该账号和密码用于的认证在路由器上启用并设置认证的账号和密码案例配置过程认证方路由器的配置在路由器上配置认证的账号和密码在路由器指定该密码应用于认证配置路由器的接口的在接口启用并指定认证方式为案例配置过程被认证方路由器的配置在路由器上配置接口的在接口启用并指定认证的账号和密码案例验证使用命令在路由器上查看认证的详细信息从上面的验证的信息中可以看到认证已成功配置案例认证的配置案例背景与要求根据下图所示的网络拓扑要求完成两台路由器的认证通信配置认证的用户名为密码为采用加密方式密文方式案例配置思路配置路由器和的接口在路由器上配置认证的账号和密码并制定该账号和密码用于的认证在路由器上启用并设置认证的账号和密码案例配置过程路由器的配置在路由器上配置认证的账号和密码在路由器指定该密码应用于认证配置路由器的接口的在接口启用并指定认证方式为在路由器上配置认证的账号和密码在路由器指定该密码应用于认证配置路由器的接口的在接口启用并指定认证方式为路由器的配置在路由器上配置接口的在接口启用并指定认证的账号和密码案例验证使用命令在路由器上查看认证的详细信息从上面的测试信息中可以看到认证已成功配置以太网上的点对点协议基本概念协议的基本概念即以太网上的点对点协议是一个允许在以太广播域中的两个以太网接口之间创建点对点隧道的协议下图所示是一个典型的网络模型多个客户端通过以太网同一个广播域接入到服务端协议报文格式报文格式如图所示关于报文中各字段的含义描述如下表示以太网目标设备的地址通常为以太网单播目的地址或者以太网广播地址表示以太网源设备的地址表示协议类型字段当值为时表示承载的是发现阶段的报文当值为时表示承载的是会话阶段的报文表示校验域用来确保数据链路层数据帧传输的正确性字段表示版本号协议规定固定为表示类型协议规定固定为表示报文类型不同取值标识不同的报文类型当访问集中器还未分配唯一的会话给用户主机时该字段填充为一旦主机获取了会话后那么在后续的所有报文中都都填充这个会话表示报文的长度的工作过程的工作过程分为个不同的阶段即阶段发现阶段阶段会话阶段和阶段会话终结阶段的通信流程如图所示发现阶段在这个阶段一开始由于客户端并不知道服务端的地址它将使用类似于解析的过程的机制来获取服务端的地址并建立连接这个过程主要有个步骤报文报文报文报文报文发起的服务器探测报文目的地址为广播地址通过以太网广播寻找服务器报文服务器收到报文之后回应给发起方的回应报文目的地址为客户端的地址源地址为服务器的报文客户端收到报文后将通过报文向服务端发起建立会话的请求报文目的地之为服务器的地址源地址为客户端的地址报文服务器收到客户端的会话请求报文时当该客户端满足建立会话连接时它将为这个会话分配一个唯一的会话并发送会话建立确认报文给客户端否则将发送会话终止报文给客户端终止连接会话阶段一旦进入到会话阶段则的数据报文就会被填充在的净载荷中被传送这时两者所发送的所有以太网包均是单目地址会话阶段以太网帧的协议域填充为代码域填充整个会话的过程就是的会话过程它可分为两部分协商阶段和报文传输阶段协商阶段和普通的协商方式一致具体流程如本节图所示的协商成功后就可以承载数据报文在这一阶段传输的数据包中必须包含在发现阶段确定的并保持不变会话终结阶段在中定义了一个报文用来结束会话或者可以在会话开始后的任何时候通过发送报文来结束会话报文发起的服务器探测报文目的地址为广播地址通过以太网广播寻找服务器报文服务器收到报文之后回应给发起方的回应报文目的地址为客户端的地址源地址为服务器的报文客户端收到报文后将通过报文向服务端发起建立会话的请求报文目的地之为服务器的地址源地址为客户端的地址报文服务器收到客户端的会话请求报文时当该客户端满足建立会话连接时它将为这个会话分配一个唯一的会话并发送会话建立确认报文给客户端否则将发送会话终止报文给客户端终止连接配置案例的配置案例背景与需求路由器是工作室的路由器路由器是的服务器路由器和通过以太网连接路由器通过拨号连接到路由器并接入通过路由器的服务接入案例拓扑如图所示案例需求如下路由器的的为它通过口与路由器相连采用的认证用户名为密码为本案例仅实现路由器通过同路由器互联的地址为网关为路由器的接口地址为案例配置思路服务端的配置配置虚拟模板接口配置的其他选项将虚拟接口和服务端以太口绑定配置从到的默认路由实现网络互通客户端的配置拨号控制中心虚拟拨号接口的配置将的虚拟拨号接口和客户端以太网接口绑定指定配置的拨号访问控制列表允许协议的数据报文配置从到的默认路由实现网络互通案例配置思路详细描述如下服务端的配置配置虚拟模板接口为了让以太网承载那么就需要配置虚拟模板虚拟模板就是为了让一条链路上可以封装多种同层协议的虚拟接口因为现在的以太网物理接口已经默认封装了以太网协议无法再封装其他协议了所以需要通过来模拟一个接口然后封装其他协议如最后在把绑定到物理接口实现和以太网协议的嵌套配置的其他选项包括客户端分配的地址网关以及用于认证的用户名和密码等将虚拟接口和服务端以太口绑定把虚拟接口和连接服务端的物理以太网接口绑定完成协议的封装配置从到的默认路由实现网络互通客户端的配置拨号控制中心虚拟拨号接口的配置虚拟拨号接口就是专门用来控制拨号的接口在这个接口下配置封装协议认证地址自动获得接口拨号使用的用户名连接建立的等待时间所属的组指定接口的编号这个编号是用来和物理接口绑定时候用到的编号地址转换等配置都在是该拨号接口下完成的将的虚拟拨号接口和客户端以太网接口绑定把的虚拟拨号接口和客户端以太网接口绑定完成协议的封装指定配置的拨号访问控制列表允许协议的数据报文配置从到的默认路由实现网络互通案例配置步骤服务端的配置配置及的各种参数创建接口编号可自定义这里定为定义采用方式认证为客户端指定地址池名称自定义为设置接口的配置的其他选项创建地址池为客户端指定网关指定客户端分配的地址范围为客户端指定进入本地用户数据库创建用于认证的用户指定用户用于认证将物理接口与虚拟接口进行绑定实现协议的封装将接口与接口绑定配置从到的默认路由配置路由器的接口地址客户端路由器的配置配置路由器的接口的地址虚拟拨号接口的配置创建的接口编号可自定义这里定义为封装配置的认证用户名配置认证的密码设置客户端自动获取地址指定接口拨号使用的用户名指定接口的编号将该接口置于一个拨号组中编号将的虚拟拨号接口和客户端以太网接口绑定将接口与接口绑定指定配置的拨号访问控制列表允许协议的数据报文配置从到的默认路由案例验证在客户端执行命令查看会话的状态和配置信息在服务器端执行命令查看会话的状态和配置信息在内网主机执行测试与服务端的接口的连通性结果显示内网成功连接到路由器的接口',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-03-31 19:33:25',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">渊</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 1.05rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 1.05rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 1.05rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 1.05rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 1.05rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 1.05rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 1.05rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 1.05rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.05rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 1.05rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 1.05rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 1.05rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.05rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.05rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 1.05rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 1.05rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 1.05rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 1.05rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 1.05rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>基础教程</span></a><a class="article-meta__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>华为1+X</span></a></span></div></div><h1 class="post-title" itemprop="name headline">5.华为1+X-广域网技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2021-12-16T13:41:24.000Z" title="发表于 2021-12-16 21:41:24">2021-12-16</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.427Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">7.6k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>27分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="5.华为1+X-广域网技术"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为西安"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>西安</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://s4.ax1x.com/2021/12/23/TGe4nf.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"><header><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">基础教程</a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url">华为1+X</a><h1 id="CrawlerTitle" itemprop="name headline">5.华为1+X-广域网技术</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">渊</span><time itemprop="dateCreated datePublished" datetime="2021-12-16T13:41:24.000Z" title="发表于 2021-12-16 21:41:24">2021-12-16</time><time itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.427Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></header><p>华为1+X-广域网技术</p>
+<h1 id="广域网概述"><a href="#广域网概述" class="headerlink" title="广域网概述"></a>广域网概述</h1><h2 id="广域网基本概念"><a href="#广域网基本概念" class="headerlink" title="广域网基本概念"></a>广域网基本概念</h2><p><strong>广域网的概念：</strong>广域网（Wide Area Network）简称WAN，是指跨越很大地域范围的数据通信网络。广域网通常使用因特网服务提供商（ISP）提供的设备作为信息传输平台，对网络通信的要求较高。<br>广域网对应的OSI三层模型，如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/TiS8Df"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/16/TiS8Df.png" alt="TiS8Df.png"></a></p>
+<hr>
+<p><strong>tip：</strong></p>
+<p>PPP主要被设计用来在支持全双工的同异步链路上进行点到点之间的数据传输。PPP是一个适用于通过调制解调器、点到点专线、HDLC比特串行线路和其他物理层的多协议帧机制，它支持错误检测、选项商定、头部压缩等机制，在当今的网络中得到普遍的应用。<br>PPP在物理上可使用各种不同的传输介质，包括双绞线、光纤及无线传输介质，在数据链路层提供了一套解决链路建立、维护、拆除和上层协议协商、认证等问题的方案；协议支持同步串行连接、异步串行连接、ISDN连接、HSSI连接等连接类型，具有以下特性。<br>能够控制数据链路的建立。<br>能够对IP地址进行分配和使用。<br>允许同时采用多种网络层协议。<br>能够配置和测试数据链路。<br>能够进行错误检测。<br>有协商选项，能够对网络层的地址和数据压缩等进行协商。</p>
+<hr>
+<p><strong>广域网的链路类型</strong><br>广域网的链路类型可以分为宽带广域网和窄带广域网，宽带广域网包括ATM异步传输模式网和SDH同步数字系列，窄带广域网包括ISDN综合业务数字网、DDN数字数据网、帧中继Frame Relay、X.25公用分组交换网和PSTN公共交换电话网。<br><strong>广域网的协议概述</strong><br>广域网协议通常是指在因特网上负责路由器之间连接的数据链路层协议。广域网数据封装协议包括点到点型的PPP、PPPoE协议和HDLC协议，也包括逐渐被淘汰的电路交换型ISDN协议和分组交换型的ATM、帧中继协议。</p>
+<hr>
+<p><strong>tip：</strong></p>
+<p>广域网的接口类型主要包括同步和异步串口。同步串口有DTE和DCE两种工作方式，可以支持多种链路层协议，可以支持网络层的IP和IPX协议，也可以支持多种类型的线缆。异步串口分为手工设置的异步串口和专用异步串口，可以设置为专线方式和拨号方式。<br>其中，HDLC(High-Level Data Link Control)称为高级数据链路控制协议，工作在数据链路层，是国际标准化组织（ISO）以IBM公司系统网络架构的SDLC协议作为基础开发出来的协议。<br>PPP和PPPoE协议将在本章中进行详细介绍。</p>
+<hr>
+<h2 id="广域网接入"><a href="#广域网接入" class="headerlink" title="广域网接入"></a>广域网接入</h2><p>DDN接入：DDN是数字数据网(Digital Data Network)的简称。它由光纤、数字微波或卫星等数字传输通道和数字交叉复用设备组成，为用户提供高质量的数据传输通道，传送各种数据业务；<br>电缆调制解调器远程接入：电缆调制解调器运行在有线电视（CATV）的铜轴电缆上，可以提供比传统电话线更高的传输速率；<br>PSTN公共电话网接入：PSTN公共电话网的优点是覆盖区域广、易于使用、价格较低，缺点是网络线路质量较差，传输速率较低；<br>DSL远程接入：DSL称为数字用户线路，DSL远程接入方式是通过DSL调制解调器实现用户数据在传统电话线上的高速传输。DSL技术常见的类型包括ADSL、VDSL、SDSL、HDSL和ISDN DSL等。其中，ASDL已经成为广域网接入的主要技术。 </p>
+<h1 id="点对点协议-PPP"><a href="#点对点协议-PPP" class="headerlink" title="点对点协议-PPP"></a>点对点协议-PPP</h1><h2 id="PPP基本概念"><a href="#PPP基本概念" class="headerlink" title="PPP基本概念"></a>PPP基本概念</h2><p>PPP的基本概念<br>PPP是 Point-to-Point Protocol的简称，也叫做P2P，目前是TCP&#x2F;IP网络中最重要的点到点数据链路层协议。 PPP在点对点中的应用，如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti1Qu6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti1Qu6.png" alt="Ti1Qu6.png"></a></p>
+<p><strong>PPP的成员协议：主要包括链路控制协议（LCP）和网络控制协议（NCP）。</strong><br>LCP：链路控制协议(LCP，Link Control Protocol)，主要用于数据链路连接的建立、拆除和监控；LCP主要完成MTU（最大传输单元）、质量协议、验证协议、魔术字、协议域压缩、地址和控制域压缩协商等参数的协商；<br>NCP：网络层控制协议族(NCP，Network Control Protocol)，主要用于协商在该链路上所传输的数据包的格式与类型，建立和配置不同网络层协议。</p>
+<p><strong>PPP配置PPP帧格式</strong></p>
+<p>关于PPP帧格式中各字段的含义描述如下图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti1GUe"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti1GUe.png" alt="Ti1GUe.png"></a></p>
+<hr>
+<p><strong>tip：</strong></p>
+<p>（1）Flag字段<br>该字段的长度为8bit，标识一个物理帧的起始和结束。PPP帧都是以01111110（0X7E）开始的。<br>（2）Address字段<br>该字段的长度为8bit，字节固定值为11111111（0XFF），该字段并非是一个MAC地址，它表明主从端的状态都为接收状态，可以理解为“所有的接口”。<br>PPP帧是在一条单一的PPP链路上固定地从此接口传输到对端接口，因此PPP帧不像以太帧那样包含了源MAC地址和目的MAC地址这些信息。事实上，PPP接口根本就不需要属于自己的MAC地址，MAC地址对于PPP接口来说毫无意义。<br>（3）Control字段<br>该字段的长度为8bit，取值固定为00000011(0X03)。该字段并没有什么特别的作用，表明为无序号帧。<br>（4）Protocol字段<br>该字段的长度为16bit，是告知在信息字段中使用的是哪类分组，针对LCP、NCP、IP、IPX、AppleTalk及其他协议，定义了相应的代码。例如，当 Protocol字段的取值为0xc021时，就表明Information字段是一个LCP报文；当Protocol字段的取值为0x0021时，就表明 Information字段是一个IP报文。<br>（5）Information字段<br>该字段是PPP帧的载荷数据，其长度是可变的。信息字段包含协议字段中指定协议的数据包。数据字段的默认最大长度（不包括协议字段）称为最大接收单元MRU（Maximum Receive Unit），MRU的默认值为1500字节。<br>（6）FCS<br>FCS是Frame Checksum的缩写，该字段的长度为16bit，其作用是对PPP帧进行差错校验。</p>
+<hr>
+<p><strong>PPP的基本建链过程：</strong></p>
+<p> PPP在建立链路之前要进行一些列的协商过程。PPP大致可以分为如下几个阶段：Dead （链路不可行）阶段、Establish(链路建立)阶段、Authenticate（验证）阶段、Network（网络层协议）阶段、Terminate（链路终止）阶段。如图所示：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti10Df"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti10Df.png" alt="Ti10Df.png"></a></p>
+<hr>
+<p><strong>tip：</strong></p>
+<p>PPP链路的建立是通过一些列的协商完成的。其中，链路控制协议除了用于建立、拆除和监控PPP数据链路，还主要进行数据链路层特性的协商，如MTU、验证方式等；网络层控制协议族主要用于协商在该数据链路上所传输的数据的格式和类型，如IP地址。<br>   （1）Dead（链路不可用）阶段。<br>链路必须从这个阶段开始和结束。当一个外部事件（如一个载波信号或网络管理员配置）检测到物理层可用，PPP就会进入到Establish阶段。在Dead阶段，LCP状态机有两个状态：Initial和Starting。从这个状态迁移到Establish状态会给LCP状态机送一个Up事件。当断开连接后，链路会自动的回到这个状态。在一般情况下这个阶段是很短的，仅仅只是检测到设备在线。</p>
+<p>（2）在Establish（链路建立）阶段。<br>该阶段PPP链路将进行LCP参数协商，协商内容包括最大接收单元MRU、认证方式、魔术字（Magic Number）等选项。LCP参数协商成功后会进入Opened状态，表示底层链路已经建立。<br>（3）Authenticate（验证）阶段。<br>某些链路可能要求对端验证自己之后才允许网络层协议数据包在链路上传输，在默认值中验证是不要求的。如果某个应用要求对端采用特定的验证协议进行验证，则必须在链路建立阶段发出使用这种协议的请求。只有当验证通过时才可以进入网络层协议阶段，如果验证不通过，则应继续验证而不是转到链路终止阶段。在这个阶段只允许链路控制协议、验证协议和链路质量检测的数据包进行传输，其他的数据报都应丢弃。<br>（4）Network-Layer Protocol（网络层协议）阶段。<br>该阶段PPP链路将进行NCP协商。通过协商来选择和配置一个网络层协议及相关参数。只有相应的网络层协议协商成功后，才可以通过这条PPP链路发送报文。NCP协商成功后，PPP链路将保持通信状态。<br>（5）Link Terminate（链路终止）阶段。<br>PPP终止链路，这可能是由于载波信号的丢失、验证不通过、链路质量不好、定时器超时或管理员关闭链路。PPP通过交换终止链路的数据包来关闭链路，当交换结束时，应用就会告诉物理层拆除连接从而强行终止链路。但验证失败时，发出终止请求的一方必须等到收到终止应答或者重起计数器超过最大终止计数次数才断开连接。收到终止请求的一方必须等对方先断开连接，而且在发送终止应答之后必须等至少一次重起计数器超时之后才能断开连接，之后PPP回到链路不可用状态。</p>
+<hr>
+<p><strong>PPP的身份认证</strong><br>PPP包含了通信双方身份验证的安全性协议，即在网络层协商IP地址之前，首先必须通过身份验证。<br>PPP的身份验证有两种方式：CHAP和PAP。</p>
+<p>（1）PAP验证 ： PAP（Password Authentication Protocol）协议是两次握手协议，它通过用户名及口令来进行用户的验证，其过程如下：<br>① 当开始验证阶段时，被验证方首先将自己的用户名及口令发送到验证方，验证方根据本端的用户数据库（或Radius服务器）察看是否有此用户，口令是否正确，<br>② 如果正确则发送Ack报文通知对端进入下一阶段协商，否则发送Nak报文通知对端验证失败。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti1g8s"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti1g8s.png" alt="Ti1g8s.png"></a></p>
+<p>PAP是在网络上以明文的方式传送用户名及口令，所以安全性不高。</p>
+<p>（2）CHAP验证： CHAP为三次握手协议，它只在网络上传用户名而不传口令，因此安全性比PAP高。其验证过程为：<br>① 首先验证方向被验证方发送一些随机的报文，并加上自己的主机名；<br>② 被验证方收到验证方的验证请求，通过收到的主机名和本端的用户数据库查找用户口令字（密钥），如果找到用户数据库中和验证方主机名相同的用户，便利用接收到的随机报文、此用户的密钥和报文ID用Md5加密算法生成应答，随后将应答和自己的主机名送回；<br>③ 验证方收到此应答后，利用对端的用户名在本端的用户数据库中查找本方保留的口令字，用本方保留的用户的口令字（密钥）、随机报文和报文ID用Md5加密算法生成结果，与被验证方的应答比较，相同则返回Ack，否则返回Nak。其报文交互过程如图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti1fK0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti1fK0.png" alt="Ti1fK0.png"></a></p>
+<p>CHAP不仅在连接建立阶段进行，在以后的数据传输阶段也可以按随机间隔继续进行，但每次验证方和被验证方的随机数据都应不同，以防被第三方猜出密钥。如果验证方发现结果不一致，将立即切断线路。它的特点是只在网络上传输用户名，而并不传输用户口令，因此它的安全性要比PAP高。</p>
+<p><strong>1、案例5-1 PPP的基本配置</strong><br>（1）案例背景与要求：根据如图5-7所示的网络拓扑要求，完成两台路由器的PPP通信配置，实现PC1和PC2互通。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti1Lx1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti1Lx1.png" alt="Ti1Lx1.png"></a></p>
+<p>（2）案例配置思路<br>①在路由器R1和R2的串行连接接口上启用PPP；<br>②对拓扑的所有设备上配置IP地址。</p>
+<p>（3）案例配置过程<br>①配置路由器R1的串口IP和PPP。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;R1&gt; system-view</span><br><span class="line">[R1] interface serial 0/0/1</span><br><span class="line">[R1-Serial0/0/1] ip address 10.10.10.1 24 </span><br><span class="line">[R1-Serial0/0/1] link-protocol ppp</span><br></pre></td></tr></table></figure>
+
+<p>②配置路由器R2的串口IP和PPP。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;R2&gt; system-view</span><br><span class="line">[R2] interface serial 0/0/1</span><br><span class="line">[R2-Serial0/0/1] ip address 10.10.10.2 24 </span><br><span class="line">[R2-Serial0/0/1] link-protocol ppp</span><br></pre></td></tr></table></figure>
+
+<p>4、案例验证<br>在路由器R1的S0&#x2F;0&#x2F;1接口上输入【display int serial 0&#x2F;0&#x2F;1】命令，测试PPP封装情况。测试结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1-Serial0/0/1]display int S0/0/1</span><br><span class="line">Serial0/0/1 current state : UP</span><br><span class="line">Line protocol current state : UP</span><br><span class="line">Last line protocol up time : 2020-01-20 15:44:49 UTC-08:00</span><br><span class="line">Description:HUAWEI, AR Series, Serial4/0/0 Interface</span><br><span class="line">Route Port,The Maximum Transmit Unit is 1500, Hold timer is 10(sec)</span><br><span class="line">Internet Address is 10.10.10.2/24</span><br><span class="line">Link layer protocol is PPP</span><br><span class="line">LCP opened, IPCP opened</span><br><span class="line">（省略部分内容）</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>tip：</strong></p>
+<p>上面的回显信息中，“Internet Address is 10.10.10.1&#x2F;24”表示路由器R1的 Serial4&#x2F;0&#x2F;0接口的IP地址为10.10.10.1&#x2F;24 。“Link layer protocol is PPP”表示路由器R1的 Serial4&#x2F;0&#x2F;0接口的数据链路层协议为PPP。“LCP opened，IPCP opened”表示LCP和IPCP协商已经成功。注意，既然NCP采用的是IPCP，就说明PPP链路上已经可以传递IP报文了。</p>
+<hr>
+<p>2、案例5-2 PAP认证通信的配置<br>（1）案例背景与要求：根据下图所示的网络拓扑要求，完成两台路由器的PAP认证通信配置，认证的用户名为“jan16”，密码为“huawei”，采用加密方式密文方式。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti3mdS"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti3mdS.png" alt="Ti3mdS.png"></a></p>
+<p>（2）案例配置思路<br>①配置路由器R1和R2的接口IP；<br>②在路由器R1上配置认证的账号和密码，并制定该账号和密码用于PPP的PAP认证；<br>③在路由器R2上启用PPP，并设置PAP认证的账号和密码。</p>
+<p>（3）案例配置过程<br>① 认证方路由器R1的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//在路由器R1上配置PAP认证的账号和密码</span><br><span class="line">[R1]aaa </span><br><span class="line">[R1-aaa]local-user jan16 password cipher huawei</span><br><span class="line">//在路由器R1指定该密码应用于PPP认证</span><br><span class="line">[R1-aaa]local-user jan16 service-type ppp </span><br><span class="line">//配置路由器R1的S 0/0/1接口的IP</span><br><span class="line">[R1]interface Serial 0/0/1  </span><br><span class="line">[R1-Serial0/0/1] ip address 10.10.10.1 24 </span><br><span class="line">//在S 0/0/1接口启用ppp，并指定认证方式为PAP</span><br><span class="line">[R1-Serial0/0/1]link-protocol ppp</span><br><span class="line">[R1-Serial0/0/1]ppp authentication-mode pap</span><br></pre></td></tr></table></figure>
+
+<p>（3）案例配置过程<br>② 被认证方路由器R2的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//在路由器R2上配置S 0/0/1接口的IP</span><br><span class="line">[R2]interface Serial 0/0/1  </span><br><span class="line">[R2-Serial0/0/1] ip address 10.10.10.2 24 </span><br><span class="line">//在接口S 0/0/1启用PPP，并指定PAP认证的账号和密码</span><br><span class="line">[R2-Serial0/0/1]link-protocol ppp</span><br><span class="line">[R2-Serial0/0/1]ppp pap local-user jan16 password cipher huawei </span><br></pre></td></tr></table></figure>
+
+<p>（4）案例验证<br>使用命令【Debugging PPP PAP all】在路由器R2上查看PAP认证的详细信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;R2&gt;debugging ppp pap all</span><br><span class="line">Aug 25 2019 05:30:24.280.4+00:00 R2 PPP/7/debug2:</span><br><span class="line">  PPP State Change: </span><br><span class="line">      Serial4/0/0 PAP : Initial --&gt; SendRequest </span><br><span class="line">Aug 25 2019 05:30:24.290.3+00:00 R2 PPP/7/debug2:</span><br><span class="line">  PPP State Change: </span><br><span class="line">      Serial4/0/0 PAP : SendRequest --&gt; ClientSuccess</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+
+<p>从上面的验证的信息中可以看到PAP认证已成功配置。</p>
+<p>3、案例5-3 CHAP认证的配置<br>（1）案例背景与要求：根据下图所示的网络拓扑要求，完成两台路由器的CHAP认证通信配置，认证的用户名为“jan16”，密码为“huawei”，采用加密方式密文方式。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti3YZT"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti3YZT.png" alt="Ti3YZT.png"></a></p>
+<p>（2）案例配置思路<br>①配置路由器R1和R2的接口IP；<br>②在路由器R1上配置认证的账号和密码，并制定该账号和密码用于PPP的CHAP认证；<br>③在路由器R2上启用PPP，并设置CHAP认证的账号和密码。</p>
+<p>（3）案例配置过程<br>①路由器R1的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//在路由器R1上配置CHAP认证的账号和密码</span><br><span class="line">[R1]aaa </span><br><span class="line">[R1-aaa]local-user jan16 password cipher huawei</span><br><span class="line">//在路由器R1指定该密码应用于PPP认证</span><br><span class="line">[R1-aaa]local-user jan16 service-type ppp </span><br><span class="line">//配置路由器R1的S 0/0/1接口的IP</span><br><span class="line">[R1]interface Serial 0/0/1  </span><br><span class="line">[R1-Serial0/0/1] ip address 10.10.10.1 24 </span><br><span class="line">//在S 0/0/1接口启用ppp，并指定认证方式为CHAP</span><br><span class="line">[R1-Serial0/0/1]link-protocol ppp</span><br><span class="line">[R1-Serial0/0/1]ppp authentication-mode chap//在路由器R1上配置CHAP认证的账号和密码</span><br><span class="line">[R1]aaa </span><br><span class="line">[R1-aaa]local-user jan16 password cipher huawei</span><br><span class="line">//在路由器R1指定该密码应用于PPP认证</span><br><span class="line">[R1-aaa]local-user jan16 service-type ppp </span><br><span class="line">//配置路由器R1的S 0/0/1接口的IP</span><br><span class="line">[R1]interface Serial 0/0/1  </span><br><span class="line">[R1-Serial0/0/1] ip address 10.10.10.1 24 </span><br><span class="line">//在S 0/0/1接口启用ppp，并指定认证方式为CHAP</span><br><span class="line">[R1-Serial0/0/1]link-protocol ppp</span><br><span class="line">[R1-Serial0/0/1]ppp authentication-mode chap</span><br></pre></td></tr></table></figure>
+
+<p>②路由器R2的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//在路由器R2上配置S 0/0/1接口的IP</span><br><span class="line">[R2]interface Serial 0/0/1  </span><br><span class="line">[R2-Serial0/0/1] ip address 10.10.10.2 24 </span><br><span class="line">//在接口S 0/0/1启用PPP，并指定CHAP认证的账号和密码</span><br><span class="line">[R2-Serial0/0/1]link-protocol ppp</span><br><span class="line">[R2-Serial0/0/1]ppp chap user jan16</span><br><span class="line">[R2-Serial0/0/1]ppp chap password cipher huawei</span><br></pre></td></tr></table></figure>
+
+<p>（4）案例验证<br>使用命令【Debugging PPP CHAP all】在路由器R2上查看CHAP认证的详细信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;R2&gt;debugging ppp chap all</span><br><span class="line">Aug 26 2019 05:15:54.230.1+00:00 RTB PPP/7/debug2:</span><br><span class="line">PPP State Change: </span><br><span class="line">      Serial0/0/1 CHAP : Initial --&gt; ListenChallenge </span><br><span class="line">Aug 20 2019 05:15:54.230.7+00:00 R2 PPP/7/debug2:</span><br><span class="line">  PPP State Change: </span><br><span class="line">      Serial0/0/1 CHAP : ListenChallenge --&gt; SendResponse </span><br><span class="line">Aug 20 2019 05:15:54.250.3+00:00 R2 PPP/7/debug2:</span><br><span class="line">  PPP State Change: </span><br><span class="line">     Serial0/0/1 CHAP : SendResponse --&gt; ClientSuccess </span><br><span class="line">……</span><br></pre></td></tr></table></figure>
+
+<p>从上面的测试信息中可以看到CPAP认证已成功配置。</p>
+<h1 id="以太网上的点对点协议-PPPoE"><a href="#以太网上的点对点协议-PPPoE" class="headerlink" title="以太网上的点对点协议-PPPoE"></a>以太网上的点对点协议-PPPoE</h1><h2 id="PPPoE基本概念"><a href="#PPPoE基本概念" class="headerlink" title="PPPoE基本概念"></a>PPPoE基本概念</h2><p><strong>1、PPPoE协议的基本概念</strong><br>PPPoE，即以太网上的点对点协议（Point-to-Point Protocol Over Ethernet）是一个允许在以太广播域中的两个以太网接口之间创建点对点隧道的协议。<br>下图所示是一个典型的PPPoE网络模型，多个PPPoE客户端通过以太网（同一个广播域）接入到PPPoE服务端。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti3wW9"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti3wW9.png" alt="Ti3wW9.png"></a></p>
+<p>2、PPPoE协议报文格式<br>PPPoE报文格式如图所示</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti3DQ1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti3DQ1.png" alt="Ti3DQ1.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>关于PPPoE报文中各字段的含义描述如下：<br>（1）DMAC：表示以太网目标设备的MAC地址，通常为以太网单播目的地址或者以太网广播地址（0xFFFFFFFF）。<br>（2）SMAC：表示以太网源设备的MAC地址。<br>（3）Type：表示协议类型字段，当值为0x8863时表示承载的是PPPoE发现阶段的报文。当值为0x8864时表示承载的是PPPoE会话阶段的报文。<br>（4）FCS：表示校验域，用来确保数据链路层数据帧传输的正确性。<br>（5）PPPoE字段。<br>① VER：表示PPPoE版本号，协议规定固定为0x01。<br>② Type：表示类型，协议规定固定为0x01。<br>③ Code：表示PPPoE报文类型，不同取值标识不同的PPPoE报文类型。<br>④ Session ID：当访问集中器（PPPoE Server）还未分配唯一的会话ID给用户主机时，该字段填充为0x0000，一旦主机获取了会话ID后，那么在后续的所有报文中都都填充这个会话ID。<br>⑤ Length：表示PPPoE报文的Payload长度。</p>
+<hr>
+<p>3、PPPoE的工作过程<br>PPPoE的工作过程，分为3个不同的阶段，即 Discovery阶段（发现阶段）、Session阶段（会话阶段）和Session Terminate阶段（会话终结阶段）。 PPPoE的通信流程如图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti3sL6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti3sL6.png" alt="Ti3sL6.png"></a></p>
+<p>（1）发现阶段：在这个阶段一开始，由于客户端并不知道服务端的MAC地址，它将使用类似于ARP解析的过程的机制来获取服务端的MAC地址，并建立连接，这个过程主要有4个步骤：<br>① PADI（PPPoE Active Discovery Initiation）报文。<br>② PADO（PPPoE Active Discovery Offer）报文。<br>③ PADR（PPPoE Active Discovery Request）报文。<br>④ PADS（PPPoE Active Discovery Session Configuration）报文。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>① PADI（PPPoE Active Discovery Initiation）报文。<br>PPPoE Client发起的PPPoE服务器探测报文，目的MAC地址为广播地址，通过以太网广播寻找服务器。<br>② PADO（PPPoE Active Discovery Offer）报文。<br>PPPoE服务器收到PADI报文之后回应给发起方的回应报文，目的地址为客户端的MAC地址，源地址为服务器的MAC。<br>③ PADR（PPPoE Active Discovery Request）报文。<br>客户端收到PADO报文后，将通过PADR报文向服务端发起建立会话的请求报文，目的地之为服务器的MAC地址，源地址为客户端的MAC地址。<br>④ PADS（PPPoE Active Discovery Session Configuration）报文。<br>PPPoE服务器收到客户端的会话请求报文PADR时，当该客户端满足建立会话连接时，它将为这个会话分配一个唯一的会话ID，并发送会话建立确认报文PADS给客户端；否则将发送会话终止报文PADS给客户端，终止连接。</p>
+<hr>
+<p>（2）会话阶段<br>一旦PPPOE进入到会话阶段，则PPP的数据报文就会被填充在PPPOE的净载荷中被传送，这时两者所发送的所有以太网包均是单目地址。PPPOE会话阶段以太网帧的协议域填充为0x8864，代码域填充0x00，整个会话的过程就是PPP的会话过程，它可分为两部分：PPP协商阶段和PPP报文传输阶段。<br>PPP协商阶段和普通的PPP协商方式一致，具体流程如本节图5-4所示。PPPoE Session的PPP协商成功后，就可以承载PPP数据报文。在这一阶段传输的数据包中必须包含在发现阶段确定的Session ID，并保持不变。<br>（3）会话终结阶段<br>在PPPoE中定义了一个PADT 报文用来结束会话，PPPoE Client或者PPPoE Server可以在会话开始后的任何时候通过发送PADT报文来结束会话。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>① PADI（PPPoE Active Discovery Initiation）报文。<br>PPPoE Client发起的PPPoE服务器探测报文，目的MAC地址为广播地址，通过以太网广播寻找服务器。<br>② PADO（PPPoE Active Discovery Offer）报文。<br>PPPoE服务器收到PADI报文之后回应给发起方的回应报文，目的地址为客户端的MAC地址，源地址为服务器的MAC。<br>③ PADR（PPPoE Active Discovery Request）报文。<br>客户端收到PADO报文后，将通过PADR报文向服务端发起建立会话的请求报文，目的地之为服务器的MAC地址，源地址为客户端的MAC地址。<br>④ PADS（PPPoE Active Discovery Session Configuration）报文。<br>PPPoE服务器收到客户端的会话请求报文PADR时，当该客户端满足建立会话连接时，它将为这个会话分配一个唯一的会话ID，并发送会话建立确认报文PADS给客户端；否则将发送会话终止报文PADS给客户端，终止连接。</p>
+<hr>
+<h2 id="PPPoE配置"><a href="#PPPoE配置" class="headerlink" title="PPPoE配置"></a>PPPoE配置</h2><p>1、案例5-4 PPPoE的配置<br>（1）案例背景与需求：路由器R1是Jan16工作室的路由器，路由器R2是ISP的PPPoE服务器，路由器R1和R2通过以太网连接。路由器R1通过PPPoE拨号连接到路由器R2，并接入Internet。PC1通过路由器R1的NAT服务接入Internet。案例拓扑如图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ti3fWd"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/17/Ti3fWd.png" alt="Ti3fWd.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p> 案例需求如下：<br> （1）路由器R2的PPPoE Server的IP为1.1.1.254&#x2F;24, 它通过G0&#x2F;0&#x2F;0口与路由器R1相连。<br> （2）PPPoE采用PPP的CHAP认证，用户名为jan16，密码为huawei@123。<br> （3）本案例仅实现路由器R1通过PPPoE同路由器R2互联。<br> （4） PC1的IP地址为：192.168.1.1，网关为192.168.1.254，路由器R2的LoopBack 0接口IP地址为2.2.2.2&#x2F;24。</p>
+<hr>
+<p>（2）案例配置思路<br>1）PPPoE服务端R2的配置<br>① 配置Virtual-Template虚拟模板接口。<br>② 配置PPP的其他选项。<br>③ 将VT虚拟接口和PPPoE服务端以太口绑定。<br>④配置从PPPoE Server到 PPPoE Client的默认路由，实现网络互通。<br>2）PPPoE客户端R1的配置<br>① DCC（拨号控制中心）虚拟拨号接口（dialer）的配置。<br>② 将DCC的dialer虚拟拨号接口和PPPoE客户端以太网接口绑定。<br>③ 指定配置的拨号访问控制列表允许IPv4协议的数据报文。<br>④ 配置从PPPoE Client到 PPPoE Server的默认路由，实现网络互通。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>案例配置思路详细描述如下:<br>（1）PPPoE服务端R2的配置<br>① 配置Virtual-Template虚拟模板接口。<br>为了让以太网承载PPP，那么就需要配置虚拟模板（VT，Virtual-Template），虚拟模板就是为了让一条链路上可以封装多种同层协议的虚拟接口。因为现在的以太网物理接口已经默认封装了以太网协议，无法再封装其他协议了。所以需要通过VT来模拟一个PPP接口，然后封装其他协议如PPP，最后在把VT绑定到物理接口，实现PPP和以太网协议的嵌套。<br>② 配置PPP的其他选项。<br>包括PPPoE客户端分配的IP地址、DNS、网关以及用于PPP认证的用户名和密码等。<br>③ 将VT虚拟接口和PPPoE服务端以太口绑定。<br>把VT虚拟接口和连接PPPoE服务端的物理以太网接口绑定，完成PPPoE协议的封装。<br>④配置从PPPoE Server到 PPPoE Client的默认路由，实现网络互通。<br>（2）PPPoE客户端R1的配置<br>① DCC（拨号控制中心）虚拟拨号接口（dialer）的配置。<br>DDC虚拟拨号接口就是专门用来控制拨号的接口，在这个接口下配置封装协议、PPP认证、IP地址自动获得、dialer接口拨号使用的用户名、PPPoE连接建立的等待时间、dialer所属的组、指定dialer接口的编号（这个编号是用来和物理接口绑定时候用到的编号）、NAT地址转换等配置，都在是该拨号接口下完成的。<br>② 将DCC的dialer虚拟拨号接口和PPPoE客户端以太网接口绑定。<br>把DCC的dialer虚拟拨号接口和PPPoE客户端以太网接口绑定，完成PPPoE协议的封装。<br>③ 指定配置的拨号访问控制列表允许IPv4协议的数据报文。<br>④ 配置从PPPoE Client到 PPPoE Server的默认路由，实现网络互通。</p>
+<hr>
+<p>（3）案例配置步骤<br>1）PPPoE服务端R2的配置<br>① 配置VT及PPP的各种参数。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view </span><br><span class="line">[Huawei]sysname R2</span><br><span class="line">[R2]interface Virtual-Template 1    //创建VT接口，编号可自定义，这里定为1</span><br><span class="line">[R2-Virtual-Template1]ppp authentication-mode chap //定义PPP采用CHAP方式认证</span><br><span class="line">[R2-Virtual-Template1]remote address pool jan16ippool //为PPPoE客户端指定IP地址池，名称自定义为jan16ippool</span><br><span class="line">[R2-Virtual-Template1]ip address 1.1.1.254 24   //设置VT接口的IP</span><br><span class="line">[R2-Virtual-Template1]quit</span><br></pre></td></tr></table></figure>
+
+<p>② 配置PPP的其他选项。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]ip pool jan16ippool                         //创建IP地址池“jan16ippool”</span><br><span class="line">[R2-ip-pool-jan16ippool]gateway-list 1.1.1.254  //为客户端指定网关</span><br><span class="line">[R2-ip-pool-jan16ippool]network 1.1.1.0 mask 24 //指定客户端分配的IP地址范围</span><br><span class="line">[R2-ip-pool-jan16ippool]dns-list 114.114.114.114 //为客户端指定DNS</span><br><span class="line">[R2-ip-pool-jan16ippool]quit</span><br><span class="line">[R2]aaa                                      //进入AAA本地用户数据库</span><br><span class="line">[R2-aaa]local-user jan16 password cipher huawei@123 //创建用于PPP认证的用户</span><br><span class="line">[R2-aaa]local-user jan16 service-type ppp    //指定用户“jan16”用于PPP认证</span><br><span class="line">[R2-aaa]quit</span><br></pre></td></tr></table></figure>
+
+<p>③ 将物理接口与VT虚拟接口进行绑定，实现pppoe协议的封装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]int g0/0/0</span><br><span class="line">[R2-GigabitEthernet0/0/0]pppoe-server bind virtual-template 1  </span><br><span class="line">//将G0/0/0接口与VT 1接口绑定</span><br></pre></td></tr></table></figure>
+
+<p>④配置从PPPoE Server到 PPPoE Client的默认路由。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]ip route-static 0.0.0.0 0.0.0.0 Virtual-Template1</span><br></pre></td></tr></table></figure>
+
+<p>⑤配置路由器R2的LoopBack 0接口IP地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]int LoopBack 0</span><br><span class="line">[R2-LoopBack0]ip address 2.2.2.2 24</span><br><span class="line">[R2-LoopBack0]quit</span><br></pre></td></tr></table></figure>
+
+<p>2）PPPoE客户端路由器R1的配置<br>①配置路由器R1的GE0&#x2F;0&#x2F;1接口的IP地址。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;sys</span><br><span class="line">[Huawei]sys R1</span><br><span class="line">[R1]int g0/0/1</span><br><span class="line">[R1-GigabitEthernet0/0/1]ip address 192.168.1.254 24</span><br><span class="line">[R1-GigabitEthernet0/0/1]quit</span><br></pre></td></tr></table></figure>
+
+<p>②DCC虚拟拨号接口dialer的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]int Dialer 1        //创建DCC的dialer接口，编号可自定义，这里定义为1</span><br><span class="line">[R1-Dialer1]link-protocol ppp               //封装PPP</span><br><span class="line">[R1-Dialer1]ppp chap user jan16             //配置PPP的chap认证用户名</span><br><span class="line">[R1-Dialer1]ppp chap password simple huawei@123  //配置chap认证的密码</span><br><span class="line">[R1-Dialer1]ip address ppp-negotiate        //设置PPPoE客户端自动获取IP地址</span><br><span class="line">[R1-Dialer1]dialer user jan16              //指定dialer接口拨号使用的用户名</span><br><span class="line">[R1-Dialer1]dialer bundle 1                //指定dialer接口的编号</span><br><span class="line">[R1-Dialer1]dialer-group 1           //将该接口置于一个拨号组中，编号</span><br><span class="line">[R1-Dialer1]quit</span><br></pre></td></tr></table></figure>
+
+<p>③将DCC的dialer虚拟拨号接口和PPPoE客户端以太网接口绑定。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]int g0/0/0</span><br><span class="line">[R1-GigabitEthernet0/0/0]pppoe-client dial-bundle-number 1</span><br><span class="line">//将G0/0/0接口与dialer 1 接口绑定</span><br></pre></td></tr></table></figure>
+
+<p>④指定配置的拨号访问控制列表允许IPv4协议的数据报文。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]dialer-rule </span><br><span class="line">[R1]dialer-rule 1 ip permit</span><br></pre></td></tr></table></figure>
+
+<p>⑤配置从PPPoE Client到 PPPoE Server的默认路由。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]ip route-static 0.0.0.0 0 dialer 1 </span><br><span class="line">[R1]quit</span><br></pre></td></tr></table></figure>
+
+<p>（4）案例验证<br>① 在PPPoE客户端R1执行【display pppoe-client session summary】命令，查看PPPoE client会话的状态和配置信息。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]dis pppoe-client session summary </span><br><span class="line">PPPoE Client Session:</span><br><span class="line">ID   Bundle  Dialer  Intf             Client-MAC    Server-MAC    State</span><br><span class="line">1    1       1       GE0/0/0          00e0fc385510  00e0fc8c5842  UP</span><br></pre></td></tr></table></figure>
+
+<p>②在PPPoE服务器端R2执行【display pppoe-server session all】命令，查看PPPoE server会话的状态和配置信息。 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]display pppoe-server session all</span><br><span class="line">SID Intf                   State OIntf          RemMAC         LocMAC</span><br><span class="line">1   Virtual-Template1:0    UP    GE0/0/0        00e0.fc38.5510 00e0.fc8c.5842</span><br></pre></td></tr></table></figure>
+
+<p>③ 在内网主机PC1执行【ping 2.2.2.2】，测试与服务端R2的LoopBack 0接口的连通性。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PC&gt;ping 2.2.2.2</span><br><span class="line"> </span><br><span class="line">Ping 2.2.2.2: 32 data bytes, Press Ctrl_C to break</span><br><span class="line">From 2.2.2.2: bytes=32 seq=1 ttl=254 time=32 ms</span><br><span class="line">From 2.2.2.2: bytes=32 seq=2 ttl=254 time=31 ms</span><br><span class="line">From 2.2.2.2: bytes=32 seq=3 ttl=254 time=16 ms</span><br><span class="line">From 2.2.2.2: bytes=32 seq=4 ttl=254 time=15 ms</span><br><span class="line">From 2.2.2.2: bytes=32 seq=5 ttl=254 time=31 ms</span><br><span class="line"> </span><br><span class="line">--- 2.2.2.2 ping statistics ---</span><br><span class="line">  5 packet(s) transmitted</span><br><span class="line">  5 packet(s) received</span><br><span class="line">  0.00% packet loss</span><br><span class="line">  round-trip min/avg/max = 15/25/32 ms</span><br></pre></td></tr></table></figure>
+
+<p>结果显示，内网PC1成功连接到路由器R2的LoopBack 0接口。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">渊</div><div class="post-copyright__author_desc">乖乖，我永远希望你能开心</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2021/12/16/华为1+X/5.华为1+X-广域网技术/')">5.华为1+X-广域网技术</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/"><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=5.华为1+X-广域网技术&amp;url=http://example.com/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/&amp;pic=https://s4.ax1x.com/2021/12/23/TGe4nf.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">渊</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__category-list"><a class="post-meta__box__categoryes" href="/categories/%E5%8D%8E%E4%B8%BA1-X/"><span class="categoryes-punctuation"> <i class="anzhiyufont anzhiyu-icon-inbox"></i></span>华为1+X<span class="categoryesPageCount">8</span></a></div><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>基础教程<span class="tagsPageCount">33</span></a><a class="post-meta__box__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>华为1+X<span class="tagsPageCount">8</span></a></div></div><div class="post_share"><div class="social-share" data-image="/img/default_cover1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/15/%E5%8D%8E%E4%B8%BA1+X/4.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%8F%AF%E9%9D%A0%E6%80%A7/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">4.华为1+X-网络可靠性</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/17/%E5%8D%8E%E4%B8%BA1+X/6.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">6.华为1+X-网络安全技术</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&IP/" title="1.华为1+X&#x2F;TCP&amp;IP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-11</div><div class="title">1.华为1+X&#x2F;TCP&amp;IP</div></div></a></div><div><a href="/2021/12/13/%E5%8D%8E%E4%B8%BA1+X/2.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/" title="2.华为1+X&#x2F;网络交换技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-13</div><div class="title">2.华为1+X&#x2F;网络交换技术</div></div></a></div><div><a href="/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/" title="3.华为1+X-路由技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-14</div><div class="title">3.华为1+X-路由技术</div></div></a></div><div><a href="/2021/12/15/%E5%8D%8E%E4%B8%BA1+X/4.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%8F%AF%E9%9D%A0%E6%80%A7/" title="4.华为1+X-网络可靠性"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-15</div><div class="title">4.华为1+X-网络可靠性</div></div></a></div><div><a href="/2021/12/17/%E5%8D%8E%E4%B8%BA1+X/6.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="6.华为1+X-网络安全技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-17</div><div class="title">6.华为1+X-网络安全技术</div></div></a></div><div><a href="/2021/12/18/%E5%8D%8E%E4%B8%BA1+X/7.%E5%8D%8E%E4%B8%BA1+X-IPV6%E5%8D%8F%E8%AE%AE/" title="7.华为1+X-IPV6协议"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-18</div><div class="title">7.华为1+X-IPV6协议</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">落魄谷中寒风吹,春秋蝉鸣少年归 荡魂山处石人泪,定仙游走魔向北 逆流河上万仙退,爱情不敌坚持泪 宿命天成命中败,仙尊悔而我不悔</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">渊</h1><div class="author-info__desc">乖乖，我永远希望你能开心</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/updateyuan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1807133884" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">天若有情天亦老,大道无情情至公</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">广域网概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%9F%9F%E7%BD%91%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">广域网基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8E%A5%E5%85%A5"><span class="toc-number">1.2.</span> <span class="toc-text">广域网接入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%82%B9%E5%AF%B9%E7%82%B9%E5%8D%8F%E8%AE%AE-PPP"><span class="toc-number">2.</span> <span class="toc-text">点对点协议-PPP</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PPP%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.</span> <span class="toc-text">PPP基本概念</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E4%B8%8A%E7%9A%84%E7%82%B9%E5%AF%B9%E7%82%B9%E5%8D%8F%E8%AE%AE-PPPoE"><span class="toc-number">3.</span> <span class="toc-text">以太网上的点对点协议-PPPoE</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#PPPoE%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">3.1.</span> <span class="toc-text">PPPoE基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PPPoE%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">PPPoE配置</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浏览器页面切换快捷键"/></a><div class="content"><a class="title" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键">浏览器页面切换快捷键</a><time datetime="2024-01-29T10:31:51.596Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/hello-world1/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/01/29/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-01-29T10:31:51.589Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/31/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/10/31/hello-world/" title="Hello World">Hello World</a><time datetime="2022-10-31T09:40:41.000Z" title="发表于 2022-10-31 17:40:41">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文章"/></a><div class="content"><a class="title" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章">文章</a><time datetime="2022-06-27T09:29:00.000Z" title="发表于 2022-06-27 17:29:00">2022-06-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2022/01/02/Toe4Qx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo添加徽标"/></a><div class="content"><a class="title" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标">hexo添加徽标</a><time datetime="2022-03-13T08:58:50.000Z" title="发表于 2022-03-13 16:58:50">2022-03-13</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="渊" target="_blank">渊</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">76</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">21</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 0.88rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 0.88rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 0.88rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 0.88rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 0.88rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 0.88rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 0.88rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 0.88rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 0.88rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 0.88rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 0.88rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 0.88rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 0.88rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 0.88rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.88rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 0.88rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.88rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 0.88rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 0.88rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 0.88rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 渊 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2021 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.cbd.int/mathjax@3.2.2/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

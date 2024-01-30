@@ -1,0 +1,734 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>3.华为1+X-路由技术 | 渊</title><meta name="keywords" content="基础教程,华为1+X"><meta name="author" content="渊"><meta name="copyright" content="渊"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="3.华为1+X-路由技术"><meta name="application-name" content="3.华为1+X-路由技术"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="3.华为1+X-路由技术"><meta property="og:url" content="http://example.com/2021/12/14/华为1+X/3.华为1+X-路由技术/index.html"><meta property="og:site_name" content="渊"><meta property="og:description" content="华为1+X-路由技术 路由基础路由概述路由、路由器及路由表  跨越一个从源主机到目标主机的网络来转发数据包－路由 将数据包转发到正确的目的地，并在转发过程中能选择最佳的路径的设备－路由器    路由表     网段 接口   10.1.1.0 G0&amp;#x2F;0&amp;#x2F;1   20.1.1.0"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta property="article:author" content="渊"><meta property="article:tag" content="天若有情天亦老 大道无情情至公"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta name="description" content="华为1+X-路由技术 路由基础路由概述路由、路由器及路由表  跨越一个从源主机到目标主机的网络来转发数据包－路由 将数据包转发到正确的目的地，并在转发过程中能选择最佳的路径的设备－路由器    路由表     网段 接口   10.1.1.0 G0&amp;#x2F;0&amp;#x2F;1   20.1.1.0"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":10,"position":"top","messagePrev":"距离上次更新已经","messageNext":"天了，文章的内容可能已经过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 渊","link":"链接: ","source":"来源: 渊","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '渊',
+  title: '3.华为1+X-路由技术',
+  postAI: '',
+  pageFillDescription: '路由基础, 路由概述, 路由表的生成与路由条目, 静态路由与默认路由, 静态路由, 默认路由, 静态路由汇总, 静态路由的典型应用, OSPF路由协议, OSPF概述, 单区域OSPF配置, VLAN间路由, VLAN间路由概念, VLAN间三层通信-单臂路由, VLAN间三层通信-三层交换机华为路由技术路由基础路由概述路由路由器及路由表跨越一个从源主机到目标主机的网络来转发数据包路由将数据包转发到正确的目的地并在转发过程中能选择最佳的路径的设备路由器路由表网段接口路由在网络通信中路由是一个网络层的术语作为名词它是指从某一网络设备出发去往某个目的地的路径作为动词它是指跨越一个从源主机到目标主机的网络来转发数据包路由器路由器是执行路由动作的一种网络设备它能够将数据包转发到正确的目的地并在转发过程中能选择最佳的路径路由器工作在网络层路由表路由表是若干条路由信息的一个集合体在路由表中一条路由信息也被称为一个路由项或一个路由条目路由设备根据路由表的路由条目做路径选择路由器的工作原理某公司网络拓扑路由器是该网络中正在运行的一台路由器通过对网络设备进行配置之后可以查看路由器的路由表查看到路由器的路由表在路由器上执行命令便可查看到路由器的路由表在这个路由表中每一行就是一条路由信息一个路由项或一个路由条目通常情况下一条路由信息由个要素组成目标网络掩码出接口和下一跳地址补充说明如果目的地掩码中的掩码长度为则目的地将是一个主机接口地址否则目的地就是一个网络地址通常我们总是说一个路由项的目的地是一个网络地址即目标网络地址而把主机接口地址视为目的地的一种特殊情况如果一个路由项的下一跳地址与出接口的地址相同则说明目标网络和本地接口是一个直连网络双方在同一个网络下一跳地址所对应的那个主机接口与出接口一定是位于同一个二层网络二层广播域路由信息的个要素我们现在以为这个路由项为例具体说明路由信息的个要素是一个网络地址掩码长度是由于路由器的路由表中存在这个路由项就说明路由器知道自己所在的网络上存在一个网络地址为的网络这个路由项的出接口是其含义是如果路由器需要将一个报文送往这个目标网络那么路由器应该把这个报文从路由器的接口发送出去这个路由项下一跳地址是其含义是如果路由器需要将一个报文送往这个目标网络则路由器应该把这个报文从路由器的接口发送出去并且这个报文离开路由器的接口后应该到达的下一个路由器的接口的地址是除了这个要素外一个路由项通常还包含其他一些属性例如产生这个路由项的路由表中列该路由项的路由表中列该条路由的代价值路由表中列等那么路由器是如何基于路由表进行转发工作的呢以图所示的路由器的路由表为例如果一个报文的目的地址为那么这个报文就匹配上了这个路由项且路由表里仅有一个的表项因此路由器根据此表项进行报文的转发当一个报文同时匹配上了多个路由项时路由器将根据最长掩码匹配原则来确定出一条最优路由并根据最优路由来进行报文的转发如果没有匹配项包括默认路由路由器将丢弃该数据包路由协议的分类路由设备之间要相互通信需通过路由协议来相互学习以构建一个到达其他设备的路由信息表然后才能根据路由表实现数据包的转发路由协议的常见分类如下根据不同路由算法分类可分为以下两种距离矢量路由协议和链路状态路由协议根据不同的工作范围可分为以下两种内部网关协议和外部网关协议根据手动配置或自动学习两种不同的方式建立路由表可分为以下两种静态路由协议和动态路由协议根据不同路由算法分类可分为以下两种距离矢量路由协议通过判断数据包从源主机到目的主机所经过的路由器的个数来决定选择哪条路由如等链路状态路由协议不是根据路由器的数目选择路径而是综合考虑从源主机到目的主机间的各种情况如带宽延迟可靠性承载能力和最大传输单元等最终选择一条最优路径如等根据不同的工作范围可以分为以下两种内部网关协议在一个自治系统内进行路由信息交换的路由协议如等外部网关协议在不同自治系统间进行路由信息交换的路由协议如根据手动配置或自动学习两种不同的方式建立路由表可以分为以下两种静态路由协议由网络管理人员手动配置路由器的路由信息动态路由协议路由器自动学习路由信息动态建立路由表路由表的生成与路由条目路由表的种来源直连路由设备自动发现手动配置或通过动态路由协议生成我们把设备自动发现的路由信息称为直连路由静态路由把手动配置的路由信息称为静态路由动态路由把网络设备通过运行动态路由协议而得到路由信息称为动态路由事实上网络设备还可以通过运行动态路由协议来获取路由信息网络设备通过运行路由协议而获取到的路由被称为动态路由由于设备运行了路由协议所以设备的路由表中的动态路由信息能够实时地反映出网络结构的变化路由器是可以同时运行多种路由协议如路由协议和路由协议此时该路由器除了会创建并维护一个路由表外还会分别创建并维护一个路由表和一个路由表路由表用来专门存放发现的所有路由路由表用来专门存放协议发现的所有路由通过一些优选法则的筛选后某些路由表中的路由项以及某些路由表中的路由项才能被加入进路由表而路由器最终是根据路由表来进行报文的转发工作的路由优先级设备上的路由优先级一般都有默认值不同厂家设备对于优先级的默认值可能不同华为路由器上部分路由类型与优先级的默认值的对应关系如下表所示路由类型优先级的默认值直连路由静态路由路由器可以自动发现直连路由手动配置静态路由或动态路由协议等方式学习到路由信息当路由器通过不同的方式学习到同一个目标网络的多条路由条目信息时它会根据路由的优先级进行路由选择优先选择值最小的路由事实上网络设备还可以通过运行动态路由协议来获取路由信息网络设备通过运行路由协议而获取到的路由被称为动态路由由于设备运行了路由协议所以设备的路由表中的动态路由信息能够实时地反映出网络结构的变化路由器是可以同时运行多种路由协议如路由协议和路由协议此时该路由器除了会创建并维护一个路由表外还会分别创建并维护一个路由表和一个路由表路由表用来专门存放发现的所有路由路由表用来专门存放协议发现的所有路由通过一些优选法则的筛选后某些路由表中的路由项以及某些路由表中的路由项才能被加入进路由表而路由器最终是根据路由表来进行报文的转发工作的路由的开销什么是路由的开销一条路由的开销是指到达这条路由的目的地掩码需要付出的代价值路由开销的选择同一种路由协议发现有多条路由可以到达同一目的地掩码时将优选开销最小的路由即只把开销最小的路由加入进本协议的路由表中路由开销举例不同的路由协议对于开销的具体定义是不同的例如只能以跳数作为开销同一种路由协议发现有多条路由可以到达同一目的地掩码时如果这些路由的开销代价是相等的那么开销相等的路由称为等价路由需要特别强调的是不同的路由协议对于开销的具体定义是不同的开销值大小的比较只在同一种路由协议内才有意义不同路由协议之间的路由开销值没有可比性也不存在换算关系静态路由与默认路由静态路由静态路由概述静态路由是指通过手动方式为路由器配置路由信息可以简单地让路由器获知达到目标网络的路由静态路由的优缺点优点静态路由配置简单路由器资源负载小可控性强等优点缺点不能动态反映网络拓扑当网络拓扑发生变化时网络管理员就必须手动配置改变路由表因此静态路由不适合于在大型网络中使用案例静态路由的配置案例背景与要求在路由器和路由器上配置静态路由实现网络互联互通案例配置思路在路由器上配置一条静态路由目的地掩码为出接口为下一跳地址为在路由器上配置一条静态路由目的地掩码为出接口为下一跳地址为案例配置过程配置路由器目的地掩码下一跳地址配置路由器案例验证在路由器系统视图状态下输入命令查看其路由表查看路由表命令默认路由默认路由概述我们把目的地掩码为的路由称为默认路由如果网络设备的路由表中存在默认路由那么当一个待发送或待转发的报文不能匹配路由表中的任何非默认路由时就会根据默认路由来进行发送或转发如果网络设备的路由表中不存在默认路由那么当一个待发送或待转发的报文不能匹配路由表中的任何路由时该报文就会被直接丢弃案例默认路由的配置案例背景与要求网络管拓扑所示路由器是因特网服务提供商路由器并且假设路由器上已经有了通往的路由要求管理员配置路由器实现所有的都能够互通并且都能够访问案例配置思路在路由器上配置一条静态路由目的地掩码为下一跳地址为路由器的接口的地址出接口为路由器的接口另外在路由器上配置一条默认路由该默认路由的下一跳地址为路由器的接口的地址出接口为路由器的接口在路由器上配置一条默认路由该默认路由的下一跳地址为路由器的口的地址出接口为路由器的接口在路由器上配置一条默认路由下一跳地址均为路由器的接口的地址出接口均为路由器的接口案例配置步骤配置路由器配置静态路由配置默认路由配置路由器配置默认路由配置路由器配置默认路由案例验证完成以上配置后在路由器系统视图状态下输入命令查看其路由表从输出结果显示路由器的路由表中己经有了一条默认路由静态路由汇总静态路由汇总概念将多个路由条目进行汇总的方式称为路由汇总汇总前的静态路由汇总后的静态路由在如左图所示的拓扑中如果路由器要访问路由器右侧的等目标网络则需要在路由器上配置路由假如配置静态路由需要在路由器上配置条静态路由对应图中的个网段如果路由器右侧有个甚至更多的网段那么就需要在路由器上手动配置条甚至更多的静态路由庞大的路由条目会让路由器的路由表变的非常臃肿大大降低路由器的工作效率这时我们就需要使用静态路由汇总的方法来解决该问题路由汇总能减小路由条目的数量降低路由设备资源的消耗提高网络基础设施的转发效率突出地址作为逻辑地址的可汇总优势从左图中我们可以看到条命令开头的路由明细而在右图中通过静态路由汇总后仅仅只有条静态路由命令就可以实现相同的访问效果路由汇总是一种重要的网络设计思想通常在大中型网络中要使用路由汇总技术进行优化设计路由汇总除了静态路由汇总外还有动态路由汇总由于本书知识范围所限动态路由汇总配置不作介绍静态路由汇总计算与配置路由汇总的前提是子网及网络模型的科学合理设计路由汇总的计算是通过对子网掩码的操作进行的以下图为例介绍路由汇总的计算方法通过前面的学习我们知道可变长子网掩码是一种在有类网络中通过子网掩码划分多个子网的技术是无类编址方式的有效解决方案路由器左侧的网段明细为将这些网段写成二进制的形式如下图所示从网络拓扑图可以看出这个子网是连续的对连续的子网进行汇总的计算方法如下将所有的十进制的网段写成二进制形式实际操作中只需要将所有网段中的不相同的十进制数写成二进制如本例中十进制的网段的第三位画一根分隔线将所有网段进行分隔从上图中可见分隔线左侧的每一列的二进制数都完全相同而右侧列的二进制数则不完全一样分隔线的位置确定后分隔线左侧的二进制数不变而右侧的第一位开始到最后一位全部写因汇总后的掩码长度为分隔线左侧的二进制的位数为位因此通过计算得到汇总后的地址段为同理可算出路由器右侧的所有网段经过汇总后的地址段为由于静态路由汇总的配置与静态路由的配置相同因此以路由器为例进行配置配置命令如下所示静态路由的典型应用浮动静态路由的概念浮动静态路由是一种特殊的静态路由通过配置去往相同的目标网络但优先级不同的静态路由以保证在网络中优先级较高的路由工作而一旦主路由失效备份路由会接替主路由增强网络的可靠性载均衡的概念当有多条可选路径前往同一目标网络可以通过配置相同优先级和开销的静态路由实现负载均衡使得数据的传输均衡地分配到多条路径上从而实现数据分流减轻单条路径负载过重的效果而当其中某一条路径失效时其他路径仍然能够正常传输数据也起到了冗余作用仅负载均衡条件下路由器才会同时显示两条去往同一目标网络的路由条目案例浮动静态路由及负载均衡的配置案例背景与要求路由器模拟某公司总部路由器与路由器模拟两个分部主机与所在的网段分别模拟两个分部中的办公网络现需要总部与各个分部分部与分部之间都能够通信且分部之间在通信时直连链路为主用链路通过总部的链路为备用链路本实验要求使用浮动静态路由实现路由备份并可以通过调整优先级的值实现路由器到网络的负载均衡浮动静态路由及负载均衡的拓扑如下图所示案例配置思路在路由器上配置两条静态路由第一条目的地掩码为出接口为下一跳地址为第二条目的地掩码为出接口为下一跳地址为在路由器上配置一条静态路由目的地掩码为出接口为下一跳地址为在路由器上配置一条优先级为的静态路由目的地掩码为出接口为下一跳地址为在路由器上配置一条静态路由目的地掩码为出接口为下一跳地址为在路由器上配置一条优先级为的静态路由目的地掩码为出接口为下一跳地址为根据路由器的路由信息调整到网段的静态路由优先级实现负载均衡案例配置步骤路由器的配置如下路由器的配置如下路由器的配置如下案例验证完成以上配置后在路由器系统视图状态下输入命令查看其路由表结果路由器的路由表中己经有了目标网段为优先级为的静态路由信息但没有优先级为的路由信息通过对路由器执行命令查看到优先级为的路由条目用命令断开路由器的接口模拟主链路故障验证浮动静态路由的效果用命令断开路由器的接口模拟主链路故障回显信息可以看到路由器的路由表中出现了优先级为的路由条目从而验证了浮动静态路由的效果为了检验负载均衡的效果用命令重新开启路由器的接口同时在路由器上用命令将这条路由的优先级从改为通过查看路由器的路由表的回显信息可以看到有两条路径不同下一跳地址不同去往目标网段的路由条目从而验证了负载均衡的效果路由协议概述的概念开放最短路径优先是由组织开发的开放性标准协议它是一个链路状态内部网关路由协议运行协议的路由器会将自己拥有的链路状态信息通过启用了协议的接口发送给其他设备同一个区域中的每台设备都会参与链路状态信息的创建发送接收与转发直到这个区域中的所有设备获得了相同的链路状态信息为止区域区域概念一个网络可以被划分成多个区域如果一个网络只包含一个区域则这样的网络称为单区域网络如果一个网络包含了多个区域则称为多区域网络区域结构如图所示网络共有个区域其中为骨干区域和为非骨干区域需要注意的是路由器和同时属于骨干区域和非骨干区域而其他路由器只属于一个区域在网络中每一个区域都有一个编号称为区域区域是一个位的二进制数一般用十进制数来表示区域为的区域称为骨干区域其他区域都称为非骨干区域单区域网络只包含一个区域这个区域必须是骨干区域多区域网络中除骨干区域外还有若干个非骨干区域一般来说每一个非骨干区域都需要与骨干区域直连当非骨干区域没有与骨干区域直连时要采用虚链路技术从逻辑上实现非骨干区域与骨干区域直连也就是说非骨干区域之间的通信必须要通过骨干区域中转才能实现链路状态及是一种基于链路状态的路由协议链路状态也指路由器的接口状态其核心思想是每台路由器都将自己的各个接口的接口状态链路状态共享给其他路由器在此基础上每台路由器就可以依据自身的接口状态和其他路由器的接口状态计算出去往各个目的地的路由路由器的链路状态包含了该接口的地址及子网掩码等信息链路状态通告是链路状态信息的主要载体链路状态信息主要包含在中并通过的通告泛洪来实现共享的需要说明的是不同类型的所包含的内容功能通告的范围也是不同的的类型主要包括等由于本书的知识范围限制的类型不作详细阐述消息中的报文协议报文有种类型分别是报文报文报文报文和报文协议报文直接封装在报文中报文头部中的协议字段值必须为报文中的报文所携带的信息是指路由器某一接口所发送的报文携带的如下信息的版本号接口所属路由器的接口所属区域的接口的密钥信息接口的认证类型接口地址的子网掩码接口的发送报文的间隔时间接口的接口所连二层网络的和报文中的报文用于描述自己的链路状态数据库并进行数据库的同步报文用于请求相邻路由器中的一部分数据报文的功能是向对端路由器发送多条用于更新报文是指路由器在接收到报文后所发出的确认应答报文是区域中路由器的唯一标识一台路由器的的是按照以下方式生成的如果管理员手动配置了路由器的则路由器将使用该如果没有设置但在路由器上创建了逻辑接口如环回接口则路由器会选择这台路由器上所有逻辑接口的地址中数值最大的地址作为不论该接口是否参与了协议如果和都没有则路由器会选择所有活动物理接口的地址中数值最大的地址作为不论该接口是否参与了协议一旦选定只要进程没有重启路由器的就不会改变不论接口是否有变化的变化会对网络产生影响因此通常情况下管理员都会采用手动配置的网络类型所支持的网络类型是指能够支持的二层网络类型根据数据链路层协议类型将网络分为下列种类型广播类型类型点到多点类型点到点类型广播类型当链路层协议是或时默认的网络类型是在该类型的网络中通常以组播形式和发送协议报文类型链路层协议是帧中继或时默认认为网络类型是在该项类型的网络中以单播形式发送协议报文点到多点类型点到多点必须是由其他的网络类型强制更改的常用做法是将非全连通的改为点到多点的网络在该类型的网络中以组播形式发送协议报文点到点类型当链路层协议是和时默认的网络类型是在该类型的网络中以组播形式发送协议报文邻居关系与邻接关系邻居关系在协议中每台路由器的接口都会周期性地向外发送报文如果相邻两台路由器之间发送给对方的报文完全一致那么这两台路由器就会成为彼此的邻居路由器他们之间才存在邻居关系邻接关系在或的二层网络类型中两台互为邻居关系的路由器一定会同步彼此的当这两台路由器成功地完成了的同步后他们之间便建立起了邻接关系在协议中如果两台路由器的相邻接口位于同一个二层网络中那么这两台路由器存在相邻关系但相邻并不等同于邻居关系更不等同于邻接关系如果两台路由器存在邻接关系则他们之间一定存在邻居关系如果两台路由器存在邻居关系则他们之间可能存在邻接关系也可能不存在网络的与与概述指定路由器和备份指定路由器只适用于广播网络或非广播多路访问网络与的选举规则由于在一个广播网络或网络中路由器之间会通过报文进行交互报文中包含了路由器的和优先级路由器的优先级的取值范围是从到取值越大优先级越高选举和是为了产生针对这两种网络的同时可减少多路访问环境下不必要的报文发送从而提高链路带宽的利用率的作用是当出现故障时迅速替代的角色在广播型网络或网络中会与其他路由器包括建立邻接关系也会与其他路由器包括建立邻接关系其他路由器之间不会建立邻接关系互为邻接关系的路由器之间可以交互所有信息根据和优先级进行与的选举规则如下优先级最大的路由器将成为如果优先级相等则值最大的路由器将成为的选举与的选举规则完全一样的选举发生在的选举之后在同一个网络中和不能是同一台路由器如果和都存在则出现故障后将迅速代替的角色如果只存在而没有则出现故障后将重新选举新的这就需要耗费一定的时间如果一个路由器的优先级为则不参加或的选举单区域配置案例单区域的配置案例背景与要求如图所示某公司网络有台路由器其中路由器为公司总部路由器路由器和分别为两个分公司的路由器网络规划要求整个网络运行路由协议并且采用单区域的网络结构案例配置思路分别在台路由器上启用进程指定各路由器的接口为骨干区域案例配置步骤配置路由器配置时需注意以下事项首先进入系统视图然后执行命令以启用进程并进入视图执行命令时如果不输入进程编号的值则进程编号默认取值为是一个的二进制数一般用十进制数的地址表示如果执行命令时不指定则路由器会根据规则自动生成一个值在视图中需要根据网络规划指定运行协议的接口以及这些接口所在的区域首先执行命令创建区域进入区域视图后执行命令指定协议的接口其中为通配符掩码与合在一起时表示的是一个由若干个地址组成的集合这个集合中的任何一个地址都满足且只需满足条件如果中某一个比特位的取值为则该地址中的对应比特位的取值必须与中对应的比特位的取值相同配置路由器配置路由器案例验证通过以上配置三台路由器之间都建立起了邻接关系为了确认上述配置已经生效可以使用命令来查看路由器的邻居信息下面以路由器为例回显信息表明路由器已经成功和路由器和建立了邻接关系通过在路由器上使用命令查看路由表回显信息表可以看到路由器的路由表中已经拥有了从路由器去往各个目标网络的路由间路由间路由概念间路由的概念虽然可以减少网络中的广播提高网络安全性能但无法实现网络内部的所有主机互相通信我们可以通过路由器或三层交换机来实现属于不同的计算机之间的三层通信这就是间路由间二层通信的局限性如图所示隔离了二层广播域即隔离了各个之间的任何二层流量因此不同的用户之间不能进行二层通信由于不同之间的主机是无法实现二层通信的所以必须通过三层路由才能将报文从一个转发到另外一个实现跨通信实现间通信的方法主要有种多臂路由单臂路由和三层交换间路由的种方法多臂路由单臂路由和三层交换多臂路由图所示在路由器上为每个分配一个单独的接口并使用一条物理链路连接到二层交换机上当间的主机需要通信时数据会经由路由器进行路由并被转发到目标内的主机这样就可以实现之间的相互通信然而随着每个交换机上数量的增加这样做必然需要大量的路由器接口而路由器的接口数量是极其有限的并且某些之间的主机可能不需要频繁进行通信如果这样配置的话会导致路由器的接口利用率很低因此实际应用中一般不会采用多臂路由来解决间的通信问题单臂路由示意图所示交换机和路由器之间仅使用一条物理链路连接在交换机上把连接到路由器的端口配置成类型的端口并允许相关的帧通过在路由器上创建子接口逻辑上把连接路由器的物理链路分成了多条链路每个子接口对应一个这些子接口的地址各不相同每个子接口的地址应该配置为该子接口所对应的默认网关地址子接口是一个逻辑上的概念所以子接口也常常被称为虚接口配置子接口时需要注意以下几点必须为每个子接口分配一个地址该地址与子接口所属位于同一网段需要在子接口上配置封装在子接口上执行命令启用子接口的广播功能本例中主机发送数据给主机时路由器会通过子接口收到此数据然后查找路由表将数据从子接口发送给主机这样就实现了和之间的主机通信相对于多臂路由单臂路由可以节约路由器的接口资源但如果数量较多间的通信流量很大时单臂链路所能提供的带宽就有可能无法支撑这些通信流量而三层交换设备较好的解决了接口数量和交换带宽问题第三层交换是在交换机中引入路由模块而取代路由器二层交换机的网络技术这种集成了三层数据包转发功能的交换机被称为三层交换机三层交换机中每个对应一个网段之间还是隔离的但不同网段之间的访问就要跨越它需要使用三层转发引擎提供的间路由功能来实现该第三层转发引擎相当于传统组网中的路由器当需要与其他通信时要在三层交换引擎上分配一个路由接口逻辑接口用来做的网关三层交换机本身提供了路由功能因此它不需要借助路由器来转发不同间的流量三层交换机本身就拥有大量的高速端口它可以直接连接大量的终端设备因此一台三层交换机就可以实现将终端隔离在不同的中同时为这些终端提供间路由的功能三层交换示意图所示在三层交换机上配置接口来实现间路由如果网络上有多个则需要给每个配置一个接口并给每个接口配置一个地址用户设置的默认网关就是三层交换机中接口的地址间三层通信单臂路由案例单臂路由的配置案例背景与要求根据下图所示的网络拓扑在路由器上配置单臂路由实现和网络互联互通案例配置思路在交换机上创建并将相应接口加入到对应中配置交换机与路由器相连接口为模式在路由器上创建子接口并配置子接口的地址启用子接口的封装配置允许终结子接口转发广播报文案例配置步骤配置交换机在交换机上创建和并配置接口配置交换机的端口允许和的数据通过配置路由器主要配置子接口及其封装上述命令中命令用来创建子接口代表物理接口内的逻辑接口通道命令用来配置子接口封装的单层默认情况子接口没有配置封装的单层本命令执行成功后终结子接口对报文的处理如下接收报文时剥掉报文中携带的后进行三层转发转发出去的报文是否带由出接口决定发送报文时将相应的信息添加到报文中再发送命令用来启用子接口的广播功能默认情况下终结子接口没有启用广播功能禁用子接口不能转发广播报文时在收到广播报文后它将直接丢弃该报文为了允许终结子接口能转发广播报文可以通过在子接口上执行此命令案例验证配置完成后在上执行命令测试结果如下所示将的地址配置为并将其默认网关地址配置为路由器子接口的地址将的地址配置为并将其默认网关地址配置为路由器子接口的地址从回显信息中我们可以看到收到了的响应表示可以通这说明通过单臂路由成功地实现了与之间的三层通信间三层通信三层交换机案例三层交换机间路由的配置案例背景与要求如图所示的网络拓扑在三层交换机上配置三层路由实现和网络互联互通案例配置思路在三层交换机上创建和将交换机上的对应端口添加到和中在交换上配置三层接口的地址在和配置对应的地址和网关并测试间的连通性案例配置步骤在交换机上创建和在交换机上进行端口配置在交换机上配置接口案例验证在上执行命令测试结果如下所示将的地址配置为网关地址配置为将的地址配置为网关地址配置为配置完成后在上执行命令从回显信息中我们可以看到收到了的响应表示可以通这说明三层交换机成功地实现了与之间的三层通信',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-03-31 19:33:25',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">渊</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 1.05rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 1.05rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 1.05rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 1.05rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 1.05rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 1.05rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 1.05rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 1.05rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.05rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 1.05rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 1.05rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 1.05rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.05rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.05rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 1.05rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 1.05rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 1.05rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 1.05rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 1.05rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>基础教程</span></a><a class="article-meta__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>华为1+X</span></a></span></div></div><h1 class="post-title" itemprop="name headline">3.华为1+X-路由技术</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2021-12-14T06:44:57.000Z" title="发表于 2021-12-14 14:44:57">2021-12-14</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.431Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">13.4k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>50分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="3.华为1+X-路由技术"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为西安"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>西安</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://s4.ax1x.com/2021/12/23/TGe4nf.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/"><header><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">基础教程</a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url">华为1+X</a><h1 id="CrawlerTitle" itemprop="name headline">3.华为1+X-路由技术</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">渊</span><time itemprop="dateCreated datePublished" datetime="2021-12-14T06:44:57.000Z" title="发表于 2021-12-14 14:44:57">2021-12-14</time><time itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.431Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></header><p>华为1+X-路由技术</p>
+<h1 id="路由基础"><a href="#路由基础" class="headerlink" title="路由基础"></a>路由基础</h1><h2 id="路由概述"><a href="#路由概述" class="headerlink" title="路由概述"></a>路由概述</h2><p><strong>路由、路由器及路由表</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ov2fat"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ov2fat.png"></a></p>
+<p>跨越一个从源主机到目标主机的网络来转发数据包－路由</p>
+<p>将数据包转发到正确的目的地，并在转发过程中能选择最佳的路径的设备－路由器</p>
+<table>
+<thead>
+<tr>
+<th><strong>路由表</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网段</td>
+<td>接口</td>
+</tr>
+<tr>
+<td>10.1.1.0</td>
+<td>G0&#x2F;0&#x2F;1</td>
+</tr>
+<tr>
+<td>20.1.1.0</td>
+<td>G0&#x2F;0&#x2F;2</td>
+</tr>
+<tr>
+<td>30.1.1.0</td>
+<td>G0&#x2F;0&#x2F;3</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>tip：</strong></p>
+<p>①路由：在网络通信中，路由（Route）是一个网络层的术语，作为名词它是指从某一网络设备出发去往某个目的地的路径，作为动词它是指跨越一个从源主机到目标主机的网络来转发数据包。<br>②路由器：路由器（Router）是执行路由动作的一种网络设备，它能够将数据包转发到正确的目的地，并在转发过程中能选择最佳的路径，路由器工作在网络层。<br>③路由表：路由表（Routing Table）是若干条路由信息的一个集合体。在路由表中，一条路由信息也被称为一个路由项或一个路由条目，路由设备根据路由表的路由条目做路径选择。</p>
+<hr>
+<p><strong>路由器的工作原理</strong><br>某公司网络拓扑<br>路由器R1是该网络中正在运行的一台路由器，通过对网络设备进行配置之后，可以查看路由器R1的路由表。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovWF1S"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovWF1S.png"></a></p>
+<p>查看到路由器R1的路由表<br>在路由器R1上执行【display ip routing-table】命令便可查看到路由器R1的路由表，在这个路由表中，每一行就是一条路由信息（一个路由项或一个路由条目）。通常情况下，一条路由信息由3个要素组成：目标网络&#x2F;掩码（Destination&#x2F;Mask）、出接口（Interface）和下一跳IP地址（NextHop）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]display ip routing-table </span><br><span class="line">Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Destination/Mask  Proto   Pre  Cost    Flags  NextHop    Interface</span><br><span class="line">2.2.2.0/24        Direct  0    0       D      2.2.2.1    GigabitEthernet1/0/1</span><br><span class="line">2.2.2.1/32        Direct  0    0       D      127.0.0.1  InLoopBack0</span><br><span class="line">3.3.3.0/24        Static  60   0       D      1.1.1.2    GigabitEthernet1/0/2</span><br><span class="line">1.1.1.0/24        Direct  0    0       D      127.0.0.1  GigabitEthernet1/0/2</span><br><span class="line">1.1.1.1/32        Direct  0    0       D      127.0.0.1  InLoopBack0</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>tip:</strong></p>
+<p>补充说明<br>①如果目的地&#x2F;掩码中的掩码长度为32，则目的地将是一个主机接口地址，否则目的地就是一个网络地址。通常，我们总是说一个路由项的目的地是一个网络地址（即目标网络地址），而把主机接口地址视为目的地的一种特殊情况。<br>②如果一个路由项的下一跳IP地址与出接口的IP地址相同，则说明目标网络和本地接口是一个直连网络（双方在同一个网络）。<br>③下一跳IP地址所对应的那个主机接口与出接口一定是位于同一个二层网络（二层广播域）。</p>
+<hr>
+<p><strong>路由信息的3个要素</strong><br>我们现在以Destination&#x2F;Mask为3.3.3.0&#x2F;24这个路由项为例，具体说明路由信息的3个要素。<br>3.3.3.0是一个网络地址，掩码长度是24。由于路由器R1的路由表中存在3.3.3.0&#x2F;24这个路由项，就说明路由器R1知道自己所在的网络上存在一个网络地址为3.3.3.0的网络；<br>3.3.3.0这个路由项的出接口是GigabitEthernet1&#x2F;0&#x2F;2，其含义是，如果路由器R1需要将一个IP报文送往3.3.3.0&#x2F;24这个目标网络，那么路由器R1应该把这个IP报文从路由器R1的GigabitEthernet1&#x2F;0&#x2F;2接口发送出去；<br>3.3.3.0这个路由项下一跳IP地址（NextHop）是1.1.1.2，其含义是，如果路由器R1需要将一个IP报文送往3.3.3.0&#x2F;24这个目标网络，则路由器R1应该把这个IP报文从路由器R1的GigabitEthernet1&#x2F;0&#x2F;2接口发送出去，并且这个IP报文离开路由器R1的GigabitEthernet1&#x2F;0&#x2F;2接口后应该到达的下一个路由器的接口的IP地址是1.1.1.2。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>除了这3个要素外，一个路由项通常还包含其他一些属性，例如，产生这个路由项的Protocol（路由表中Proto列），该路由项的Preference（路由表中Pre列），该条路由的代价值（路由表中Cost列）等。<br>那么，路由器是如何基于IP路由表进行转发工作的呢？以图3-2所示的路由器R1的IP路由表为例，如果一个IP报文的目的IP地址为3.3.3.0，那么这个IP报文就匹配上了3.3.3.0&#x2F;24这个路由项，且路由表里仅有一个3.3.3.0的表项，因此，路由器根据此表项进行IP报文的转发。当一个IP报文同时匹配上了多个路由项时，路由器将根据“最长掩码匹配”原则来确定出一条最优路由，并根据最优路由来进行IP报文的转发，如果没有匹配项（包括默认路由），路由器将丢弃该数据包。</p>
+<hr>
+<p><strong>路由协议的分类：</strong><br>路由设备之间要相互通信，需通过路由协议来相互学习，以构建一个到达其他设备的路由信息表，然后才能根据路由表，实现IP数据包的转发。路由协议的常见分类如下。<br>根据不同路由算法分类，可分为以下两种：距离矢量路由协议和链路状态路由协议；<br>根据不同的工作范围，可分为以下两种：内部网关协议（IGP）和外部网关协议（EGP）；<br>根据手动配置或自动学习两种不同的方式建立路由表，可分为以下两种：静态路由协议和动态路由协议。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>①根据不同路由算法分类，可分为以下两种。<br>距离矢量路由协议：通过判断数据包从源主机到目的主机所经过的路由器的个数来决定选择哪条路由，如RIP等。<br>链路状态路由协议：不是根据路由器的数目选择路径，而是综合考虑从源主机到目的主机间的各种情况（如带宽、延迟、可靠性、承载能力和最大传输单元等），最终选择一条最优路径，如OSPF、IS-IS等。<br>②根据不同的工作范围，可以分为以下两种。<br>内部网关协议（IGP）：在一个自治系统内进行路由信息交换的路由协议，如RIP、OSPF、ISIS等<br>外部网关协议（EGP）：在不同自治系统间进行路由信息交换的路由协议，如BGP。<br>③根据手动配置或自动学习两种不同的方式建立路由表，可以分为以下两种。<br>静态路由协议：由网络管理人员手动配置路由器的路由信息。<br>动态路由协议：路由器自动学习路由信息，动态建立路由表。</p>
+<hr>
+<h2 id="路由表的生成与路由条目"><a href="#路由表的生成与路由条目" class="headerlink" title="路由表的生成与路由条目"></a>路由表的生成与路由条目</h2><p><strong>路由表的3种来源</strong><br>直连路由：设备自动发现、手动配置或通过动态路由协议生成。我们把设备自动发现的路由信息称为直连路由（Direct Route）；<br>静态路由：把手动配置的路由信息称为静态路由（Static Route）；<br>动态路由：把网络设备通过运行动态路由协议而得到路由信息称为动态路由（Dynamic Route）。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>事实上，网络设备还可以通过运行动态路由协议来获取路由信息。网络设备通过运行路由协议而获取到的路由被称为动态路由。由于设备运行了路由协议，所以设备的路由表中的动态路由信息能够实时地反映出网络结构的变化。<br>路由器是可以同时运行多种路由协议，如RIP路由协议和OSPF路由协议。此时，该路由器除了会创建并维护一个IP路由表外，还会分别创建并维护一个RIP路由表和一个OSPF路由表。RIP路由表用来专门存放RIP发现的所有路由，OSPF路由表用来专门存放OSPF协议发现的所有路由。通过一些优选法则的筛选后，某些IP路由表中的路由项以及某些OSPF路由表中的路由项才能被加入进IP路由表，而路由器最终是根据IP路由表来进行IP报文的转发工作的。</p>
+<hr>
+<p><strong>路由优先级</strong></p>
+<p>设备上的路由优先级一般都有默认值，不同厂家设备对于优先级的默认值可能不同。华为AR路由器上部分路由类型与优先级的默认值的对应关系，如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th><strong>路由类型</strong></th>
+<th><strong>优先级的默认值</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>直连路由</td>
+<td>0</td>
+</tr>
+<tr>
+<td>OSPF</td>
+<td>10</td>
+</tr>
+<tr>
+<td>静态路由</td>
+<td>60</td>
+</tr>
+<tr>
+<td>RIP</td>
+<td>100</td>
+</tr>
+<tr>
+<td>BGP</td>
+<td>255</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>tip:</strong></p>
+<p>路由器可以自动发现直连路由，手动配置静态路由或动态路由协议等方式学习到路由信息，当路由器通过不同的方式学习到同一个目标网络的多条路由条目信息时，它会根据路由的优先级进行路由选择，优先选择值最小的路由。<br>事实上，网络设备还可以通过运行动态路由协议来获取路由信息。网络设备通过运行路由协议而获取到的路由被称为动态路由。由于设备运行了路由协议，所以设备的路由表中的动态路由信息能够实时地反映出网络结构的变化。<br>路由器是可以同时运行多种路由协议，如RIP路由协议和OSPF路由协议。此时，该路由器除了会创建并维护一个IP路由表外，还会分别创建并维护一个RIP路由表和一个OSPF路由表。RIP路由表用来专门存放RIP发现的所有路由，OSPF路由表用来专门存放OSPF协议发现的所有路由。通过一些优选法则的筛选后，某些IP路由表中的路由项以及某些OSPF路由表中的路由项才能被加入进IP路由表，而路由器最终是根据IP路由表来进行IP报文的转发工作的。</p>
+<hr>
+<p>**路由的开销 **<br>什么是路由的开销：一条路由的开销是指到达这条路由的目的地&#x2F;掩码需要付出的代价值。<br>路由开销的选择：同一种路由协议发现有多条路由可以到达同一目的地&#x2F;掩码时，将优选开销最小的路由，即只把开销最小的路由加入进本协议的路由表中。<br>路由开销举例：不同的路由协议对于开销的具体定义是不同的，例如，RIP只能以“跳数（Hop Count）”作为开销。 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovh5wj"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovh5wj.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>同一种路由协议发现有多条路由可以到达同一目的地&#x2F;掩码时，如果这些路由的开销（代价）是相等的，那么开销相等的路由称为等价路由。需要特别强调的是，不同的路由协议对于开销的具体定义是不同的，开销值大小的比较只在同一种路由协议内才有意义，不同路由协议之间的路由开销值没有可比性，也不存在换算关系。</p>
+<hr>
+<h1 id="静态路由与默认路由"><a href="#静态路由与默认路由" class="headerlink" title="静态路由与默认路由"></a>静态路由与默认路由</h1><h2 id="静态路由"><a href="#静态路由" class="headerlink" title="静态路由"></a>静态路由</h2><p><strong>静态路由概述</strong><br>静态路由（Static Route）是指通过手动方式为路由器配置路由信息，可以简单地让路由器获知达到目标网络的路由。<br><strong>静态路由的优缺点</strong><br>优点：静态路由配置简单、路由器资源负载小、可控性强等优点；<br>缺点：不能动态反映网络拓扑，当网络拓扑发生变化时，网络管理员就必须手动配置改变路由表，因此静态路由不适合于在大型网络中使用。</p>
+<p>案例3-1 静态路由的配置<br>案例背景与要求：在路由器R1和路由器R2上配置静态路由，实现网络互联互通。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovImWt"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovImWt.png"></a></p>
+<p><strong>案例配置思路</strong><br>在路由器R1上配置一条静态路由，目的地&#x2F;掩码为3.3.3.0&#x2F;24，出接口为GE1&#x2F;0&#x2F;2，下一跳IP地址为1.1.1.2；<br>在路由器R2上配置一条静态路由，目的地&#x2F;掩码为2.2.2.0&#x2F;24，出接口为GE1&#x2F;0&#x2F;2，下一跳IP地址为1.1.1.1。<br><strong>案例配置过程</strong><br>配置路由器R1</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R1</span><br><span class="line">[R1]ip route-static 3.3.3.0 24 1.1.1.2</span><br></pre></td></tr></table></figure>
+
+<p>3.3.3.0目的地    24掩码   1.1.1.2下一跳地址</p>
+<p>配置路由器R2</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R2</span><br><span class="line">[R2]ip route-static 2.2.2.0 24 1.1.1.1</span><br></pre></td></tr></table></figure>
+
+<p>案例验证<br>在路由器R1系统视图状态下输入【display ip routing-table】命令查看其路由表。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]display ip routing-table </span><br><span class="line">Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Destination/Mask  Proto   Pre  Cost    Flags  NextHop    Interface</span><br><span class="line">2.2.2.0/24        Direct  0    0       D      2.2.2.1    GigabitEthernet1/0/1</span><br><span class="line">2.2.2.1/32        Direct  0    0       D      127.0.0.1  InLoopBack0</span><br><span class="line">3.3.3.0/24        Static  60   0       D      1.1.1.2    GigabitEthernet1/0/2</span><br><span class="line">1.1.1.0/24        Direct  0    0       D      127.0.0.1  GigabitEthernet1/0/2</span><br><span class="line">1.1.1.1/32        Direct  0    0       D      127.0.0.1  InLoopBack0</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<p>查看路由表命令：display ip routing-table </p>
+<h2 id="默认路由"><a href="#默认路由" class="headerlink" title="默认路由"></a>默认路由</h2><p><strong>默认路由概述</strong><br>我们把目的地&#x2F;掩码为0.0.0.0&#x2F;0的路由称为默认路由（Default Route）。<br>如果网络设备的路由表中存在默认路由，那么当一个待发送或待转发的IP报文不能匹配IP路由表中的任何非默认路由时，就会根据默认路由来进行发送或转发；<br>如果网络设备的IP路由表中不存在默认路由，那么当一个待发送或待转发的IP报文不能匹配IP路由表中的任何路由时，该IP报文就会被直接丢弃。</p>
+<p><strong>案例3-2 默认路由的配置</strong><br>案例背景与要求：网络管拓扑所示，路由器R3是因特网服务提供商(Internet Service Provider, ISP）路由器，并且假设路由器R3上已经有了通往Internet的路由。要求管理员配置路由器，实现所有的PC都能够互通，并且都能够访问Internet。 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovoVnU"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovoVnU.png"></a></p>
+<p><strong>案例配置思路</strong><br>在路由器R1上配置一条静态路由，目的地&#x2F;掩码为3.3.3.0&#x2F;24，下一跳地址为路由器R2的GE1&#x2F;0&#x2F;2接口的IP地址1.1.1.2，出接口为路由器R1的GE1&#x2F;0&#x2F;2接口。另外，在路由器R1上配置一条默认路由，该默认路由的下一跳地址为路由器R3的GE1&#x2F;0&#x2F;0接口的IP地址4.4.4.2，出接口为路由器R1的GE1&#x2F;0&#x2F;0接口。<br>在路由器R2上配置一条默认路由，该默认路由的下一跳地址为路由器R1的GE1&#x2F;0&#x2F;2口的E地址1.1.1.1，出接口为路由器R2的GE1&#x2F;0&#x2F;2接口。<br>在路由器R3上配置一条默认路由，下一跳IP地址均为路由器R1的GE1&#x2F;0&#x2F;0接口的IP地址4.4.4.1，出接口均为路由器R3的GE1&#x2F;0&#x2F;0接口。</p>
+<p><strong>案例配置步骤</strong><br>配置路由器R1</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R1</span><br><span class="line">[R1]ip route-static 3.3.3.0 24 1.1.1.2		(配置静态路由)</span><br><span class="line">[R1]ip route-static 0.0.0.0  0 4.4.4.2		(配置默认路由)</span><br></pre></td></tr></table></figure>
+
+<p>配置路由器R1</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R2</span><br><span class="line">[R2]ip route-static 0.0.0.0 0 1.1.1.1		(配置默认路由)</span><br></pre></td></tr></table></figure>
+
+<p>配置路由器R1</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R3</span><br><span class="line">[R3]ip route-static 0.0.0.0 0 4.4.4.1		(配置默认路由)</span><br></pre></td></tr></table></figure>
+
+<p>案例验证<br>完成以上配置后，在路由器R1系统视图状态下输入【display ip routing-table】命令查看其路由表。从输出结果显示，路由器R1的路由表中己经有了一条默认路由。 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]display ip routing-table </span><br><span class="line">Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Destination/Mask  Proto   Pre  Cost    Flags  NextHop    Interface</span><br><span class="line">0.0.0.0/24        Static  60   0       RD     4.4.4.2    GigabitEthernet1/0/0</span><br><span class="line">2.2.2.0/24        Direct  0    0       D      2.2.2.1    GigabitEthernet1/0/1</span><br><span class="line">2.2.2.1/32        Direct  0    0       D      127.0.0.1  InLoopBack0</span><br><span class="line">3.3.3.0/24        Static  60   0       D      1.1.1.2    GigabitEthernet1/0/2</span><br><span class="line">1.1.1.0/24        Direct  0    0       D      127.0.0.1  GigabitEthernet1/0/2</span><br><span class="line">1.1.1.1/32        Direct  0    0       D      127.0.0.1  InLoopBack0</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<h2 id="静态路由汇总"><a href="#静态路由汇总" class="headerlink" title="静态路由汇总"></a>静态路由汇总</h2><p>静态路由汇总概念：将多个路由条目进行汇总的方式称为路由汇总</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovTIJA"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovTIJA.png" alt="汇总前的静态路由"></a></p>
+<p>汇总前的静态路由</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovTjoQ"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovTjoQ.png" alt="汇总后的静态路由"></a></p>
+<p>汇总后的静态路由</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>在如左图所示的拓扑中，如果路由器R1要访问路由器R2右侧的172.16.1.0&#x2F;24等目标网络，则需要在路由器R1上配置路由。假如配置静态路由，需要在路由器R1上配置4条静态路由对应图中的4个网段，如果路由器R2右侧有200个甚至更多的网段，那么就需要在路由器R1上手动配置200条甚至更多的静态路由。庞大的路由条目会让路由器R1的路由表变的非常臃肿，大大降低路由器的工作效率。<br>这时我们就需要使用静态路由汇总的方法来解决该问题，路由汇总能减小路由条目的数量，降低路由设备资源的消耗，提高网络基础设施的转发效率，突出IP地址作为逻辑地址的可汇总优势。<br>从左图中我们可以看到4条【ip route-static】命令开头的路由明细，而在右图中，通过静态路由汇总后，仅仅只有1条静态路由【ip route-static 172.16.0.0 16 11.1.1.2】命令，就可以实现相同的访问效果。<br>路由汇总是一种重要的网络设计思想。通常，在大中型网络中，要使用路由汇总技术进行优化设计。路由汇总除了静态路由汇总外，还有动态路由汇总，由于本书知识范围所限，动态路由汇总配置不作介绍。</p>
+<hr>
+<p>静态路由汇总计算与配置<br>路由汇总的前提是IP子网及网络模型的科学合理设计，路由汇总的计算是通过对子网掩码的操作进行的，以下图为例介绍路由汇总的计算方法。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ov71eO"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ov71eO.png"></a></p>
+<p>通过前面的学习，我们知道，可变长子网掩码（VLSM）是一种在有类网络中通过子网掩码划分多个IP子网的技术，是无类编址方式的有效解决方案。</p>
+<p>路由器R1左侧的IP网段明细为172.16.1.0&#x2F;24~172.16.31.0&#x2F;24，将这些IP网段写成二进制的形式如下图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ov7wOf"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ov7wOf.png"></a></p>
+<p>从网络拓扑图可以看出，这个IP子网是连续的，对连续的IP子网进行汇总的计算方法如下。<br>①将所有的十进制的IP网段写成二进制形式，实际操作中，只需要将所有IP网段中的不相同的十进制数写成二进制，如本例中十进制的IP网段的第三位；<br>②画一根分隔线将所有IP网段进行分隔，从上图中可见，分隔线左侧的每一列的二进制数都完全相同，而右侧列的二进制数则不完全一样；<br>③分隔线的位置确定后，分隔线左侧的二进制数不变，而右侧的第一位开始到最后一位全部写0。因汇总后的掩码长度为分隔线左侧的二进制的位数为16+3&#x3D;19位，因此，通过计算得到汇总后的地址段为172.16.0.0&#x2F;19；<br>④同理，可算出路由器R3右侧的所有IP网段经过汇总后的地址段为10.1.32.0&#x2F;19。由于静态路由汇总的配置与静态路由的配置相同。因此，以路由器R2为例进行配置，配置命令如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R2</span><br><span class="line">[R2]ip route-static 172.16.0.0 19 2.1.1.1</span><br><span class="line">[R2]ip route-static 10.1.32.0 19 1.1.1.1</span><br></pre></td></tr></table></figure>
+
+<h2 id="静态路由的典型应用"><a href="#静态路由的典型应用" class="headerlink" title="静态路由的典型应用"></a>静态路由的典型应用</h2><p><strong>浮动静态路由的概念</strong><br>浮动静态路由（Floating Static Route）是一种特殊的静态路由，通过配置去往相同的目标网络，但优先级不同的静态路由，以保证在网络中优先级较高的路由工作。而一旦主路由失效，备份路由会接替主路由，增强网络的可靠性。<br><strong>载均衡的概念</strong><br>当有多条可选路径前往同一目标网络，可以通过配置相同优先级和开销的静态路由实现负载均衡，使得数据的传输均衡地分配到多条路径上，从而实现数据分流、减轻单条路径负载过重的效果。而当其中某一条路径失效时，其他路径仍然能够正常传输数据，也起到了冗余作用。仅负载均衡条件下，路由器才会同时显示两条去往同一目标网络的路由条目。</p>
+<p><strong>案例3-3 浮动静态路由及负载均衡的配置</strong><br>案例背景与要求：路由器R1模拟某公司总部，路由器R2与路由器R3模拟两个分部，主机PC1与PC2所在的网段分别模拟两个分部中的办公网络。现需要总部与各个分部、分部与分部之间都能够通信，且分部之间在通信时，直连链路为主用链路，通过总部的链路为备用链路。本实验要求使用浮动静态路由实现路由备份，并可以通过调整优先级的值实现路由器R2到12.1.1.0&#x2F;24网络的负载均衡。浮动静态路由及负载均衡的拓扑，如下图所示。 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ov7qpR"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ov7qpR.png"></a></p>
+<p>案例配置思路<br>①在路由器R1上配置两条静态路由，第一条：目的地&#x2F;掩码为12.1.1.0&#x2F;24，出接口为GE2&#x2F;0&#x2F;0，下一跳IP地址为2.1.1.2。第二条：目的地&#x2F;掩码为11.1.1.0&#x2F;24，出接口为GE1&#x2F;0&#x2F;0，下一跳IP地址为1.1.1.2。<br>②在路由器R2上配置一条静态路由，目的地&#x2F;掩码为12.1.1.0&#x2F;24，出接口为GE2&#x2F;0&#x2F;0，下一跳IP地址为3.1.1.2。<br>③在路由器R2上配置一条优先级为100的静态路由，目的地&#x2F;掩码为12.1.1.0&#x2F;24，出接口为GE1&#x2F;0&#x2F;0，下一跳IP地址为1.1.1.1。<br>④在路由器R3上配置一条静态路由，目的地&#x2F;掩码为11.1.1.0&#x2F;24，出接口为GE1&#x2F;0&#x2F;0，下一跳IP地址为3.1.1.1。<br>⑤在路由器R3上配置一条优先级为100的静态路由，目的地&#x2F;掩码为11.1.1.0&#x2F;24，出接口为GE2&#x2F;0&#x2F;0，下一跳IP地址为2.1.1.1。<br>⑥根据路由器R2的路由信息，调整到12.1.1.0&#x2F;24网段的静态路由优先级，实现负载均衡。 </p>
+<p>案例配置步骤<br>路由器R1的配置如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R1</span><br><span class="line">[R1]ip route-static 12.1.1.0 24 2.1.1.2</span><br><span class="line">[R1]ip route-static 11.1.1.0 24 1.1.1.2</span><br></pre></td></tr></table></figure>
+
+<p>路由器R2的配置如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R2</span><br><span class="line">[R2]ip route-static 12.1.1.0 24 3.1.1.2</span><br><span class="line">[R2]ip route-static 12.1.1.0 24 1.1.1.1 preference 100</span><br></pre></td></tr></table></figure>
+
+<p>路由器R3的配置如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname R3</span><br><span class="line">[R3]ip route-static 11.1.1.0 24 3.1.1.1</span><br><span class="line">[R3]ip route-static 11.1.1.0 24 2.1.1.1 preference 100</span><br></pre></td></tr></table></figure>
+
+<p>案例验证<br>①完成以上配置后，在路由器R2系统视图状态下输入【display ip routing-table】命令查看其路由表。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;R2&gt;display ip routing-table </span><br><span class="line">Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Routing Tables: Public</span><br><span class="line">         Destinations : 14       Routes : 14       </span><br><span class="line">Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface</span><br><span class="line">        1.0.0.0/8   Direct  0    0           D   1.1.1.2         GigabitEthernet1/0/0</span><br><span class="line">        1.1.1.2/32  Direct  0    0           D   127.0.0.1       GigabitEthernet1/0/0</span><br><span class="line">  1.255.255.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet1/0/0</span><br><span class="line">        3.0.0.0/8   Direct  0    0           D   3.1.1.1         GigabitEthernet2/0/0</span><br><span class="line">        3.1.1.1/32  Direct  0    0           D   127.0.0.1       GigabitEthernet2/0/0</span><br><span class="line">  3.255.255.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet2/0/0</span><br><span class="line">       11.1.1.0/24  Direct  0    0           D   11.1.1.1        GigabitEthernet3/0/0</span><br><span class="line">       11.1.1.1/32  Direct  0    0           D   127.0.0.1       GigabitEthernet3/0/0</span><br><span class="line">     11.1.1.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet3/0/0</span><br><span class="line">       12.1.1.0/24  Static  60   0          RD   3.1.1.2         GigabitEthernet2/0/0</span><br><span class="line">      127.0.0.0/8   Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">      127.0.0.1/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">127.255.255.255/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">255.255.255.255/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br></pre></td></tr></table></figure>
+
+<p>结果：路由器R2的路由表中己经有了目标网段为12.1.1.0&#x2F;24，优先级为60的静态路由信息，但没有优先级为100的路由信息。</p>
+<p>②通过对路由器R2执行【display ip routing-table protocol static】命令查看到优先级为100的路由条目。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]display ip routing-table protocol static</span><br><span class="line">Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Public routing table : Static</span><br><span class="line">         Destinations : 1        Routes : 2        Configured Routes : 2</span><br><span class="line">Static routing table status : &lt;Active&gt;</span><br><span class="line">         Destinations : 1        Routes : 1</span><br><span class="line">Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface</span><br><span class="line">       12.1.1.0/24  Static  60   0          RD   3.1.1.2         GigabitEthernet2/0/0</span><br><span class="line">Static routing table status : &lt;Inactive&gt;</span><br><span class="line">         Destinations : 1        Routes : 1</span><br><span class="line">Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface</span><br><span class="line">       12.1.1.0/24  Static  100  0          R    1.1.1.1         GigabitEthernet1/0/0</span><br></pre></td></tr></table></figure>
+
+<p>③用【shutdown】命令断开路由器R2的G2&#x2F;0&#x2F;0接口，模拟主链路故障，验证浮动静态路由的效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]interface gigabitEthernet2/0/0</span><br><span class="line">[R2-gigabitEthernet2/0/0]shutdown</span><br><span class="line">[R2]display ip routing-table </span><br><span class="line">Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Routing Tables: Public</span><br><span class="line">         Destinations : 11       Routes : 11       </span><br><span class="line">Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface</span><br><span class="line">        1.0.0.0/8   Direct  0    0           D   1.1.1.2         GigabitEthernet1/0/0</span><br><span class="line">        1.1.1.2/32  Direct  0    0           D   127.0.0.1       GigabitEthernet1/0/0</span><br><span class="line">  1.255.255.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet1/0/0</span><br><span class="line">       11.1.1.0/24  Direct  0    0           D   11.1.1.1        GigabitEthernet3/0/0</span><br><span class="line">       11.1.1.1/32  Direct  0    0           D   127.0.0.1       GigabitEthernet3/0/0</span><br><span class="line">     11.1.1.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet3/0/0</span><br><span class="line">       12.1.1.0/24  Static  100  0          RD   1.1.1.1         GigabitEthernet1/0/0</span><br><span class="line">      127.0.0.0/8   Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">      127.0.0.1/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">127.255.255.255/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">255.255.255.255/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br></pre></td></tr></table></figure>
+
+<p>用【shutdown】命令断开路由器R2的G2&#x2F;0&#x2F;0接口，模拟主链路故障，回显信息可以看到路由器R2的路由表中出现了优先级为100的路由条目，从而验证了浮动静态路由的效果。</p>
+<p>④为了检验负载均衡的效果，用【undo shutdown】命令重新开启路由器R2的G2&#x2F;0&#x2F;0接口，同时，在路由器R2上用【ip route-static 12.1.1.0 24 1.1.1.1】命令将这条路由的优先级（preference）从100改为60，通过查看路由器R2的路由表的回显信息可以看到有两条路径不同（下一跳地址不同）去往12.1.1.0&#x2F;24目标网段的路由条目，从而验证了负载均衡的效果。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R2]display ip routing-table </span><br><span class="line"> Route Flags: R - relay, D - download to fib</span><br><span class="line">------------------------------------------------------------------------------</span><br><span class="line">Routing Tables: Public</span><br><span class="line">         Destinations : 14       Routes : 15       </span><br><span class="line">Destination/Mask    Proto   Pre  Cost      Flags NextHop         Interface</span><br><span class="line">        1.0.0.0/8   Direct  0    0           D   1.1.1.2         GigabitEthernet1/0/0</span><br><span class="line">        1.1.1.2/32  Direct  0    0           D   127.0.0.1       GigabitEthernet1/0/0</span><br><span class="line">  1.255.255.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet1/0/0</span><br><span class="line">        3.0.0.0/8   Direct  0    0           D   3.1.1.1         GigabitEthernet2/0/0</span><br><span class="line">        3.1.1.1/32  Direct  0    0           D   127.0.0.1       GigabitEthernet2/0/0</span><br><span class="line">  3.255.255.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet2/0/0</span><br><span class="line">       11.1.1.0/24  Direct  0    0           D   11.1.1.1        GigabitEthernet3/0/0</span><br><span class="line">       11.1.1.1/32  Direct  0    0           D   127.0.0.1       GigabitEthernet3/0/0</span><br><span class="line">     11.1.1.255/32  Direct  0    0           D   127.0.0.1       GigabitEthernet3/0/0</span><br><span class="line">       12.1.1.0/24  Static  60   0          RD   3.1.1.2         GigabitEthernet2/0/0</span><br><span class="line">                    Static  60   0          RD   1.1.1.1         GigabitEthernet1/0/0</span><br><span class="line">      127.0.0.0/8   Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">      127.0.0.1/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">127.255.255.255/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br><span class="line">255.255.255.255/32  Direct  0    0           D   127.0.0.1       InLoopBack0</span><br></pre></td></tr></table></figure>
+
+<h1 id="OSPF路由协议"><a href="#OSPF路由协议" class="headerlink" title="OSPF路由协议"></a>OSPF路由协议</h1><h2 id="OSPF概述"><a href="#OSPF概述" class="headerlink" title="OSPF概述"></a>OSPF概述</h2><p><strong>OSPF的概念</strong><br>开放最短路径优先（Open Shortest Path First，OSPF）是由IETF组织开发的开放性标准协议，它是一个链路状态内部网关路由协议，运行OSPF协议的路由器会将自己拥有的链路状态信息，通过启用了OSPF协议的接口发送给其他0SPF设备，同一个OSPF区域中的每台设备都会参与链路状态信息的创建、发送、接收与转发，直到这个区域中的所有OSPF设备获得了相同的链路状态信息为止。<br><strong>OSPF区域</strong><br>OSPF区域概念<br>一个OSPF网络可以被划分成多个区域（Area）。如果一个OSPF网络只包含一个区域，则这样的OSPF网络称为单区域OSPF网络；如果一个OSPF网络包含了多个区域，则称为多区域OSPF网络。</p>
+<p><strong>OSPF区域结构</strong><br>如图所示。OSPF网络共有4个区域，其中Area 0为骨干区域，Area 1、Area 2和Area 3为非骨干区域。需要注意的是，路由器R1、R2和R3同时属于骨干区域和非骨干区域，而其他路由器只属于一个区域。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovbEG9"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovbEG9.png"></a></p>
+<p>在OSPF网络中，每一个区域都有一个编号，称为区域ID（Area ID）。区域ID是一个32位的二进制数，一般用十进制数来表示。区域ID为0的区域称为骨干区域（Backbone Area），其他区域都称为非骨干区域。单区域OSPF网络只包含一个区域，这个区域必须是骨干区域。多区域OSPF网络中，除骨干区域外，还有若干个非骨干区域，一般来说，每一个非骨干区域都需要与骨干区域直连，当非骨干区域没有与骨干区域直连时，要采用虚链路（Virtual Link）技术从逻辑上实现非骨干区域与骨干区域直连。也就是说，非骨干区域之间的通信必须要通过骨干区域中转才能实现。</p>
+<p><strong>链路状态及LSA</strong><br>OSPF是一种基于链路状态的路由协议，链路状态也指路由器的接口状态，其核心思想是，每台路由器都将自己的各个接口的接口状态（链路状态）共享给其他路由器。在此基础上，每台路由器就可以依据自身的接口状态和其他路由器的接口状态计算出去往各个目的地的路由。路由器的链路状态包含了该接口的IP地址及子网掩码等信息；<br>链路状态通告（Link-State Advertisement，LSA）是链路状态信息的主要载体，链路状态信息主要包含在LSA中并通过LSA的通告（泛洪）来实现共享的。</p>
+<p>需要说明的是，不同类型的LSA所包含的内容、功能、通告的范围也是不同的，LSA的类型主要包括Type-1 LSA(Router LSA)、Type-2 LSA(Network LSA)、Type-3 LSA(Network Summary LSA)、Type-4 LSA(ASBR Summary LSA)等。由于本书的知识范围限制，LSA的类型不作详细阐述。</p>
+<p><strong>OSPF消息中的报文</strong><br>OSPF协议报文有5种类型，分别是Hello报文、DD报文（Database Description Packet）、LSR报文（Link-State Request Packet）、LSU报文（Link-State Update Packet）和LSAck（Link-State Acknowledgement Packet）报文。 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovbGRA"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovbGRA.png"></a></p>
+<p>OSPF协议报文直接封装在IP报文中，IP报文头部中的协议字段值必须为89。<br>OSPF报文中的Hello报文所携带的信息是指路由器某一接口所发送的Hello报文携带的如下信息。<br>OSPF的版本号<br>接口所属路由器的Router-ID<br>接口所属区域的Area-ID<br>接口的密钥信息<br>接口的认证类型<br>接口IP地址的子网掩码<br>接口的HelloInterval(发送报文的间隔时间)<br>接口的RouterDeadInterval<br>接口所连二层网络的DR和BDR<br>OSPF报文中的DD报文用于描述自己的链路状态数据库LSDB并进行数据库的同步；LSR报文用于请求相邻路由器LSDB中的一部分数据；LSU报文的功能是向对端路由器发送多条LSA用于更新；LSAck报文是指路由器在接收到LSU报文后所发出的确认应答报文。</p>
+<p><strong>Router ID： Router ID是OSPF区域中路由器的唯一标识</strong><br>一台OSPF路由器的Router ID的是按照以下方式生成的：<br>①如果管理员手动配置了路由器的Router ID，则路由器将使用该Router ID。<br>②如果没有设置，但在路由器上创建了逻辑接口（如环回接口），则路由器会选择这台路由器上所有逻辑接口的IPv4地址中，数值最大的IPv4地址作为Router ID（不论该接口是否参与了OSPF协议）。<br>③如果①和②都没有，则路由器会选择所有活动物理接口的IPv4地址中数值最大的IPv4地址作为Router ID（不论该接口是否参与了OSPF协议）。</p>
+<p>Router ID一旦选定，只要OSPF进程没有重启，路由器的Router ID就不会改变，不论接口是否有变化。RouterID的变化会对OSPF网络产生影响，因此，通常情况下管理员都会采用手动配置RouterID。</p>
+<p><strong>OSPF的网络类型</strong><br>OSPF所支持的网络类型是指OSPF能够支持的二层网络类型，根据数据链路层协议类型将网络分为下列4种类型：<br>广播（Broadcast）类型<br>NBMA（Non-Broadcast Multi-Access）类型<br>点到多点P2MP（point-to-multipoint）类型<br>点到点P2P(point-to-point)类型</p>
+<p>① 广播（Broadcast）类型：当链路层协议是Ethernet或FDDI时，OSPF默认的网络类型是Broadcast。在该类型的网络中，通常以组播形式（224.0.0.5和224.0.0.6）发送协议报文。<br>②NBMA（Non-Broadcast Multi-Access）类型：链路层协议是帧中继、ATM或X.25时，OSPF默认认为网络类型是NBMA。在该项类型的网络中，以单播形式发送协议报文。<br>③点到多点P2MP（point-to-multipoint）类型：点到多点必须是由其他的网络类型强制更改的。常用做法是将非全连通的NBMA改为点到多点的网络。在该类型的网络中，以组播形式（224.0.0.5）发送协议报文。<br>④点到点P2P(point-to-point)类型：当链路层协议是PPP、HDLC和LAPB时，OSPF默认的网络类型是P2P。在该类型的网络中，以组播形式（224.0.0.5）发送协议报文。</p>
+<p><strong>邻居关系与邻接关系</strong><br>邻居关系：在OSPF协议中，每台路由器的接口都会周期性地向外发送Hello报文。如果“相邻”两台路由器之间发送给对方的Hello报文完全一致，那么这两台路由器就会成为彼此的邻居路由器，他们之间才存在“邻居”关系。<br>邻接关系：在P2P或P2MP的二层网络类型中，两台互为“邻居”关系的路由器一定会同步彼此的LSDB，当这两台路由器成功地完成了LSDB的同步后，他们之间便建立起了“邻接”关系。</p>
+<p>在OSPF协议中，如果两台路由器的相邻接口位于同一个二层网络中，那么这两台路由器存在“相邻”关系，但“相邻”并不等同于“邻居（Neighbor）”关系，更不等同于“邻接(Adjacency)”关系。<br>如果两台路由器存在“邻接”关系，则他们之间一定存在“邻居”关系；如果两台路由器存在“邻居”关系，则他们之间可能存在“邻接”关系，也可能不存在。</p>
+<p> <strong>OSPF网络的DR与BDR</strong><br>DR与BDR概述：指定路由器（Designate Router，DR）和备份指定路由器（Backup Designate Router，BDR）只适用于广播（Broadcast）网络或非广播多路访问（NBMA）网络；<br>DR与BDR的选举规则：由于在一个广播网络或NBMA网络中，路由器之间会通过Hello报文进行交互，Hello报文中包含了路由器的Router-ID和优先级，路由器的优先级的取值范围是从0到255，取值越大优先级越高。</p>
+<p>选举DR和BDR是为了产生针对这两种网络的Type-2 LSA，同时可减少MA（多路访问multi-access)环境下，不必要的OSPF报文发送，从而提高链路带宽的利用率。BDR的作用是当DR出现故障时迅速替代DR的角色。<br>在广播型网络或NBMA网络中， DR会与其他路由器（包括BDR）建立邻接关系，BDR也会与其他路由器（包括DR）建立邻接关系，其他路由器之间不会建立邻接关系，互为邻接关系的路由器之间可以交互所有信息。<br>根据Router-ID和优先级进行DR与BDR的选举规则如下：<br>优先级（Router Priority）最大的路由器将成为DR。<br>如果优先级（Router Priority）相等，则Router-ID值最大的路由器将成为DR。<br>BDR的选举与DR的选举规则完全一样，BDR的选举发生在DR的选举之后，在同一个网络中DR和BDR不能是同一台路由器。<br>如果DR和BDR都存在，则DR出现故障后，BDR将迅速代替DR的角色。如果只存在DR而没有BDR，则DR出现故障后将重新选举新的DR，这就需要耗费一定的时间。如果一个路由器的优先级为0，则不参加DR或BDR的选举。</p>
+<h2 id="单区域OSPF配置"><a href="#单区域OSPF配置" class="headerlink" title="单区域OSPF配置"></a>单区域OSPF配置</h2><p>案例3-4 单区域OSPF的配置<br>案例背景与要求：如图所示，某公司网络有3台路由器，其中路由器R1为公司总部路由器，路由器R2和R3分别为两个分公司的路由器，网络规划要求整个网络运行OSPF路由协议，并且采用单区域的OSPF网络结构。 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovbXdO"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovbXdO.png"></a></p>
+<p><strong>案例配置思路</strong><br>①分别在3台路由器上启用OSPF进程。<br>②指定各路由器的接口为Area 0骨干区域。<br>案例配置步骤<br>配置路由器R1 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei] sysname R1</span><br><span class="line">[R1]OSPF 1 router-id 10.1.1.1</span><br><span class="line">[R1-OSPF-1]area 0</span><br><span class="line">[R1-OSPF-1-area-0.0.0.0]network 1.0.0.0 0.255.255.255</span><br><span class="line">[R1-OSPF-1-area-0.0.0.0]network 2.0.0.0 0.255.255.255</span><br><span class="line">[R1-OSPF-1-area-0.0.0.0]network 10.1.1.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<p>配置时需注意以下事项。<br>①首先进入系统视图，然后执行【OSPF[process-id|router-id router-id]】命令以启用OSPF进程，并进入OSPF视图。<br>②执行OSPF命令时，如果不输入OSPF进程编号（proccess-id）的值，则进程编号默认取值为1。<br>③Router ID是一个32bit的二进制数，一般用十进制数的IP地址表示，如果执行OSPF命令时不指定Router ID，则路由器会根据规则自动生成一个Router ID值。<br>④在OSPF视图中，需要根据网络规划指定运行OSPF协议的接口以及这些接口所在的区域。首先执行【area area-id】命令创建区域，进入区域视图后执行【network address wildcard-mask】命令指定OSPF协议的接口，其中，wildcard-mask为通配符掩码，addresss与wildcard-mask合在一起时，表示的是一个由若干个IP地址组成的集合，这个集合中的任何一个IP地址都满足且只需满足条件：如果wildcard-mask中某一个比特位的取值为0，则该IP地址中的对应比特位的取值必须与addresss中对应的比特位的取值相同。</p>
+<p>配置路由器R2</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei] sysname R2</span><br><span class="line">[R2]OSPF 1 router-id 11.1.1.1</span><br><span class="line">[R2-OSPF-1]area 0</span><br><span class="line">[R2-OSPF-1-area-0.0.0.0]network 1.0.0.0 0.255.255.255</span><br><span class="line">[R2-OSPF-1-area-0.0.0.0]network 3.0.0.0 0.255.255.255</span><br><span class="line">[R2-OSPF-1-area-0.0.0.0]network 11.1.1.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<p>配置路由器R3 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei] sysname R3</span><br><span class="line">[R3]OSPF 1 router-id 12.1.1.1</span><br><span class="line">[R3-OSPF-1]area 0</span><br><span class="line">[R3-OSPF-1-area-0.0.0.0]network 2.0.0.0 0.255.255.255</span><br><span class="line">[R3-OSPF-1-area-0.0.0.0]network 3.0.0.0 0.255.255.255</span><br><span class="line">[R3-OSPF-1-area-0.0.0.0]network 12.1.1.0 0.0.0.255</span><br></pre></td></tr></table></figure>
+
+<p>案例验证<br>通过以上配置，三台路由器之间都建立起了邻接关系。为了确认上述配置已经生效，可以使用【display OSPF 1 peer】命令来查看路由器的邻居信息，下面以路由器R1为例。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]display OSPF 1 peer</span><br><span class="line">  	 OSPF Process 1 with Router ID 10.1.1.1</span><br><span class="line">		 Neighbors </span><br><span class="line">Area 0.0.0.0 interface 2.1.1.1(GigabitEthernet2/0/0)&#x27;s neighbors</span><br><span class="line">Router ID: 12.1.1.1         Address: 2.1.1.2         </span><br><span class="line">State: Full  Mode:Nbr is  Master  Priority: 1</span><br><span class="line">DR: 2.1.1.1  BDR: 2.1.1.2  MTU: 0    </span><br><span class="line">......</span><br><span class="line">		 Neighbors </span><br><span class="line"> Area 0.0.0.0 interface 1.1.1.1(GigabitEthernet1/0/0)&#x27;s neighbors</span><br><span class="line"> Router ID: 11.1.1.1         Address: 1.1.1.2         </span><br><span class="line"> State: Full  Mode:Nbr is  Master  Priority: 1</span><br><span class="line"> DR: 1.1.1.1  BDR: 1.1.1.2  MTU: 0    </span><br><span class="line"> Dead timer due in 37  sec </span><br><span class="line"> Retrans timer interval: 5 </span><br><span class="line"> Neighbor is up for 00:15:23     </span><br><span class="line"> Authentication Sequence: [ 0 ] </span><br></pre></td></tr></table></figure>
+
+<p>回显信息表明，路由器R1已经成功和路由器R2和R3建立了邻接关系。</p>
+<p>通过在路由器R1上使用【display OSPF 1 routing】命令查看OSPF路由表。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]display OSPF 1 routing</span><br><span class="line"> OSPF Process 1 with Router ID 10.1.1.1</span><br><span class="line"> Routing Tables </span><br><span class="line"> Routing for Network </span><br><span class="line">Destination        Cost  Type       NextHop         AdvRouter       Area</span><br><span class="line">1.0.0.0/8          1     Transit    1.1.1.1         10.1.1.1        0.0.0.0</span><br><span class="line">2.0.0.0/8          1     Transit    2.1.1.1         10.1.1.1        0.0.0.0</span><br><span class="line">10.1.1.0/24        1     Stub       10.1.1.1        10.1.1.1        0.0.0.0</span><br><span class="line">3.0.0.0/8          2     Transit    1.1.1.2         11.1.1.1        0.0.0.0</span><br><span class="line">3.0.0.0/8          2     Transit    2.1.1.2         11.1.1.1        0.0.0.0</span><br><span class="line">11.1.1.0/24        2     Stub       1.1.1.2         11.1.1.1        0.0.0.0</span><br><span class="line">12.1.1.0/24        2     Stub       2.1.1.2         12.1.1.1        0.0.0.0</span><br><span class="line">Total Nets: 7  </span><br><span class="line">Intra Area: 7  Inter Area: 0  ASE: 0  NSSA: 0 </span><br></pre></td></tr></table></figure>
+
+<p>回显信息表可以看到，路由器R1的OSPF路由表中已经拥有了从路由器R1去往各个目标网络的路由。</p>
+<h1 id="VLAN间路由"><a href="#VLAN间路由" class="headerlink" title="VLAN间路由"></a>VLAN间路由</h1><h2 id="VLAN间路由概念"><a href="#VLAN间路由概念" class="headerlink" title="VLAN间路由概念"></a>VLAN间路由概念</h2><p> VLAN间路由的概念<br>虽然VLAN可以减少网络中的广播，提高网络安全性能，但无法实现网络内部的所有主机互相通信，我们可以通过路由器或三层交换机来实现属于不同VLAN的计算机之间的三层通信，这就是VLAN间路由。</p>
+<p>VLAN间二层通信的局限性<br>如图所示，VLAN隔离了二层广播域，即隔离了各个VLAN之间的任何二层流量，因此，不同VLAN的用户之间不能进行二层通信；<br>由于不同VLAN之间的主机是无法实现二层通信的，所以必须通过三层路由才能将报文从一个VLAN转发到另外一个VLAN，实现跨VLAN通信。实现VLAN间通信的方法主要有3种：多臂路由、单臂路由和三层交换。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovqBm6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovqBm6.png"></a></p>
+<p>VLAN间路由的3种方法：多臂路由、单臂路由和三层交换</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovq4nP"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovq4nP.png" alt="多臂路由示意图"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovLVnx"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovLVnx.png" alt="单臂路由示意图"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovLQ9H"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovLQ9H.png" alt="三层交换示意图"></a></p>
+<p>①多臂路由图所示，在路由器上为每个VLAN分配一个单独的接口，并使用一条物理链路连接到二层交换机上。当VLAN间的主机需要通信时，数据会经由路由器进行路由，并被转发到目标VLAN内的主机，这样就可以实现VLAN之间的相互通信。然而，随着每个交换机上VLAN数量的增加，这样做必然需要大量的路由器接口，而路由器的接口数量是极其有限的。并且，某些VLAN之间的主机可能不需要频繁进行通信，如果这样配置的话，会导致路由器的接口利用率很低。因此，实际应用中一般不会采用多臂路由来解决VLAN间的通信问题。<br>②单臂路由示意图所示，交换机和路由器之间仅使用一条物理链路连接。在交换机上，把连接到路由器的端口配置成Trunk类型的端口，并允许相关VLAN的帧通过。在路由器上创建子接口（Sub-Interface），逻辑上把连接路由器的物理链路分成了多条链路（每个子接口对应一个VLAN）。这些子接口的IP地址各不相同，每个子接口的IP地址应该配置为该子接口所对应VLAN的默认网关地址。子接口是一个逻辑上的概念，所以子接口也常常被称为虚接口。配置子接口时，需要注意以下几点。<br>①必须为每个子接口分配一个IP地址。该IP地址与子接口所属VLAN位于同一网段。<br>②需要在子接口上配置802.1Q封装。<br>③在子接口上执行【arp broadcast enable】命令启用子接口的ARP广播功能。本例中，主机A发送数据给主机B时，路由器R1会通过G0&#x2F;0&#x2F;1.1子接口收到此数据，然后查找路由表，将数据从G0&#x2F;0&#x2F;1.2子接口发送给主机B，这样就实现了VLAN2和VLAN3之间的主机通信。<br>③相对于多臂路由，单臂路由可以节约路由器的接口资源，但如果VLAN数量较多，VLAN间的通信流量很大时，单臂链路所能提供的带宽就有可能无法支撑这些通信流量。而三层交换设备较好的解决了接口数量和交换带宽问题。<br>第三层交换是在交换机中引入路由模块而取代“路由器+二层交换机”的网络技术，这种集成了三层数据包转发功能的交换机被称为三层交换机。三层交换机中每个VLAN对应一个IP网段，VLAN之间还是隔离的，但不同IP网段之间的访问就要跨越VLAN，它需要使用三层转发引擎提供的VLAN间路由功能来实现。该第三层转发引擎相当于传统组网中的路由器，当需要与其他VLAN通信时要在三层交换引擎上分配一个路由接口（逻辑接口VLANIF），用来做VLAN的网关。<br>三层交换机本身提供了路由功能，因此它不需要借助路由器来转发不同VLAN间的流量。三层交换机本身就拥有大量的高速端口，它可以直接连接大量的终端设备。因此，一台三层交换机就可以实现将终端隔离在不同的VLAN中，同时为这些终端提供VLAN间路由的功能。<br>三层交换示意图所示，在三层交换机上配置VLANIF接口来实现VLAN间路由。如果网络上有多个VLAN，则需要给每个VLAN配置一个VLANIF接口，并给每个VLANIF接口配置一个IP地址。用户设置的默认网关就是三层交换机中VLANIF接口的IP地址。</p>
+<h2 id="VLAN间三层通信-单臂路由"><a href="#VLAN间三层通信-单臂路由" class="headerlink" title="VLAN间三层通信-单臂路由"></a>VLAN间三层通信-单臂路由</h2><p>案例3-5 单臂路由的配置<br>案例背景与要求：根据下图所示的网络拓扑，在路由器上配置单臂路由，实现VLAN10和VLAN20网络互联互通。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovLa4g"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovLa4g.png"></a></p>
+<p>案例配置思路<br>①在交换机SW1上创建VLAN，并将相应接口加入到对应VLAN中；<br>②配置交换机与路由器相连接口为Trunk模式；<br>③在路由器R1上创建子接口，并配置子接口的IP地址，启用子接口的dot1q封装，配置允许终结子接口转发广播报文。</p>
+<p>案例配置步骤<br>①配置交换机SW1，在交换机SW1上创建VLAN10和VLAN20，并配置trunk接口。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname SW1</span><br><span class="line">[SW1]vlan batch 10 20</span><br><span class="line">[SW1-GigabitEthernet0/0/24]port link-type trunk</span><br><span class="line">[SW1-GigabitEthernet0/0/24]port trunk allow-pass vlan 10 20 </span><br><span class="line">//配置交换机SW1的G0/0/24端口允许VLAN10和VLAN20的数据通过//</span><br><span class="line">[SW1-GigabitEthernet0/0/1]port link-type access</span><br><span class="line">[SW1-GigabitEthernet0/0/1]port default vlan 10</span><br><span class="line">[SW1-GigabitEthernet0/0/2]port link-type access</span><br><span class="line">[SW1-GigabitEthernet0/0/2]port default vlan 20</span><br></pre></td></tr></table></figure>
+
+<p>②配置路由器R1，主要配置子接口IP及其dot1q封装。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[R1]interface g0/0/1.1</span><br><span class="line">[R1-GigabitEthernet0/0/0.10]dot1q termination vid 10</span><br><span class="line">[R1-GigabitEthernet0/0/1.10]ip address 192.168.10.254 24</span><br><span class="line">[R1-GigabitEthernet0/0/1.10]arp broadcast enable</span><br><span class="line">[R1-GigabitEthernet0/0/1.10]quit</span><br><span class="line">[R1]interface g0/0/1.2</span><br><span class="line">[R1-GigabitEthernet0/0/1.20]dot1q termination vid 20</span><br><span class="line">[R1-GigabitEthernet0/0/1.20Jip address 192.168.20.254 24</span><br><span class="line">[R1-GigabitEthernet0/0/1.20]arp broadcast enable</span><br></pre></td></tr></table></figure>
+
+<p>上述命令中，【interface g0&#x2F;0&#x2F;1.1】命令用来创建子接口，g0&#x2F;0&#x2F;1.1代表物理接口g0&#x2F;0&#x2F;1内的逻辑接口通道。【dot1q termination vid】命令用来配置子接口dot1q封装的单层VLAN ID。默认情况，子接口没有配置dot1q封装的单层VLAN ID。本命令执行成功后，终结子接口对报文的处理如下：接收报文时，剥掉报文中携带的Tag后进行三层转发。转发出去的报文是否带Tag由出接口决定。发送报文时，将相应的VLAN信息添加到报文中再发送。【arp broadcast enable】命令用来启用子接口的ARP广播功能。默认情况下，终结子接口没有启用ARP广播功能。禁用子接口不能转发广播报文时，在收到广播报文后它将直接丢弃该报文。为了允许终结子接口能转发广播报文，可以通过在子接口上执行此命令。</p>
+<p>案例验证<br>配置完成后，在PC1上执行命令“ping 192.168.20.1”。测试结果如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PC&gt;ping 192.168.20.1</span><br><span class="line">Ping 192.168.20.1: 32 data bytes, Press Ctrl_C to break</span><br><span class="line">From 192.168.20.1: bytes=32 seq=1 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=2 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=3 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=4 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=5 ttl=127 time&lt;1 ms</span><br><span class="line">--- 192.168.20.1 ping statistics ---</span><br><span class="line">  5 packet(s) transmitted</span><br><span class="line">  5 packet(s) received</span><br><span class="line">  0.00% packet loss</span><br><span class="line">  round-trip min/avg/max = 0/0/0 ms</span><br></pre></td></tr></table></figure>
+
+<p>将PC1的IP地址配置为192.168.10.1&#x2F;24，并将其默认网关地址配置为路由器R1子接口GigabitEthernet0&#x2F;0&#x2F;1.1的IP地址：192.168.10.254&#x2F;24。将PC2的IP地址配置为192.168.20.1&#x2F;24，并将其默认网关地址配置为路由器R1子接口GigabitEthernet0&#x2F;0&#x2F;1.2的IP地址：192.168.10.254&#x2F;24。</p>
+<p>从回显信息中我们可以看到，PC1收到了PC2的响应，表示PC1可以Ping通PC2，这说明通过单臂路由，成功地实现了VLAN10与VLAN20之间的三层通信。</p>
+<h2 id="VLAN间三层通信-三层交换机"><a href="#VLAN间三层通信-三层交换机" class="headerlink" title="VLAN间三层通信-三层交换机"></a>VLAN间三层通信-三层交换机</h2><p>案例3-6 三层交换机VLAN间路由的配置<br>案例背景与要求：如图所示的网络拓扑，在三层交换机上配置三层路由，实现VLAN10和VLAN20网络互联互通。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ovOMZV"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/14/ovOMZV.png"></a></p>
+<p>案例配置思路<br>①在三层交换机上创建VLAN10和VLAN20；<br>②将交换机上的对应端口添加到VLAN10和VLAN20中；<br>③在交换上配置三层接口VLANIF的IP地址；<br>④在PC1和PC2配置对应的IP地址和网关，并测试VLAN间的连通性。<br>案例配置步骤<br>①在交换机SW1上创建VLAN 10和VLAN 20。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Huawei&gt;system-view</span><br><span class="line">[Huawei]sysname SW1</span><br><span class="line">[SW1]vlan batch 10 20</span><br></pre></td></tr></table></figure>
+
+<p>②在交换机SW1上进行端口配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[SW1]interface gigabitethernet0/0/1</span><br><span class="line">[SW1-GigabitEthernet0/0/1]port link-type access</span><br><span class="line">[SW1-GigabitEthernet0/0/1]port default vlan 10</span><br><span class="line">[SW1-GigabitEthernet0/0/1]quit</span><br><span class="line">[SW1]interface gigabitethernet0/0/2</span><br><span class="line">[SW1-GigabitEthernet0/0/2]port link-type access</span><br><span class="line">[SW1-GigabitEthernet0/0/2]port default vlan 20</span><br><span class="line">[SW1-GigabitEthernet0/0/2]quit</span><br></pre></td></tr></table></figure>
+
+<p>③在交换机SW1上配置VLANIF接口</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[SW1]interface vlanif 10</span><br><span class="line">[SW1-Vlanif10]ip address 192.168.10.254 24</span><br><span class="line">[SW1-Vlanif10]quit</span><br><span class="line">[SW1]interface vlanif 20</span><br><span class="line">[SW1-Vlanif20]ip address 192.168.20.254 24</span><br><span class="line">[SW1-Vlanif20]quit</span><br></pre></td></tr></table></figure>
+
+<p>案例验证<br>在PC1上执行【ping 192.168.20.1】命令，测试结果如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">PC&gt;ping 192.168.20.1</span><br><span class="line">Ping 192.168.20.1: 32 data bytes, Press Ctrl_C to break</span><br><span class="line">From 192.168.20.1: bytes=32 seq=1 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=2 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=3 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=4 ttl=127 time&lt;1 ms</span><br><span class="line">From 192.168.20.1: bytes=32 seq=5 ttl=127 time&lt;1 ms</span><br><span class="line">--- 192.168.20.1 ping statistics ---</span><br><span class="line">  5 packet(s) transmitted</span><br><span class="line">  5 packet(s) received</span><br><span class="line">  0.00% packet loss</span><br><span class="line">  round-trip min/avg/max = 0/0/0 ms</span><br></pre></td></tr></table></figure>
+
+<p>将PC1的IP地址配置为192.168.10.1&#x2F;24，网关地址配置为192.168.10.254&#x2F;24。将PC2的IP地址配置为192.168.20.1&#x2F;24，网关地址配置为192.168.20.254&#x2F;24。配置完成后，在PC1上执行【ping 192.168.20.1】命令。<br>从回显信息中我们可以看到，PC1收到了PC2的响应，表示PC1可以Ping通PC2，这说明三层交换机SW1成功地实现了VLAN10与VLAN20之间的三层通信。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">渊</div><div class="post-copyright__author_desc">乖乖，我永远希望你能开心</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2021/12/14/华为1+X/3.华为1+X-路由技术/')">3.华为1+X-路由技术</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/"><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=3.华为1+X-路由技术&amp;url=http://example.com/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/&amp;pic=https://s4.ax1x.com/2021/12/23/TGe4nf.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">渊</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__category-list"><a class="post-meta__box__categoryes" href="/categories/%E5%8D%8E%E4%B8%BA1-X/"><span class="categoryes-punctuation"> <i class="anzhiyufont anzhiyu-icon-inbox"></i></span>华为1+X<span class="categoryesPageCount">8</span></a></div><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>基础教程<span class="tagsPageCount">33</span></a><a class="post-meta__box__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>华为1+X<span class="tagsPageCount">8</span></a></div></div><div class="post_share"><div class="social-share" data-image="/img/default_cover1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/13/%E5%8D%8E%E4%B8%BA1+X/2.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">2.华为1+X/网络交换技术</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/15/%E5%8D%8E%E4%B8%BA1+X/4.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%8F%AF%E9%9D%A0%E6%80%A7/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">4.华为1+X-网络可靠性</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&IP/" title="1.华为1+X&#x2F;TCP&amp;IP"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-11</div><div class="title">1.华为1+X&#x2F;TCP&amp;IP</div></div></a></div><div><a href="/2021/12/13/%E5%8D%8E%E4%B8%BA1+X/2.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/" title="2.华为1+X&#x2F;网络交换技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-13</div><div class="title">2.华为1+X&#x2F;网络交换技术</div></div></a></div><div><a href="/2021/12/15/%E5%8D%8E%E4%B8%BA1+X/4.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%8F%AF%E9%9D%A0%E6%80%A7/" title="4.华为1+X-网络可靠性"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-15</div><div class="title">4.华为1+X-网络可靠性</div></div></a></div><div><a href="/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/" title="5.华为1+X-广域网技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-16</div><div class="title">5.华为1+X-广域网技术</div></div></a></div><div><a href="/2021/12/17/%E5%8D%8E%E4%B8%BA1+X/6.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="6.华为1+X-网络安全技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-17</div><div class="title">6.华为1+X-网络安全技术</div></div></a></div><div><a href="/2021/12/18/%E5%8D%8E%E4%B8%BA1+X/7.%E5%8D%8E%E4%B8%BA1+X-IPV6%E5%8D%8F%E8%AE%AE/" title="7.华为1+X-IPV6协议"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-18</div><div class="title">7.华为1+X-IPV6协议</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">落魄谷中寒风吹,春秋蝉鸣少年归 荡魂山处石人泪,定仙游走魔向北 逆流河上万仙退,爱情不敌坚持泪 宿命天成命中败,仙尊悔而我不悔</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">渊</h1><div class="author-info__desc">乖乖，我永远希望你能开心</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/updateyuan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1807133884" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">天若有情天亦老,大道无情情至公</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">路由基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">路由概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1%E8%A1%A8%E7%9A%84%E7%94%9F%E6%88%90%E4%B8%8E%E8%B7%AF%E7%94%B1%E6%9D%A1%E7%9B%AE"><span class="toc-number">1.2.</span> <span class="toc-text">路由表的生成与路由条目</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E4%B8%8E%E9%BB%98%E8%AE%A4%E8%B7%AF%E7%94%B1"><span class="toc-number">2.</span> <span class="toc-text">静态路由与默认路由</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1"><span class="toc-number">2.1.</span> <span class="toc-text">静态路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%BB%98%E8%AE%A4%E8%B7%AF%E7%94%B1"><span class="toc-number">2.2.</span> <span class="toc-text">默认路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E6%B1%87%E6%80%BB"><span class="toc-number">2.3.</span> <span class="toc-text">静态路由汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E8%B7%AF%E7%94%B1%E7%9A%84%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">静态路由的典型应用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OSPF%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.</span> <span class="toc-text">OSPF路由协议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OSPF%E6%A6%82%E8%BF%B0"><span class="toc-number">3.1.</span> <span class="toc-text">OSPF概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E5%8C%BA%E5%9F%9FOSPF%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">单区域OSPF配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#VLAN%E9%97%B4%E8%B7%AF%E7%94%B1"><span class="toc-number">4.</span> <span class="toc-text">VLAN间路由</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN%E9%97%B4%E8%B7%AF%E7%94%B1%E6%A6%82%E5%BF%B5"><span class="toc-number">4.1.</span> <span class="toc-text">VLAN间路由概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN%E9%97%B4%E4%B8%89%E5%B1%82%E9%80%9A%E4%BF%A1-%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1"><span class="toc-number">4.2.</span> <span class="toc-text">VLAN间三层通信-单臂路由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VLAN%E9%97%B4%E4%B8%89%E5%B1%82%E9%80%9A%E4%BF%A1-%E4%B8%89%E5%B1%82%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="toc-number">4.3.</span> <span class="toc-text">VLAN间三层通信-三层交换机</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浏览器页面切换快捷键"/></a><div class="content"><a class="title" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键">浏览器页面切换快捷键</a><time datetime="2024-01-29T10:31:51.596Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/hello-world1/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/01/29/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-01-29T10:31:51.589Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/31/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/10/31/hello-world/" title="Hello World">Hello World</a><time datetime="2022-10-31T09:40:41.000Z" title="发表于 2022-10-31 17:40:41">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文章"/></a><div class="content"><a class="title" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章">文章</a><time datetime="2022-06-27T09:29:00.000Z" title="发表于 2022-06-27 17:29:00">2022-06-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2022/01/02/Toe4Qx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo添加徽标"/></a><div class="content"><a class="title" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标">hexo添加徽标</a><time datetime="2022-03-13T08:58:50.000Z" title="发表于 2022-03-13 16:58:50">2022-03-13</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="渊" target="_blank">渊</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">76</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">21</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 0.88rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 0.88rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 0.88rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 0.88rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 0.88rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 0.88rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 0.88rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 0.88rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 0.88rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 0.88rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 0.88rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 0.88rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 0.88rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 0.88rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.88rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 0.88rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.88rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 0.88rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 0.88rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 0.88rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 渊 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2021 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.cbd.int/mathjax@3.2.2/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>

@@ -1,0 +1,1239 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>1.华为1+X/TCP&amp;IP | 渊</title><meta name="keywords" content="基础教程,华为1+X"><meta name="author" content="渊"><meta name="copyright" content="渊"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="1.华为1+X/TCP&amp;IP"><meta name="application-name" content="1.华为1+X/TCP&amp;IP"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="1.华为1+X/TCP&amp;IP"><meta property="og:url" content="http://example.com/2021/12/11/华为1+X/1.华为1+X-TCP&amp;IP/index.html"><meta property="og:site_name" content="渊"><meta property="og:description" content="华为1+X&amp;#x2F;TCP&amp;amp;IP 通信与网络通信的基本概念什么是通信“通信”一词中，“通”的意思就是传递与交流；“信”的意思就是信息。所谓通信，就是指人与人、人与计算机、计算机与计算机之间通过某种媒介和行为进行的信息交换。通信技术的最终目的是为了帮助人们更好地沟通和资源共享。 通信系统的基"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta property="article:author" content="渊"><meta property="article:tag" content="天若有情天亦老 大道无情情至公"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg"><meta name="description" content="华为1+X&amp;#x2F;TCP&amp;amp;IP 通信与网络通信的基本概念什么是通信“通信”一词中，“通”的意思就是传递与交流；“信”的意思就是信息。所谓通信，就是指人与人、人与计算机、计算机与计算机之间通过某种媒介和行为进行的信息交换。通信技术的最终目的是为了帮助人们更好地沟通和资源共享。 通信系统的基"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://example.com/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&amp;IP/"><link rel="preconnect" href="//cdn.cbd.int"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: {"mode":"api","api":"https://img2color-go.vercel.app/api?img=","cover_change":true},
+  authorStatus: {"skills":["🤖️ 数码科技爱好者","🔍 分享与热心帮助","🏠 智能家居小能手","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 壮汉人狠话不多"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":10,"position":"top","messagePrev":"距离上次更新已经","messageNext":"天了，文章的内容可能已经过时了。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 渊","link":"链接: ","source":"来源: 渊","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: {"enable":true,"delay":100,"shiftDelay":200},
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '渊',
+  title: '1.华为1+X/TCP&IP',
+  postAI: '',
+  pageFillDescription: '通信与网络, 通信的基本概念, 什么是通信, 通信系统的基本组成, 数据通信网络典型组网模型, 通信网络最常用的3种典型组网模型介绍, 网络通信常见术语, OSI与TCPx2FIP参考模型, 网络通信协议和标准机构, 网络通信协议的基本特性, OSI参考模型, TCPx2FIP参考模型, 数据链路层, LLC与MAC, 以太网概述, 网络层, IP地址与子网划分, ARP与IPv4通信, 传输层, TCP, UDP, 应用层华为通信与网络通信的基本概念什么是通信通信一词中通的意思就是传递与交流信的意思就是信息所谓通信就是指人与人人与计算机计算机与计算机之间通过某种媒介和行为进行的信息交换通信技术的最终目的是为了帮助人们更好地沟通和资源共享通信系统的基本组成信源又称信息源分为模拟信源和数字信源信源就是信息的发送端是发出待传送信息的人或设备在通信系统中信源即产生和发送信号的设备或计算机如话筒发送设备产生适合在信道中传输的信号信道也称为信息传输的通道分为有线和无线信道也可分为模拟信道和数字信号其中传输模拟信号的物理信道叫做模拟信道而传输数字信号的物理信道称为数字信道是连接发送端和接收端设备的物理媒介噪声源是分布在通信系统中的各种噪声接收设备是从接收信号中恢复原始的电信号信宿即信息的接收端是接收所传送信息的人或设备通信过程中接收和处理数据通信网络典型组网模型通信网络最常用的种典型组网模型介绍两台主机之间的通信示例两台计算机通过一根网线相连便组成了一个最简单的网络如果主机想从主机那里获得这首歌曲那该怎么办呢很简单让两台计算机运行相应的文件传输软件并点几下鼠标就实现了多台主机之间的通信示例如图所示的网络模型稍微复杂些它由一台路由器和多台计算机组成在这样的网络模型中通过借助路由器的转发作用每两台计算机之间都可以自由地传递文件访问的通信示例当主机希望从某个网址获取文件时必须先接入然后才能下载所需的文件的中文译名有很多如因特网互联网网际网等是目前世界上规模最大的计算机网络其前身是诞生于年的的广泛普及和应用是当今信息时代的标志性内容之一网络通信常见术语术语解释和说明数据载荷根据快递服务的比喻我们将数据载荷理解为最终想要传递的信息而实际上在具有层次化结构的网络通信过程中上一层协议传递给下一层协议的数据单元报文都可以称之为下一层协议的数据载荷报文报文是网络中交换与传输的数据单元它具有一定的内在格式并通常都具有头部数据载荷尾部的基本结构在传输过程中报文的格式和内容可能会发生改变头部为了更好地传递信息在组装报文时在数据载荷的前面添加的信息段统称为报文的头部尾部为了更好地传递信息在组装报文时在数据载荷的后面添加的信息段统称为报文的尾部注意很多报文是没有尾部的封装对数据载荷添加头部和尾部从而形成新的报文的过程解封装解封装是封装的逆过程也就是去掉报文的头部和尾部获取数据载荷的过程网关网关是在采用不同体系结构或协议的网络之间进行互通时用于提供协议转换路由选择数据交换等功能的网络设备网关是一种根据其部署位置和功能而命名的术语而不是一种特定的设备类型路由器路由器是连接不同网络的主要节点设备通过路由功能为报文选择传递路径能够识别不同的网络协议在网络中通常起网关的作用与参考模型网络通信协议和标准机构网络通信协议的基本特性什么是协议在网络通信中所谓协议就是指诸如计算机交换机路由器等网络设备为了实现通信而必须遵从的事先定义好的一系列规则和约定参考模型和参考模型是计算机网络通信领域中使用频率最高的两个参考模型特别是在计算机网络通信中的地位至关重要熟悉模型和参考模型的相关概念和简单应用对于我们接下来具体而深入地学习各种网络通信知识具有非常重要的指导作用协议的三要素语义需要发出何种控制信息完成何种动作以及做出何种应答语法数据与控制信息的格式数据编码等时序时间先后顺序和速度匹配以打电话为例来说明语义语法时序假设甲要打电话给乙首先甲拨通乙的电话号码双方电话振铃乙拿起电话然后甲乙开始通话通话完毕后双方挂断电话在此过程中双方都遵守了打电话的协议其中甲拨通乙的电话后乙的电话振铃振铃是一个信号表示有电话打进乙选择接电话讲话这一系列动作包括了控制信号响应动作讲话内容等就是语义电话号码就是语法时序的概念更好理解甲拨打了电话乙的电话才会响乙听到铃声后才会考虑要不要接这一系列时间的因果关系十分明确不可能没人拨电话乙的电话会响协议标准机构标准机构简要介绍国际标准化组织是世界上最大的非政府性标准化专门机构是国际标准化领域中一个十分重要的组织的任务是促进全球范围内的标准化及相关活动以利于国际间产品与服务的交流以及在知识科学技术和经济活动发展国际间的相互合作电气与电子工程师协会是一个电子技术与信息科学工程师的协会是世界上最大的专业技术组织之一成立的目的在于为电气电子方面的科学家工程师制造商提供国际联络交流的场合并为他们提供专业教育提高专业能力服务著名的以太网标准就是来自国际互联网工程任务组是全球互联网最具权或的技术标准化组织其主要任务是负责互联网相关技术规范的研发和制定目前绝大多数的互联网技术标准都是来自如著名的标准电子工业联盟是美国电子行业标准制定者之一常见串口标准便是制定的国际电信联盟简称为国际电联其组织结构主要分为电信标准化部门无线电通信部门和电信发展部门是主管信息通信技术事务的联合国机构国际电工委员会是世界上成立最早的国际性电工标准化机构负责有关电气工程和电子工程领域中的国际标准化工作与和等合作紧密协议可以分为私有协议和开放性的公有协议而专门整理研究制定和发布开放性标准协议的组织称为标准机构协议分层模型的优势实现协议标准化每一层有特定的功能各层自主管理更容易制定出相应的协议或标准降低关联性某一层协议的增减或更新都不影响其他层协议的运行实现各层协议的独立性边界清晰易理解协议分层模型让整个计算机网络的层次性更加清晰容易掌握参考模型不同节点的同等层具有相同的功能同节点内相邻层之间通过接口通信使用下层提供的服务为上层提供服务仅在最低层进行直接数据传送的网络体系结构如图所示当发送方主机的应用进程数据到达参考模型的应用层时网络中的数据将沿着垂直方向往下层传输即由应用层向下经表示层会话层一直到达物理层到达物理层后再经传输介质传到接收端主机由接收端物理层接收向上经数据链路层等到达应用层再由接收端获取数据在由发送进程交给应用层时由应用层加上该层有关控制和识别信息再向下传送这一过程一直重复到物理层在接收端信息向上传递时各层的有关控制和识别信息被逐层剥去最后数据送到接收进程参考模型各层的功能及关系参考模型主要功能物理层提供适合于传输介质承载的物理信号的转换实现物理信号的发送接受以及在物理传输介质上的数据比特流传输数据链路层在物理链路连接的相邻节点间建立逻辑通路实现数据帧的点到点点到多点方式的直接通信能够进行编码和差错控制网络层将数据分为一定长度的分组根据数据报文中的地址信息在通信子网中选择传输路径将数据从一个节点发送到另一个节点传输层建立维护和终止端到端的数据传输过程能提供控制传输速率调整数据的传输顺序等功能会话层在通信双方的进程间建立维持协调和终止会话确定双方是否开始一方发起的通信表示层数据转换加密压缩等确保一个系统生成的应用层数据能够被另外一个系统的应用层所识别和理解应用层为用户应用程序提供丰富的系统接口物理层提供建立维护和拆除物理链路所需的机械电气功能和规程的特性提供有关在传输介质上传输非结构的位流及物理链路故障检测指示在这一层数据还没有被组织仅作为原始的位流或电气电压处理单位是比特数据链路层负责在两个相邻结点间建立数据链路连接实现无差错地传送以帧为单位的数据并进行流量控制数据链路层要负责建立维持和释放数据链路的连接在传送数据时如果接收点检测到所传数据中有差错会通知发送方重新发送网络层主要为数据在节点之间传输创建逻辑链路通过路由选择算法为数据包选择最佳路径从而实现拥塞控制网络互联等功能网络层提供的服务有面向联接和面向无联接的服务两种面向联接的服务是可靠的联接服务是数据在交换之前必须先建立联接然后传输数据结束后终止之前建立联接的服务网络层以虚电路服务的方式实现面向联接的服务面向无联接的服务是一种不可靠的服务不能防止报文的丢失重发或失序面向无联接的服务优点在于其服务方式灵活方便并且非常迅速网络层以数据报服务的方式实现面向无联接的服务传输层主要为用户提供端到端服务处理数据报错误数据包次序等传输问题传输层是计算机通信体系结构中关键一层它向高层屏蔽了下层数据的通信细节使用户完全不用考虑物理层数据链路层和网络层工作的详细情况会话层为表示层提供建立维护和拆除会话连接的功能提供会话管理服务它可以通过对话控制来决定使用何种通信方式如全双工通信或半双工通信由于不同厂家的计算机产品常使用不同的信息表示标准例如在字符编码数值表示等方面存在着差异如果不解决信息表示上的差异通信的用户之间就不能互相识别因此表示层要完成信息表示格式转换转换可以在发送前也可以在接收后也可以要求双方都转换为某个特定标准的数据表示格式表示层为应用层提供能解释所交换信息含义的一组服务主要功能是完成传输数据的解释工作包括数据转换数据加解密和数据压缩等应用层是用户应用程序与网络的接口应用层和应用程序协同工作直接向用户提供服务完成用户希望在网络上完成的各种工作如等服务参考模型的四层结构四层与七层的对比在计算机网络通信中参考模型只是作为理论研究的模型并没有实际应用而实际上应用最为广泛的是参考模型是网络互联的标准协议连入的计算机进行的信息交换和传输都需要采用该协议各层的功能及关系参考模型主要功能网络接口层定义了与各种通信子网之间的网络接口网络接口层的功能是传输经网络层处理过的消息网络层将数据分为一定长度的分组根据数据报文中的地址信息在通信子网中选择传输路径将数据从一个节点发送到另一个节点传输层建立维护和终止端到端的数据传输过程能提供控制传输速率调整数据的传输顺序等功能应用层的应用层直接为用户提供各类服务将所有与应用相关的工作都归为这一层如远程登录文件传输电子邮件服务器等数据链路层数据链路层功能负责建立和管理节点间的链路通过各种控制协议将有差错的物理信道变为无差错的能可靠传输数据帧的数据链路在网络中由于各种干扰的存在物理链路是不可靠的因此数据链路层将在物理层提供的比特流的基础上通过差错控制流量控制方法使有差错的物理线路变为无差错的数据链路即提供可靠的通过物理介质传输数据的方法与逻辑链路控制子层定义是的缩写是数据链路层的上层部分功能可为网络用户提供两种服务无确认无连接服务和面向连接的服务无确认无连接服务它提供无需建立数据链路级连接而网络层实体能交换链路服务数据单元的手段数据传送方式可以是点到点点到多点式也可以是广播式这是一种数据报服务面向连接的服务在这种服务方式下必须先建立链路连接才能进行帧的传送它提供了建立维持复位和终止数据链路层连接的手段还提供了数据链路层的定序流控和错误恢复这是一种虚电路服务屏蔽了各种的差别并向其上层提供统一的数据链路服务实现了两个站点之间帧的交换完成端到端无差错的帧传输和应答功能和流量控制功能介质访问控制子层定义是的缩写是数据链路层的下层部分功能控制和协调所有站点对共享介质的访问以避免或减少冲突类型争用型介质访问控制又称随机型的介质访问控制协议如方式确定型介质访问控制又称有序的访问控制协议如令牌方式工作原理侦听信道上是否有信号在传输如果有的话表明信道处于忙状态就继续帧听直到信道空闲为止若没有侦听到任何信号就传输数据传输的时候继续侦听如发现冲突则执行退避算法随机等待一段时间后重新执行步骤若未发现冲突则发送成功计算机会返回到侦听信道状态以太网概述什么是以太网以太网是当前应用最普遍的局域网技术它很大程度上取代了其他局域网标准如令牌环和历经以太网在上世纪末的飞速发展后目前千兆以太网甚至以太网正在国际组织和领导企业的推动下不断拓展应用范围以太网是应用最为广泛的局域网包括标准的以太网快速以太网和以太网采用的是协议它们都符合标准以太网的相关标准使用直径为英寸阻抗为粗同轴电缆也称粗缆以太网最大网段长度为基带传输方法拓扑结构为总线型使用直径为英寸阻抗为细同轴电缆也称细缆以太网最大网段长度为基带传输方法拓扑结构为总线型使用类以上双绞线电缆最大网段长度为拓扑结构为星型使用光纤传输介质传输速率为拓扑结构为星型标准以太网只有的吞吐量使用协议以太网可以使用粗同轴电缆细同轴电缆非屏蔽双绞线屏蔽双绞线和光纤等多种传输介质进行连接并且在标准中为不同的传输介质制定了不同的物理层标准在这些标准中前面的数字表示传输速度单位是最后的一个数字表示单段传输介质的长度基准单位是表示基带的意思快速以太网的相关标准是一种使用类以上双绞线的快速以太网技术它使用两对双绞线一对用于发送一对用于接收数据支持全双工的数据传输信号频率为它的最大网段长度为米拓扑结构为星型是一种使用光缆的快速以太网技术可使用单模和多模光纤和多模光纤连接的最大距离为米单模光纤连接的最大距离为米它支持全双工的数据传输拓扑结构为星型特别适合于有电气干扰的环境较大距离连接或高保密环境等情况下的适用随着网络的发展传统标准的以太网技术已难以满足日益增长的网络数据流量速度需求年月公司推出了世界上第一台快速以太网集线器和网络接口卡快速以太网技术正式得以应用年月宣布了快速以太网标准快速以太网技术可以有效的保障用户在布线基础实施上的投资它支持类双绞线以及光纤的连接能有效的利用现有的设施千兆以太网的相关标准传输介质为直径或的多模光纤传输距离为传输介质为直径或的单模光纤传输距离为传输介质为欧屏蔽双绞线传输距离为传输介质为类以上双绞线用两对线发送两对线接收每对线支持的单向数据速率速率为最大电缆长度为米传输介质为类以上双绞线用两对线发送两对线接收每对线支持的双向数据速率半双工速率为最大电缆长度为米万兆以太网定义万兆以太网是一种数据传输高达通信距离可延伸到的以太网应用范围可以应用于局域网城域网和广域网特点保留以太网的帧格式保留以太网的最大帧长和最小帧长只使用全双工工作方式完全改变了传统以太网的半双工的广播工作方式只使用光纤作为传输媒体而不使用铜线使用点对点链路支持星形结构的局域网以太网数据率非常高不直接和端用户相连创造了新的光物理媒体相关子层以太网数据帧封装格式以太网技术所使用的帧称为以太网帧或简称以太帧主要有和两种标准帧格式取值的帧代表协议帧取值的帧代表协议帧表示以太网目标地址长度为个字节表示以太网源地址长度为个字节指长度定义了字段包含的字节数表示逻辑链路控制由目的服务访问点源服务访问点和字段组成表示子网访问协议由机构代码和类型字段组成三个字节都为字段用于标识字段中包含的不同协议取值为的帧代表协议帧取值为的帧代表协议帧表示数据字段最小长度必须为字节以保证帧长至少为字节最大长度为字节表示帧校验序列是循环冗余校验生成的值为以太帧提供差错检测机制地址简介地址即网卡的物理地址是在标准中定义并规范的地址由位二进制数组成通常分成段用十六进制表示如形象的说地址就如同我们身份证上的身份证号码具有全球唯一性网络层地址与子网划分二进制与十进制二进制的特点用和两个数码来表示的数它的基数为进位规则是逢二进一借位规则是借一当二十进制是人类最方便的进制表示也是日常生活中最常用的数制包含数字但用计算机处理十进制数必须先转换成二进制数十进制二进制二进制转换成十进制计算方法十进制转换成二进制计算方法将十进制数表示成二进制为计算方法为除取余再逆序排列如图所示有类编址地址是位的二进制数一般用点分十进制数表示由网络号和主机号两部分组成在因特网上所有的主机资源都通过地址来定位地址是由分配和管理的地址的分配有一套严格机制和程序这种机制和程序保证地址在上的唯一性地址的格式是由规定的本书所讲的地址除特殊说明外均指地址地址分类根据网络号和主机号位数的不同有类编址将地址分为类类类类和类五类私有地址私有地址不用于主要用于局域网中私有地址是一段保留的地址类类和类的私有地址范围类私有地址范围类私有地址范围类私有地址范围类地址中网络地址为个字节主机地址占用个字节其范围为类地址中网络地址为个字节主机地址占用个字节其范围为类地址中网络地址为个字节主机地址占用个字节其范围为类地址为组播地址其范围为类地址保留其范围为无类编址作用解决有类编址进行地址划分的颗粒度太大的问题避免大量地址资源的浪费特点无类编址不限定网络号和主机号的位数使得地址的分配更加灵活地址的利用率也得到了提高无类编址举例地址为它可能是网络中的一个主机地址也可能是网络中的一个主机地址网络号主机号在网络通信发展的初期网络中的计算机数量很少需要使用的地址也很少所以将地址划分为类的做法基本没有问题然而随着通信网络的飞速发展这种有类编址的地址划分方法暴露了明显的问题譬如一个集团公司大约需要十万个地址如果用类地址进行分配那么将会有大量的地址被浪费子网掩码定义子网掩码由个比特位组成也可看作是由个字节并且也通常以点分十进制数来表示示例是否为子网掩码是是是是是否否子网掩码本身并不是一个地址并且子网掩码必须由若千个连续的后接若干个连续的组成子网掩码长度将子网掩码中的个数称为这个子网掩码的长度子网掩码的作用主机的子网掩码网络号的主机号网络号相同所有主机都可以通信主机的子网掩码网络号的主机号主机与的网络号不同不能通信主机的子网掩码网络号的主机号主机与的网络号不同不能通信例如子网掩码的长度为子网掩码的长度为子网掩码的长度为子网掩码的长度为通常子网掩码与地址结合使用子网掩码中的个数也就是子网掩码的长度就表示这个地址的网络号的位数而的个数就表示这个地址的主机号的位数子网掩码与地址的运算如果将一个子网掩码与一个地址进行逐位的与运算所得的结果便是该地址所在网络的网络地址广播地址应用于主机同网络内所有其他主机的通信它是主机号为全的地址子网掩码的反码即广播地址网络地址子网掩码的反码子网划分作用可以将一个大的网络划分为多个小的网络提高地址的使用效率子网划分的过程子网划分举例将划分个网段方法网络号向主机号借位借位使得地址的结构分为三个部分网络位子网位和主机位从主机最高位开始借位变为新的子网位剩余部分仍为主机位是本来属于主机号的部分变为子网位和主机位这样就实现了将大的网络划分为多个小的网络满足了不同网络对地址的个性化需求实现网络的层次性一个的网段借位可以分成个网段子网号分别为借位可以分成个网段子网号分别为子网划分原理子网号借用的主机号位数越多子网的数目也就越多但每个子网的可用主机数就越少根据子网号借用主机号的位数可以分别计算出子网数子网掩码和每个子网的可用主机数借位数掩码长度子网掩码子网主机数可用主机数可变长子网掩码允许在同一个网络地址空间中使用多个子网掩码使得地址的使用更加有效减少地址的浪费并且允许已经划分过子网的网络继续划分子网图中网络被划分成的子网其中子网又被继续划分成的子网这个子网的网络范围是从实际应用角度可以看出又将的网络划分成的子网这个的子网网络中可用的主机数为个这两个正好给两台路由器连接的接口使用由此也可以看出加强了地址的层次化结构设计使路由表的路由汇总更加有效规划地址作用地址的合理规划是网络设计的重要环节大型计算机网络必须对地址进行统一规划并得到有效实施地址规划的好坏影响到网络路由协议算法的效率影响到网络的性能影响到网络的扩展影响到网络的管理也必将直接影响到网络应用的进一步发展规划原则地址空间的分配要与网络拓扑层次结构相适应既要有效地利用地址空间又要体现出网络的可扩展性灵活性和层次性同时能满足路由协议的要求以便于网络中的路由聚类减少路由器中路由表的长度减少对路由器内存的消耗提高路由算法的效率加快路由变化的收敛速度同时还有考虑到网络地址的唯一性连续性实意性和可管理性规划网络地址案例案例需求假设某企业拥有一个类地址企业希望每个部门都工作于相对独立的局域网部门名称地址需求数行政部业务部研发部生产部解决方案根据最大地址数要求划分子网把其中一个子网网段用于满足该部门主机需求选择剩余子网网段中的一个按次大地址数要求划分子网把其中一个用于满足该部门主机需求重复上述步骤直到满足所有部门主机需求并将剩余的网络地址登记为备用网络以备网络扩展升级使用解决过程当地址数需求为时主机地址位至少要位因此该类地址可以分为两个子网如表所示将分配给生产部使用网络地址主机地址位子网网络地址当地址数需求为时主机位至少要位将继续划分子网如表所示我们将分配给业务部使用网络地址主机地址位子网网络地址生成规划总表与通信定义协议是网络层的协议用于将地址解析为的地址工作原理每个主机都会在自己的缓冲区中建立一个列表以记录地址和地址之间的对应关系主机网络接口新加入网络时也可能只是地址发生变化接口重启等会发送报文把自己地址与地址的映射关系广播给其他主机数据包通过以太网发送但以太网设备并不能识别地址它们是以地址传输的因此必须把目的地址转换成目的地址在以太网中一个主机要和另一个主机进行直接通信必须要知道目标主机的地址的报头结构硬件类型字段指明了发送方想知道的硬件接口类型以太网的值为协议类型字段指明了发送方提供的高层协议类型为进制硬件地址长度和协议长度指明了硬件地址和高层协议地址的长度这样报文就可以在任意硬件和任意协议的网络中使用操作字段用来表示这个报文的类型请求为响应为请求为响应为发送方的硬件地址字节源主机硬件地址的前个字节发送方的硬件地址字节源主机硬件地址的后个字节发送方字节源主机硬件地址的前个字节发送方字节源主机硬件地址的后个字节目的硬件地址字节目的主机硬件地址的前个字节目的硬件地址字节目的主机硬件地址的后个字节目的字节目的主机的地址与连通性测试什么是协议因特网控制报文协议工作在网络层的消息可以分为两类一类是差错报文即通知出错原因的错误消息如另一类是查询报文即用于诊断的查询消息如的功能的功能是确认包是否成功到达目标地址和通知在发送过程中包被丢弃的原因连通性测试案例背景某公司业务部拥有台计算机该公司的业务员将这台计算机接入到一台普通交换机并为每台计算机配置了地址实现了业务部的台计算机的互联互通拓扑图如图所示测试思路安装好配置台计算机的地址在台机器中分别运行命令测试本机能否访问另外两台计算机测试结果结果显示发送了个数据包给并成功接收了个返回包传输层什么是协议传输控制协议是一种基于字节流的传输层通信协议由的定义什么是封装是基于两个网络主机之间的端对端通信从高层协议接收需要传送的字节流将字节流分成段然后对段编号和排序以便传递在数据报文中的封装主要包括报头和数据头部记录源端与目标端口相关应用程序所用的连接端口号以及相关的序列号确认号窗口大小等数据转发应用层协议所交付的相关信息形成数据值得注意的是报文段中的数据部分并不是必须的当一个连接被建立和终止时交换的报文段只包含了头部而没有数据数据报的头部格式源端口号是指发送进程对应的端口号目标端口号是指目标端接收进程的端口号位序列号为数据段标记用于在目的端对到达包的重组位确认号对发送端的确认信息用于告诉发送端这个序号之前的数据段都收到了是紧急指针有效位与位紧急指针配合使用是确认序列号有效位表明该数据包包含确认信息通知接收端立即将数据提交给用户进程不在缓存中停留等待更多的数据为时请求重新建立连接为时请求建立连接为时数据发送完毕请求断开连接滑动窗口的大小指明本地可接收数据的字节数建立连接的次握手过程第次握手发送个信息包给包含双方的连接端口号序号响应序号和窗口尺寸第次握手收到的信息后向回复一个信息包该信息包中包含序号响应序号和窗口尺寸第次握手收到的信息包后再向发送一个信息包信息包中包含了序号响应序号和窗口尺寸注同步序列号请求当置时则表示建立连接序列号发送请求的次数确认协议规定为时有效请求断开连接当前发送的状态断开连接的个过程步骤发送第个信息包给包含序号响应序号和窗口尺寸步骤发送信息包给中包含序号响应序号和步骤当完成到的传输后发送信息包给包含序号响应序号和步骤再发送信息包给基于的应用层协议端口号协议简要说明简单邮件传输协议用于发送邮件选程登录协议用于远程登录通过连接目标终端得到验证后选程控制管理目标终端超文本传输协议用于超文本的传输文件传输协议用于文件的上传和下载域名服务在区域传输的时候使用其他时候使用协议是以安全为目标的通道简单讲是的安全版用于支持使用客户端远程管理在服务器上的电子邮件用来同步网络中各个计算机时间的协议为建立在应用层和传输层基础上的安全协议什么是用户数据报协议是一种无连接的传输层协议提供面向事务的简单不可靠信息传送服务的特性是面向非连接的传输报文中包含源端口和目标端口从而确保报文能够正确地传输到目的地应用场景用于传输效率要求不高的应用如服务服务等适用传输方式为一对多的广播传输用于传输非关键数据或本身具有完整性检查机制的应用程序与网络层的一样都是以非连接的方式传输信息因此的传输过程比较简单传输效率较高但可靠性较低如果传输发生问题无法确认重传及流量控制必须通过应用层的相关协议进行处理封装源端口号目标端口号报文长度校验和字段源端口号源端口号用来记录源端应用程序所用的连接端口号如果目的端的应用程序收到报文后必须回复时由源端口号标识应用程序的连接端口号目标端口号目标端口号是报文中最重要的信息用来标识目标端应用程序的连接端口号报文长度报文长度表示数据报头以及数据的总长度数据报头长度的最小值是字节校验和校验和用于差错控制检测数据报文在传输过程中是否有错错误就丢弃基于的应用层协议端口号协议简要说明简单文件传输协议是在之上上建立一个类似于的仅支持文件上传和下功能的传输协议所以它不包含中的目录操作和用户权限等内容动态主机配置协议为内部网络或网络服务供应商自动分配地址是用来管理网络设备的由于网络设备很多无连接的服务就体现出其优势域名服务在区域传输的时候使用其他时候使用应用层远程访问应用远程登录定义是用来进行远程访问的重要工具功能应用程序的主要功能是远程登录实现用户与远程计算机进行动态交互通信过程建立与服务器的连接从键盘上接收用户输入的字符把用户输入的字符串变成标准格式并发送给服务器从远程服务器接收输出的信息把该信息显示在用户的屏幕上功能举例用自己的键盘鼠标等输入设备操纵远程计算机或路由器等网络设备运行远程计算机上的软件能远程了解计算机或设备的运行情况并查看运行结果的通信过程用文本方式远程管理计算机或路由器等网络设备用户的终端实际上与本地的客户机进行通信远程主机与远程服务器进行通信然后通过进行连接客户机与服务器之间采用标准进行通信网络管理应用定义称为简单网络管理协议功能是用于网络管理的协议主要对网络中支持的设备进行管理不受设备类型和厂商的限制只要支持的设备都提供统一界面管理员可以使用统一的操作进行管理应用定义也称为超文本传输协议工作过程是一种用于超媒体信息系统的应用层协议典型的事务处理有如下过程客户与服务器建立连接客户向服务器提出请求服务器接受请求并根据请求返回相应的文件作为应答客户与服务器关闭连接电子邮件应用定义在互联网中电子邮件的传送是依靠进行的包括两个标准子集一个标准定义电子邮件信息的格式另一个是传输邮件的标准功能的主要任务是负责服务器之间的邮件传送它规定了电子邮件如何在互联网中通过在发送方和接收方之间进行传送局域网管理应用定义也称为动态主机配置协议功能在局域网环境集中管理和分配地址使客户机能动态的获得地址地址服务器地址等信息提高地址的利用率优势在大型企业网络中会有大量的主机或设备需要配置地址等网络参数如果采用手工配置工作量大且不好管理如果有用户擅自修改网络参数还有可能会造成地址冲突等问题使用动态主机配置协议来分配地址等网络参数可以减少管理员的工作量避免用户手工配置网络参数时造成的地址冲突简单来说就是一个不需要账号密码登录的自动给内网机器分配地址等信息的协议',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2022-03-31 19:33:25',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><div class="back-home-button"><i class="anzhiyufont anzhiyu-icon-grip-vertical"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div></div><a id="site-name" href="/" accesskey="h"><div class="title">渊</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 1.05rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 1.05rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 1.05rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 1.05rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 1.05rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 1.05rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 1.05rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 1.05rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 1.05rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 1.05rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 1.05rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 1.05rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 1.05rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 1.05rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 1.05rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 1.05rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 1.05rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 1.05rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 1.05rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 1.05rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 1.05rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 1.05rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 1.05rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 1.05rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 1.05rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/10/"><span class="card-archive-list-date">十月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">二月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/12/"><span class="card-archive-list-date">十二月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">8</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div><div class="console-btn-item" id="consoleKeyboard" onclick="anzhiyu.keyboardToggle()" title="快捷键开关"><a class="keyboard-switch"><i class="anzhiyufont anzhiyu-icon-keyboard"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>基础教程</span></a><a class="article-meta__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>华为1+X</span></a></span></div></div><h1 class="post-title" itemprop="name headline">1.华为1+X/TCP&amp;IP</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2021-12-11T09:15:43.000Z" title="发表于 2021-12-11 17:15:43">2021-12-11</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.424Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator"></span><span class="post-meta-wordcount"><i class="anzhiyufont anzhiyu-icon-file-word post-meta-icon" title="文章字数"></i><span class="post-meta-label" title="文章字数">字数总计:</span><span class="word-count" title="文章字数">12.4k</span><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-clock post-meta-icon" title="阅读时长"></i><span class="post-meta-label" title="阅读时长">阅读时长:</span><span>39分钟</span></span><span class="post-meta-separator"></span><span class="post-meta-pv-cv" id="" data-flag-title="1.华为1+X/TCP&amp;IP"><i class="anzhiyufont anzhiyu-icon-fw-eye post-meta-icon"></i><span class="post-meta-label" title="阅读量">阅读量:</span><span id="busuanzi_value_page_pv"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-spin"></i></span></span><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为西安"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>西安</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://s4.ax1x.com/2021/12/23/TGe4nf.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://example.com/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&amp;IP/"><header><a class="post-meta-categories" href="/categories/%E5%8D%8E%E4%B8%BA1-X/" itemprop="url">华为1+X</a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" tabindex="-1" itemprop="url">基础教程</a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" tabindex="-1" itemprop="url">华为1+X</a><h1 id="CrawlerTitle" itemprop="name headline">1.华为1+X/TCP&amp;IP</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">渊</span><time itemprop="dateCreated datePublished" datetime="2021-12-11T09:15:43.000Z" title="发表于 2021-12-11 17:15:43">2021-12-11</time><time itemprop="dateCreated datePublished" datetime="2022-03-31T11:33:25.424Z" title="更新于 2022-03-31 19:33:25">2022-03-31</time></header><p>华为1+X&#x2F;TCP&amp;IP</p>
+<h1 id="通信与网络"><a href="#通信与网络" class="headerlink" title="通信与网络"></a>通信与网络</h1><h2 id="通信的基本概念"><a href="#通信的基本概念" class="headerlink" title="通信的基本概念"></a>通信的基本概念</h2><h3 id="什么是通信"><a href="#什么是通信" class="headerlink" title="什么是通信"></a>什么是通信</h3><p>“通信”一词中，“通”的意思就是传递与交流；“信”的意思就是信息。所谓通信，就是指人与人、人与计算机、计算机与计算机之间通过某种媒介和行为进行的信息交换。通信技术的最终目的是为了帮助人们更好地沟通和资源共享。</p>
+<h3 id="通信系统的基本组成"><a href="#通信系统的基本组成" class="headerlink" title="通信系统的基本组成"></a>通信系统的基本组成</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqwnBj"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqwnBj.png" alt="通信系统的基本组成"></a></p>
+<hr>
+<p><strong>tip：</strong></p>
+<p>信源：又称信息源，分为模拟信源和数字信源，信源就是信息的发送端，是发出待传送信息的人或设备。在通信系统中信源即产生和发送信号的设备或计算机，如话筒。<br>发送设备：产生适合在信道中传输的信号。<br>信道：也称为信息传输的通道，分为有线和无线信道，也可分为模拟信道和数字信号。其中，传输模拟信号的物理信道叫做模拟信道，而传输数字信号的物理信道称为数字信道。是连接发送端和接收端设备的物理媒介。<br>噪声源：是分布在通信系统中的各种噪声。<br>接收设备：是从接收信号中恢复原始的电信号。<br>信宿：即信息的接收端，是接收所传送信息的人或设备。通信过程中接收和处理</p>
+<hr>
+<h2 id="数据通信网络典型组网模型"><a href="#数据通信网络典型组网模型" class="headerlink" title="数据通信网络典型组网模型"></a>数据通信网络典型组网模型</h2><h3 id="通信网络最常用的3种典型组网模型介绍"><a href="#通信网络最常用的3种典型组网模型介绍" class="headerlink" title="通信网络最常用的3种典型组网模型介绍"></a>通信网络最常用的3种典型组网模型介绍</h3><p><strong>两台主机之间的通信</strong><br>示例：两台计算机通过一根网线相连，便组成了一个最简单的网络。如果主机A想从主机B那里获得“B.MP4”这首歌曲，那该怎么办呢？很简单，让两台计算机运行相应的文件传输软件并点几下鼠标就实现了。<br><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqwwU1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqwwU1.png" alt="两台主机之间的通信"></a></p>
+<p><strong>多台主机之间的通信</strong><br>示例：如图所示的网络模型稍微复杂些，它由一台路由器和多台计算机组成。在这样的网络模型中，通过借助路由器的转发作用，每两台计算机之间都可以自由地传递文件。<br><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqw2bd"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqw2bd.png" alt="多台主机之间的通信"></a></p>
+<p><strong>访问Internet的通信</strong><br>示例：当主机A希望从某个网址获取文件时，A必须先接入Internet，然后才能下载所需的文件。<br><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqwqbj"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqwqbj.png" alt="通过Internet的通信"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>Internet 的中文译名有很多，如因特网、互联网、网际网等。Internet是目前世界上规模最大的计算机网络，其前身是诞生于1969年的ARPAnet（Advanced Research Projects Agency Network）。Internet 的广泛普及和应用是当今信息时代的标志性内容之一。</p>
+<hr>
+<h2 id="网络通信常见术语"><a href="#网络通信常见术语" class="headerlink" title="网络通信常见术语"></a>网络通信常见术语</h2><table>
+<thead>
+<tr>
+<th>术语</th>
+<th>解释和说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>数据载荷</td>
+<td>根据快递服务的比喻，我们将数据载荷理解为最终想要传递的信息。而实际上在具有层次化结构的网络通信过程中，上一层协议传递给下一层协议的数据单元（报文）都可以称之为下一层协议的数据载荷</td>
+</tr>
+<tr>
+<td>报文</td>
+<td>报文是网络中交换与传输的数据单元，它具有一定的内在格式，并通常都具有头部+数据载荷+尾部的基本结构。在传输过程中，报文的格式和内容可能会发生改变</td>
+</tr>
+<tr>
+<td>头部</td>
+<td>为了更好地传递信息，在组装报文时，在数据载荷的前面添加的信息段统称为报文的头部</td>
+</tr>
+<tr>
+<td>尾部</td>
+<td>为了更好地传递信息，在组装报文时，在数据载荷的后面添加的信息段统称为报文的尾部。注意，很多报文是没有尾部的</td>
+</tr>
+<tr>
+<td>封装</td>
+<td>对数据载荷添加头部和尾部，从而形成新的报文的过程</td>
+</tr>
+<tr>
+<td>解封装</td>
+<td>解封装是封装的逆过程，也就是去掉报文的头部和尾部，获取数据载荷的过程</td>
+</tr>
+<tr>
+<td>网关</td>
+<td>网关是在采用不同体系结构或协议的网络之间进行互通时，用于提供协议转换、路由选择、数据交换等功能的网络设备。网关是一种根据其部署位置和功能而命名的术语，而不是一种特定的设备类型</td>
+</tr>
+<tr>
+<td>路由器</td>
+<td>路由器是连接不同网络的主要节点设备，通过路由功能为报文选择传递路径，能够识别不同的网络协议，在网络中通常起网关的作用。</td>
+</tr>
+</tbody></table>
+<h1 id="OSI与TCP-IP参考模型"><a href="#OSI与TCP-IP参考模型" class="headerlink" title="OSI与TCP&#x2F;IP参考模型"></a>OSI与TCP&#x2F;IP参考模型</h1><h2 id="网络通信协议和标准机构"><a href="#网络通信协议和标准机构" class="headerlink" title="网络通信协议和标准机构"></a>网络通信协议和标准机构</h2><h3 id="网络通信协议的基本特性"><a href="#网络通信协议的基本特性" class="headerlink" title="网络通信协议的基本特性"></a>网络通信协议的基本特性</h3><p><strong>什么是协议？</strong><br>在网络通信中，所谓协议，就是指诸如计算机、交换机、路由器等网络设备为了实现通信而必须遵从的、事先定义好的一系列规则和约定。<br><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqL0o9"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqL0o9.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>OSI参考模型和TCP&#x2F;IP参考模型是计算机网络通信领域中使用频率最高的两个参考模型，特别是TCP&#x2F;IP，在计算机网络通信中的地位至关重要。熟悉OSI模型和TCP&#x2F;IP参考模型的相关概念和简单应用，对于我们接下来具体而深入地学习各种网络通信知识，具有非常重要的指导作用。</p>
+<hr>
+<p><strong>协议的三要素</strong><br>语义：需要发出何种控制信息，完成何种动作以及做出何种应答；<br>语法：数据与控制信息的格式、数据编码等；<br>时序：时间先后顺序和速度匹配。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqL7SP"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqL7SP.png" alt="协议三要素"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>以打电话为例来说明“语义”“语法”“时序”。假设甲要打电话给乙，首先甲拨通乙的电话号码，双方电话振铃，乙拿起电话，然后甲乙开始通话，通话完毕后，双方挂断电话。在此过程中，双方都遵守了打电话的协议。其中，甲拨通乙的电话后，乙的电话振铃，振铃是一个信号，表示有电话打进，乙选择接电话，讲话，这一系列动作包括了控制信号、响应动作、讲话内容等，就是“语义”；电话号码就是“语法”；“时序”的概念更好理解，甲拨打了电话，乙的电话才会响，乙听到铃声后才会考虑要不要接，这一系列时间的因果关系十分明确，不可能没人拨电话，乙的电话会响。</p>
+<hr>
+<p><strong>协议标准机构</strong></p>
+<table>
+<thead>
+<tr>
+<th>标准机构</th>
+<th>简要介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>国际标准化组织（International Organization for Standardization，ISO）</td>
+<td>IS0是世界上最大的非政府性标准化专门机构，是国际标准化领域中一个十分重要的组织,ISO的任务是促进全球范围内的标准化及相关活动，以利于国际间产品与服务的交流，以及在知识、科学技术和经济活动发展国际间的相互合作</td>
+</tr>
+<tr>
+<td>电气与电子工程师协会（Institute of Electrical and Electronics Engineers，IEEE）</td>
+<td>IEEE是一个电子技术与信息科学工程师的协会，是世界上最大的专业技术组织之一，IEEE成立的目的在于为电气电子方面的科学家,工程师,制造商提供国际联络交流的场合，并为他们提供专业教育、提高专业能力服务，著名的以太网标准就是来自IEEE</td>
+</tr>
+<tr>
+<td>国际互联网工程任务组(Internet Engineering Task Force，IETF)</td>
+<td>IETF是全球互联网最具权或的技术标准化组织。其主要任务是负责互联网相关技术规范的研发和制定,目前,绝大多数的互联网技术标准都是来自IETF，如著名的RFC（Request For Comments）标准</td>
+</tr>
+<tr>
+<td>电子工业联盟（Electronics Industry Alliance，EIA）</td>
+<td>EIA 是美国电子行业标准制定者之一,常见RS-232 串口标准便是EIA制定的</td>
+</tr>
+<tr>
+<td>国际电信联盟（International Telecommunication Union，ITU）</td>
+<td>ITU简称为“国际电联”，其组织结构主要分为电信标准化部门（ITU-T）、无线电通信部门（ITU-R）和电信发展部门（ITU-D），是主管信息通信技术事务的联合国机构</td>
+</tr>
+<tr>
+<td>国际电工委员会（International Electrotechnical Commission，IEC）</td>
+<td>IEC是世界上成立最早的国际性电工标准化机构，负责有关电气工程和电子工程领域中的国际标准化工作，与ISO和IEEE等合作紧密</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>tip:</strong></p>
+<p>协议可以分为私有协议和开放性的公有协议。而专门整理、研究、制定和发布开放性标准协议的组织称为标准机构。</p>
+<hr>
+<p><strong>协议分层模型的优势</strong><br>实现协议标准化：每一层有特定的功能，各层自主管理，更容易制定出相应的协议或标准；<br>降低关联性，某一层协议的增减或更新,都不影响其他层协议的运行，实现各层协议的独立性；<br>边界清晰，易理解：协议分层模型让整个计算机网络的层次性更加清晰，容易掌握。</p>
+<h2 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h2><p>不同节点的同等层具有相同的功能；<br>同节点内相邻层之间通过接口通信；<br>使用下层提供的服务，为上层提供服务；<br>仅在最低层进行直接数据传送。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqOiOU"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqOiOU.png" alt="OSI参考模型"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>OSI的网络体系结构如图所示。当发送方主机A的应用进程数据到达OSI参考模型的应用层时，网络中的数据将沿着垂直方向往下层传输，即由应用层向下经表示层、会话层一直到达物理层。到达物理层后，再经传输介质传到接收端（主机B），由接收端物理层接收，向上经数据链路层等到达应用层，再由接收端获取。数据在由发送进程交给应用层时，由应用层加上该层有关控制和识别信息，再向下传送，这一过程一直重复到物理层。在接收端信息向上传递时，各层的有关控制和识别信息被逐层剥去，最后数据送到接收进程。</p>
+<hr>
+<p><strong>OSI参考模型各层的功能及关系</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">OSI参考模型</th>
+<th align="center">主要功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">物理层</td>
+<td align="center">提供适合于传输介质承载的物理信号的转换，实现物理信号的发送，接受，以及在物理传输介质上的数据比特流传输</td>
+</tr>
+<tr>
+<td align="center">数据链路层</td>
+<td align="center">在物理链路连接的相邻节点间建立逻辑通路,实现数据帧的点到点、点到多点方式的直接通信，能够进行编码和差错控制</td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td align="center">将数据分为一定长度的分组，根据数据报文中的地址信息，在通信子网中选择传输路径，将数据从一个节点发送到另一个节点</td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td align="center">建立、维护和终止端到端的数据传输过程，能提供控制传输速率，调整数据的传输顺序等功能</td>
+</tr>
+<tr>
+<td align="center">会话层</td>
+<td align="center">在通信双方的进程间建立、维持、协调和终止会话，确定双方是否开始一方发起的通信</td>
+</tr>
+<tr>
+<td align="center">表示层</td>
+<td align="center">数据转换、加密、压缩等，确保一个系统生成的应用层数据能够被另外一个系统的应用层所识别和理解</td>
+</tr>
+<tr>
+<td align="center">应用层</td>
+<td align="center">为用户应用程序提供丰富的系统接口</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>tip:</strong></p>
+<p><strong>物理层（Physical Layer）</strong>提供建立、维护和拆除物理链路所需的机械、电气、功能和规程的特性；提供有关在传输介质上传输非结构的位流及物理链路故障检测指示。在这一层，数据还没有被组织，仅作为原始的位流或电气电压处理，单位是比特。</p>
+<p><strong>数据链路层（Data Link Layer）</strong>负责在两个相邻结点间建立数据链路连接，实现无差错地传送以帧为单位的数据，并进行流量控制。数据链路层要负责建立、维持和释放数据链路的连接，在传送数据时，如果接收点检测到所传数据中有差错，会通知发送方重新发送。</p>
+<p><strong>网络层（Network Layer）</strong>主要为数据在节点之间传输创建逻辑链路，通过路由选择算法为数据包选择最佳路径，从而实现拥塞控制、网络互联等功能。</p>
+<p>网络层提供的服务有面向联接和面向无联接的服务两种。面向联接的服务是可靠的联接服务，是数据在交换之前必须先建立联接，然后传输数据，结束后终止之前建立联接的服务。网络层以虚电路服务的方式实现面向联接的服务。面向无联接的服务是一种不可靠的服务，不能防止报文的丢失、重发或失序。面向无联接的服务优点在于其服务方式灵活方便，并且非常迅速。网络层以数据报服务的方式实现面向无联接的服务。</p>
+<p><strong>传输层（Transport Layer）</strong>主要为用户提供端到端服务，处理数据报错误、数据包次序等传输问题。传输层是计算机通信体系结构中关键一层，它向高层屏蔽了下层数据的通信细节，使用户完全不用考虑物理层、数据链路层和网络层工作的详细情况。</p>
+<p><strong>会话层（Session Layer）</strong>为表示层提供建立、维护和拆除会话连接的功能，提供会话管理服务。它可以通过对话控制来决定使用何种通信方式，如全双工通信或半双工通信。</p>
+<p>由于不同厂家的计算机产品常使用不同的信息表示标准，例如在字符编码、数值表示等方面存在着差异。如果不解决信息表示上的差异，通信的用户之间就不能互相识别。因此，<strong>表示层（Presentation Layer）</strong>要完成信息表示格式转换。转换可以在发送前，也可以在接收后，也可以要求双方都转换为某个特定标准的数据表示格式。</p>
+<p>表示层为应用层提供能解释所交换信息含义的一组服务，主要功能是完成传输数据的解释工作，包括数据转换、数据加解密和数据压缩等。</p>
+<p><strong>应用层（Application Layer）</strong>是用户应用程序与网络的接口，应用层和应用程序协同工作，直接向用户提供服务，完成用户希望在网络上完成的各种工作，如DNS、FTP、HTTP等服务。</p>
+<hr>
+<h2 id="TCP-IP参考模型"><a href="#TCP-IP参考模型" class="headerlink" title="TCP&#x2F;IP参考模型"></a>TCP&#x2F;IP参考模型</h2><p><strong>TCP&#x2F;IP的四层结构</strong></p>
+<p>TCP&#x2F;IP四层与OSI七层的对比</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqOJkd"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqOJkd.png" alt="TCP/IP四层与OSI七层的对比"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>在计算机网络通信中，OSI参考模型只是作为理论研究的模型，并没有实际应用。而实际上应用最为广泛的是TCP&#x2F;IP（Transmission Control Protocol&#x2F;Internet Protocol）参考模型。TCP&#x2F;IP是网络互联的标准协议，连入Internet的计算机进行的信息交换和传输都需要采用该协议。</p>
+<hr>
+<p><strong>TCP&#x2F;IP各层的功能及关系</strong></p>
+<table>
+<thead>
+<tr>
+<th>TCP&#x2F;IP参考模型</th>
+<th>主要功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网络接口层</td>
+<td>定义了TCP&#x2F;IP与各种通信子网之间的网络接口。网络接口层的功能是传输经网络层处理过的消息。</td>
+</tr>
+<tr>
+<td>网络层</td>
+<td>将数据分为一定长度的分组，根据数据报文中的地址信息，在通信子网中选择传输路径，将数据从一个节点发送到另一个节点</td>
+</tr>
+<tr>
+<td>传输层</td>
+<td>建立、维护和终止端到端的数据传输过程，能提供控制传输速率，调整数据的传输顺序等功能</td>
+</tr>
+<tr>
+<td>应用层</td>
+<td>TCP&#x2F;IP的应用层直接为用户提供各类服务。TCP&#x2F;IP将所有与应用相关的工作都归为这一层。如远程登录、文件传输、电子邮件、Web服务器等。</td>
+</tr>
+</tbody></table>
+<h1 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h1><p>数据链路层功能：<br>负责建立和管理节点间的链路；<br>通过各种控制协议，将有差错的物理信道变为无差错的、能可靠传输数据帧的数据链路。 </p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqOBnS"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqOBnS.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>在网络中由于各种干扰的存在，物理链路是不可靠的。因此，数据链路层将在物理层提供的比特流的基础上，通过差错控制、流量控制方法，使有差错的物理线路变为无差错的数据链路，即提供可靠的通过物理介质传输数据的方法。</p>
+<hr>
+<h2 id="LLC与MAC"><a href="#LLC与MAC" class="headerlink" title="LLC与MAC"></a>LLC与MAC</h2><p><strong>逻辑链路控制子层LLC</strong><br>定义：LLC是Logic Link Control的缩写，是数据链路层的上层部分。</p>
+<p>功能：LLC可为网络用户提供两种服务：无确认无连接服务和面向连接的服务。</p>
+<p>无确认无连接服务：它提供无需建立数据链路级连接而网络层实体能交换链路服务数据单元的手段。数据传送方式可以是点到点、点到多点式，也可以是广播式。这是一种数据报服务。</p>
+<p>面向连接的服务：在这种服务方式下，必须先建立链路连接，才能进行帧的传送。它提供了建立、维持、复位和终止数据链路层连接的手段。还提供了数据链路层的定序、流控和错误恢复，这是一种虚电路服务。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>LLC屏蔽了各种MAC的差别并向其上层提供统一的数据链路服务，实现了两个站点之间帧的交换，完成端到端无差错的帧传输和应答功能和流量控制功能。</p>
+<hr>
+<p><strong>介质访问控制子层MAC</strong><br>定义：MAC是Medium Access Control的缩写，是数据链路层的下层部分。</p>
+<p>功能：控制和协调所有站点对共享介质的访问，以避免或减少冲突。</p>
+<p>类型：</p>
+<p>争用型介质访问控制，又称随机型的介质访问控制协议，如CSMA&#x2F;CD方式；<br>确定型介质访问控制，又称有序的访问控制协议，如Token(令牌)方式。</p>
+<p>CSMA&#x2F;CD工作原理<br>① 侦听信道上是否有信号在传输。如果有的话，表明信道处于忙状态，就继续帧听，直到信道空闲为止。<br>② 若没有侦听到任何信号，就传输数据。<br>③ 传输的时候继续侦听，如发现冲突则执行退避算法，随机等待一段时间后，重新执行步骤①。<br>④ 若未发现冲突则发送成功，计算机会返回到侦听信道状态。</p>
+<h2 id="以太网概述"><a href="#以太网概述" class="headerlink" title="以太网概述"></a>以太网概述</h2><p><strong>什么是以太网</strong><br>以太网是当前应用最普遍的局域网技术。它很大程度上取代了其他局域网标准，如令牌环、FDDI和ARCNET。历经100M以太网在上世纪末的飞速发展后，目前千兆以太网甚至10G以太网正在国际组织和领导企业的推动下不断拓展应用范围。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqX9Nd"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqX9Nd.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqXJDU"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqXJDU.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>以太网是应用最为广泛的局域网，包括标准的以太网(10Mbit&#x2F;s)、快速以太网(100Mbit&#x2F;s)和10G(10Gbit&#x2F;s)以太网，采用的是CSMA&#x2F;CD协议，它们都符合IEEE802.3。</p>
+<hr>
+<p><strong>标准以太网的相关标准</strong><br>10Base-5 使用直径为0.4英寸、阻抗为50Ω粗同轴电缆，也称粗缆以太网，最大网段长度为500m，基带传输方法，拓扑结构为总线型；</p>
+<p>10Base-2 使用直径为0.2英寸、阻抗为50Ω细同轴电缆，也称细缆以太网，最大网段长度为185m，基带传输方法，拓扑结构为总线型；</p>
+<p>10Base-T 使用3类以上双绞线电缆，最大网段长度为100m，拓扑结构为星型；　　</p>
+<p>10Base-F 使用光纤传输介质，传输速率为10Mbit&#x2F;s，拓扑结构为星型。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>标准以太网只有10Mbit&#x2F;s的吞吐量，使用(CSMA&#x2F;CD协议。以太网可以使用粗同轴电缆、细同轴电缆、非屏蔽双绞线、屏蔽双绞线和光纤等多种传输介质进行连接，并且在IEEE 802.3标准中，为不同的传输介质制定了不同的物理层标准，在这些标准中前面的数字表示传输速度，单位是“Mbit&#x2F;s”，最后的一个数字表示单段传输介质的长度（基准单位是100M），Base表示“基带”的意思。</p>
+<hr>
+<p><strong>快速以太网的相关标准</strong><br>100BASE-TX 是一种使用5类以上双绞线的快速以太网技术。它使用两对双绞线，一对用于发送，一对用于接收数据，支持全双工的数据传输，信号频率为125MHz。它的最大网段长度为100米，拓扑结构为星型。</p>
+<p>100BASE-FX 是一种使用光缆的快速以太网技术，可使用单模和多模光纤（62.5和125um）。多模光纤连接的最大距离为550米，单模光纤连接的最大距离为3000米，它支持全双工的数据传输，拓扑结构为星型。100BASE－FX特别适合于有电气干扰的环境、较大距离连接、或高保密环境等情况下的适用。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>随着网络的发展，传统标准的以太网技术已难以满足日益增长的网络数据流量速度需求。1993年10月，Grand Junction公司推出了世界上第一台快速以太网集线器Fastch10／100和网络接口卡FastNIC100，快速以太网技术正式得以应用。1995年3月IEEE宣布了IEEE802.3u 100BASE-T快速以太网标准（Fast Ethernet）。快速以太网技术可以有效的保障用户在布线基础实施上的投资，它支持3、4、5类双绞线以及光纤的连接，能有效的利用现有的设施。</p>
+<hr>
+<p><strong>千兆以太网的相关标准</strong><br>1000Base-SX 传输介质为直径62.5um或50um的多模光纤，传输距离为220-550m。</p>
+<p>1000Base-LX 传输介质为直径9um或10um的单模光纤，传输距离为5000m。</p>
+<p>1000Base-CX 传输介质为150欧屏蔽双绞线（STP），传输距离为25m。</p>
+<p>1000Base-TX 传输介质为6类以上双绞线，用两对线发送，两对线接收，每对线支持500Mbit&#x2F;s的单向数据速率，速率为1Gbit&#x2F;s，最大电缆长度为100米。</p>
+<p>1000BASE-T 传输介质为5类以上双绞线，用两对线发送，两对线接收，每对线支持250Mbit&#x2F;s的双向数据速率（半双工），速率为1Gbit&#x2F;s，最大电缆长度为100米。</p>
+<p><strong>万兆以太网</strong><br>定义：万兆以太网是一种数据传输高达10Gbit&#x2F;s、通信距离可延伸到40km的以太网。</p>
+<p>应用范围：可以应用于局域网、城域网和广域网。</p>
+<p>特点：<br>保留802.3以太网的帧格式。<br>保留802.3以太网的最大帧长和最小帧长。<br>只使用全双工工作方式，完全改变了传统以太网的半双工的广播工作方式。<br>只使用光纤作为传输媒体而不使用铜线。<br>使用点对点链路，支持星形结构的局域网。<br>10G以太网数据率非。常高，不直接和端用户相连。<br>创造了新的光物理媒体相关(PMD)子层。</p>
+<p><strong>以太网数据帧封装格式</strong><br>以太网技术所使用的帧称为以太网帧，或简称以太帧。主要有Ethernet II和IEEE802.3两种标准帧格式。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqXgVe"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqXgVe.png" alt="以太网数据帧封装格式"></a></p>
+<p>Type取值0X0800的帧代表IPV4协议帧</p>
+<p>Type取值0X0806的帧代表ARP协议帧</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>（1）<strong>DMAC</strong>（Destination MAC）：表示以太网目标MAC地址，长度为6个字节。<br>（2）<strong>SMAC</strong>（Source MAC）：表示以太网源MAC地址，长度为6个字节。<br>（3）<strong>Length</strong>：指长度，定义了Data字段包含的字节数。<br>（4）<strong>LLC</strong> （Logical Link Control）：表示逻辑链路控制，由目的服务访问点（Destination Service Access Point，DSAP）、源服务访问点（Source Service Access Point，SSAP）和Control字段组成。<br>（5）<strong>SNAP</strong>（Sub-network Access Protocol）：表示子网访问协议，由机构代码（Org Code）和类型（Type）字段组成，Org code三个字节都为0。Type字段用于标识Data字段中包含的不同协议，Type取值为0x0800的帧代表IP协议帧，取值为0x0806的帧代表ARP协议帧。<br>（6）<strong>Data</strong>:表示数据字段，最小长度必须为38字节以保证帧长至少为64字节，最大长度为1492字节。<br>（7）<strong>FCS</strong>: 表示帧校验序列，是循环冗余校验生成的值，为以太帧提供差错检测机制。</p>
+<hr>
+<p><strong>MAC地址简介</strong><br>MAC地址，即网卡的物理地址，是在IEEE802标准中定义并规范的。<br>MAC地址由48位二进制数组成，通常分成6段，用十六进制表示，如00E0-FCA1-562B。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqXxx0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqXxx0.png" alt="mac地址简介"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>形象的说，MAC地址就如同我们身份证上的身份证号码，具有全球唯一性。</p>
+<hr>
+<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><h2 id="IP地址与子网划分"><a href="#IP地址与子网划分" class="headerlink" title="IP地址与子网划分"></a>IP地址与子网划分</h2><p><strong>二进制与十进制</strong></p>
+<p>二进制的特点：用0和1两个数码来表示的数。它的基数为2，进位规则是“逢二进一”，借位规则是“借一当二”；</p>
+<p>十进制是人类最方便的进制表示，也是日常生活中最常用的数制，包含数字0、1、2、3、4、5、6、7、8、9 ，但用计算机处理十进制数必须先转换成二进制数。</p>
+<table>
+<thead>
+<tr>
+<th>十进制</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>二进制</td>
+<td>0</td>
+<td>01</td>
+<td>10</td>
+<td>11</td>
+<td>100</td>
+<td>101</td>
+<td>110</td>
+<td>111</td>
+<td>1000</td>
+<td>1001</td>
+<td>1010</td>
+</tr>
+</tbody></table>
+<p><strong>二进制转换成十进制</strong><br>计算方法</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqjAi9"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqjAi9.png" alt="计算方法"></a></p>
+<p><strong>十进制转换成二进制</strong><br>计算方法：将十进制数125表示成二进制为1111101。计算方法为除2取余，再逆序排列，如图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqjmM6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqjmM6.png" alt="十进制转换成二进制"></a></p>
+<p><strong>有类编址</strong><br>IPv4地址：是32位的二进制数，一般用点分十进制数表示，由网络号和主机号两部分组成</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqjby6"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqjby6.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>在因特网上，所有的主机资源都通过IP地址来定位。IP地址是由ICANN(Internet Corporation for Assigned Names and Number)分配和管理的，IP地址的分配有一套严格机制和程序，这种机制和程序保证IP地址在Internet上的唯一性。IP地址的格式是由IP规定的，本书所讲的IP地址除特殊说明外均指IPv4地址。</p>
+<hr>
+<p>IP地址分类：根据网络号和主机号位数的不同，有类编址将IP地址分为A类、B类、C类、D类和E类五类。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqjjTe"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqjjTe.png" alt="IP地址分类"></a></p>
+<p>私有地址：私有地址不用于Internet，主要用于局域网中，私有IP地址是一段保留的IP地址。<br>A类、B类和C类的私有IP地址范围：<br>A类私有IP地址范围：10.0.0.0<del>10.255.255.255。<br>B类私有IP地址范围：172.16.0.0</del>172.31.255.255。<br>C类私有IP地址范围：192.168.0.0~192.168.255.255。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>A类地址中网络地址为1个字节，主机地址占用3个字节，其范围为0.0.0.0<del>127.255.255.255。<br>B类地址中网络地址为2个字节，主机地址占用2个字节，其范围为128.0.0.0</del>191.255.255.255。<br>C类地址中网络地址为3个字节，主机地址占用1个字节，其范围为192.0.0.0<del>223.255.255.255。<br>D类地址为组播地址，其范围为224.0.0.0</del>239.255.255.255。<br>E类地址保留，其范围为240.0.0.0~255.255.255.255。</p>
+<hr>
+<p><strong>无类编址</strong><br>作用：解决“有类编址”进行地址划分的颗粒度太大的问题。避免大量IP地址资源的浪费。<br>特点：无类编址（Classless Addressing)不限定网络号和主机号的位数，使得IP地址的分配更加灵活，IP地址的利用率也得到了提高。<br>无类编址举例：IP地址为60.1.7.1，它可能是60.1.0.0网络中的一个主机地址，也可能是60.1.7.0网络中的一个主机地址。</p>
+<table>
+<thead>
+<tr>
+<th><strong>网络号</strong></th>
+<th><strong>主机号</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>60.1.7.0</strong></td>
+<td><strong>.1</strong></td>
+</tr>
+<tr>
+<td><strong>60.1.0.0</strong></td>
+<td><strong>.7.1</strong></td>
+</tr>
+<tr>
+<td><strong>60.0.0.0</strong></td>
+<td><strong>.1.7.1</strong></td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>tip:</strong></p>
+<p>在网络通信发展的初期，网络中的计算机数量很少，需要使用的IP地址也很少。所以，将IP地址划分为5类的做法基本没有问题。然而，随着通信网络的飞速发展，这种“有类编址（Classful Addressing）”的地址划分方法暴露了明显的问题。譬如，一个集团公司大约需要十万个IP地址，如果用A类地址进行分配，那么将会有大量的IP地址被浪费。</p>
+<hr>
+<p><strong>子网掩码</strong><br>定义：子网掩码(Subnet Mask)由32个比特位组成，也可看作是由4个字节，并且也通常以点分十进制数来表示。</p>
+<table>
+<thead>
+<tr>
+<th align="center">示例</th>
+<th align="center">是否为子网掩码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">11111100  00000000  00000000  00000000  （252.0.0.0）</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">11111111  11000000  00000000  00000000  （252.192.0.0）</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">11111111  11111111  11111111  11110000  （255.255.255.240）</td>
+<td align="center">是</td>
+</tr>
+<tr>
+<td align="center">11111111  11111111  11111111  11111111  （255.255.255.255）<br/> 00000000  00000000  00000000  00000000（0.0.0.0）</td>
+<td align="center">是<br/>是</td>
+</tr>
+<tr>
+<td align="center">11011000  00000000  00000000  00000000  （216.0.0.0）</td>
+<td align="center">否</td>
+</tr>
+<tr>
+<td align="center">00000000   11111111  11111111  11111111  （0.255.255.255）</td>
+<td align="center">否</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>tip:</strong></p>
+<p>子网掩码本身并不是一个IP地址，并且子网掩码必须由若千个连续的1后接若干个连续的0组成。</p>
+<hr>
+<p>子网掩码长度：将子网掩码中1的个数称为这个子网掩码的长度。</p>
+<p>子网掩码的作用：</p>
+<p>主机的子网掩码：255.0.0.0</p>
+<table>
+<thead>
+<tr>
+<th>网络号</th>
+<th>A的主机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>60.0.0.0·</td>
+<td>.50.20.2</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqvETg"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqvETg.png"></a></p>
+<p>网络号相同，所有主机都可以通信</p>
+<hr>
+<p>主机的子网掩码：255.255.0.0</p>
+<table>
+<thead>
+<tr>
+<th>网络号</th>
+<th>A的主机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>60.50.0.0</td>
+<td>.20.2.</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqvQXV"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqvQXV.png"></a></p>
+<p>主机C与A的网络号不同，不能通信</p>
+<hr>
+<p>主机的子网掩码：255.255.255.0</p>
+<table>
+<thead>
+<tr>
+<th>网络号</th>
+<th>A的主机号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>60.50.20.0</td>
+<td>.2</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqvYtJ"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqvYtJ.png"></a></p>
+<p>主机C、D与A的网络号不同，不能通信</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>例如，子网掩码0.0.0.0的长度为0，子网掩码252.0.0.0的长度为6，子网掩码255.192.0.0的长度为10，子网掩码255.255.255.255的长度为32。<br>通常，子网掩码与IP地址结合使用。子网掩码中1的个数(也就是子网掩码的长度)就表示这个IP地址的网络号的位数，而0的个数就表示这个IP地址的主机号的位数。</p>
+<hr>
+<p><strong>子网掩码与IP地址的运算</strong><br>如果将一个子网掩码与一个IP地址进行逐位的“与”运算，所得的结果便是该IP地址所在网络的网络地址。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqva11"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqva11.png"></a></p>
+<p>广播地址应用于主机同网络内所有其他主机的通信，它是主机号为全“1”的地址（子网掩码的反码），即：广播地址&#x3D;网络地址+子网掩码的反码。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqvD0O"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqvD0O.png"></a></p>
+<p><strong>子网划分</strong><br>作用：可以将一个大的网络划分为多个小的网络，提高IP地址的使用效率。<br>子网划分的过程</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqvWct"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqvWct.png" alt="子网划分"></a></p>
+<p><strong>子网划分举例</strong>：将192.168.3.0&#x2F;24划分4个网段<br>方法：网络号向主机号借位，借位使得IP地址的结构分为三个部分：网络位、子网位和主机位。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqvvuV"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqvvuV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqxZDK"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqxZDK.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqxYb8"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqxYb8.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>从主机最高位开始借位变为新的子网位，剩余部分仍为主机位，是本来属于主机号的部分变为子网位和主机位，这样就实现了将大的网络划分为多个小的网络，满足了不同网络对IP地址的个性化需求，实现网络的层次性。<br>一个&#x2F;24的网段借2位可以分成4个网段，子网号分别为00，01，10，11；借3位可以分成8个网段，子网号分别为000、001、010、011、100、101、110、111。</p>
+<hr>
+<p><strong>子网划分原理</strong><br>子网号借用的主机号位数越多，子网的数目也就越多，但每个子网的可用主机数就越少，根据子网号借用主机号的位数，可以分别计算出子网数、子网掩码和每个子网的可用主机数。</p>
+<table>
+<thead>
+<tr>
+<th>借位数</th>
+<th>掩码长度</th>
+<th>子网掩码</th>
+<th>子网</th>
+<th>主机数</th>
+<th>可用主机数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1</strong></td>
+<td>&#x2F;25</td>
+<td>255.255.255.128</td>
+<td>2</td>
+<td>128</td>
+<td>126</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>&#x2F;26</td>
+<td>255.255.255.192</td>
+<td>4</td>
+<td>64</td>
+<td>62</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>&#x2F;27</td>
+<td>255.255.255.224</td>
+<td>8</td>
+<td>32</td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>&#x2F;28</td>
+<td>255.255.255.240</td>
+<td>16</td>
+<td>16</td>
+<td>14</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>&#x2F;29</td>
+<td>255.255.255.248</td>
+<td>32</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>&#x2F;30</td>
+<td>255.255.255.252</td>
+<td>64</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<p><strong>可变长子网掩码VLSM</strong><br>VLSM允许在同一个网络地址空间中使用多个子网掩码。VLSM使得IP地址的使用更加有效，减少IP地址的浪费，并且VLSM允许已经划分过子网的网络继续划分子网。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oqxsK0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oqxsK0.png"></a></p>
+<hr>
+<p><strong>tip:</strong><br>图中，网络172.22.0.0&#x2F;16被划分成“&#x2F;24”的子网，其中子网172.22.1.0&#x2F;24又被继续划分成“&#x2F;27”的子网。这个“&#x2F;27”子网的网络范围是172.22.1.0&#x2F;27~172.22.1.224&#x2F;27（从实际应用角度）。可以看出，又将172.22.1.224&#x2F;27的网络划分成“&#x2F;30”的子网。这个“&#x2F;30”的子网，网络中可用的主机数为2个，这两个IP正好给两台路由器连接的接口使用。<br>由此也可以看出，VLSM加强了IP地址的层次化结构设计，使路由表的路由汇总更加有效。</p>
+<hr>
+<p><strong>规划IP地址</strong></p>
+<p>作用</p>
+<p>IP地址的合理规划是网络设计的重要环节，大型计算机网络必须对IP地址进行统一规划并得到有效实施。IP地址规划的好坏，影响到网络路由协议算法的效率，影响到网络的性能，影响到网络的扩展，影响到网络的管理，也必将直接影响到网络应用的进一步发展。</p>
+<p>规划原则</p>
+<p>IP地址空间的分配，要与网络拓扑层次结构相适应，既要有效地利用地址空间，又要体现出网络的可扩展性、灵活性和层次性，同时能满足路由协议的要求，以便于网络中的路由聚类，减少路由器中路由表的长度，减少对路由器CPU、内存的消耗，提高路由算法的效率，加快路由变化的收敛速度，同时还有考虑到网络地址的唯一性、连续性、实意性和可管理性。</p>
+<p><strong>规划网络地址案例</strong></p>
+<p>案例需求：假设某企业拥有一个C类地址192.168.1.0&#x2F;24，企业希望每个部门都工作于相对独立的局域网。</p>
+<table>
+<thead>
+<tr>
+<th align="center">部门名称</th>
+<th align="center">IP地址需求数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">行政部</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">业务部</td>
+<td align="center">40</td>
+</tr>
+<tr>
+<td align="center">研发部</td>
+<td align="center">5</td>
+</tr>
+<tr>
+<td align="center">生产部</td>
+<td align="center">100</td>
+</tr>
+</tbody></table>
+<p>解决方案<br>① 根据最大IP地址数要求划分子网，把其中一个子网网段用于满足该部门主机IP需求；<br>② 选择剩余子网网段中的一个，按次大IP地址数要求划分子网，把其中一个用于满足该部门主机IP需求；<br>③ 重复上述步骤，直到满足所有部门主机IP需求，并将剩余的网络地址登记为备用网络，以备网络扩展升级使用。</p>
+<p>解决过程<br>① 当IP地址数需求为100时，主机地址位至少要7位，因此该C类地址可以分为两个子网，如表所示。将192.168.1.0&#x2F;25分配给生产部使用。</p>
+<table>
+<thead>
+<tr>
+<th>网络地址</th>
+<th>主机地址（7位）</th>
+<th>子网网络地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>192.168.1.0&#x2F;24</td>
+<td>0      000 0000</td>
+<td>192.168.1.0&#x2F;25</td>
+</tr>
+<tr>
+<td>192.168.1.0&#x2F;24</td>
+<td>1      000 0000</td>
+<td>192.168.1.128&#x2F;25</td>
+</tr>
+</tbody></table>
+<p>② 当IP地址数需求为40时，主机位至少要6位，将192.168.1.128&#x2F;25继续划分子网，如表所示。我们将192.168.1.128&#x2F;26分配给业务部使用。</p>
+<table>
+<thead>
+<tr>
+<th>网络地址</th>
+<th>主机地址（7位）</th>
+<th>子网网络地址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>192.168.1.128&#x2F;25</td>
+<td>0      000 0000</td>
+<td>192.168.1.128&#x2F;26</td>
+</tr>
+<tr>
+<td>192.168.1.128&#x2F;25</td>
+<td>1      000 0000</td>
+<td>192.168.1.192&#x2F;26</td>
+</tr>
+</tbody></table>
+<p>③ 生成IP规划总表。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oLSSfJ"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oLSSfJ.png"></a></p>
+<h2 id="ARP与IPv4通信"><a href="#ARP与IPv4通信" class="headerlink" title="ARP与IPv4通信"></a>ARP与IPv4通信</h2><p><strong>ARP</strong><br>定义：ARP（Address Resolution Protocol）协议是网络层的协议，用于将IP地址解析为的MAC地址。<br>工作原理<br>每个主机都会在自己的 ARP 缓冲区中建立一个 ARP 列表，以记录IP 地址和 MAC 地址之间的对应关系；<br>主机（网络接口）新加入网络时（也可能只是MAC地址发生变化，接口重启等），会发送ARP报文把自己IP地址与MAC地址的映射关系广播给其他主机。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>IP数据包通过以太网发送，但以太网设备并不能识别IP地址，它们是以MAC地址传输的。因此，必须把IP目的地址转换成MAC目的地址。在以太网中，一个主机要和另一个主机进行直接通信，必须要知道目标主机的MAC地址。</p>
+<hr>
+<p>ARP的报头结构</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oLSM6I"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oLSM6I.png" alt="ARP的报头结构"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>硬件类型字段：指明了发送方想知道的硬件接口类型，以太网的值为1。<br>协议类型字段：指明了发送方提供的高层协议类型，IP为0800（16进制）。<br>硬件地址长度和协议长度：指明了硬件地址和高层协议地址的长度，这样ARP报文就可以在任意硬件和任意协议的网络中使用。<br>操作字段：用来表示这个报文的类型，ARP请求为1，ARP响应为2，RARP请求为3，RARP响应为4。<br>发送方的硬件地址（0-3字节）：源主机硬件地址的前3个字节。<br>发送方的硬件地址（4-5字节）：源主机硬件地址的后3个字节。<br>发送方IP（0-1字节）：源主机硬件地址的前2个字节。<br>发送方IP（2-3字节）：源主机硬件地址的后2个字节。<br>目的硬件地址（0-1字节）：目的主机硬件地址的前2个字节。<br>目的硬件地址（2-5字节）：目的主机硬件地址的后4个字节。<br>目的IP（0-3字节）：目的主机的IP地址。</p>
+<hr>
+<p><strong>ICMP与连通性测试</strong></p>
+<p>什么是ICMP协议<br>因特网控制报文协议(Internet Control Message Protocol，ICMP)工作在网络层。ICMP的消息可以分为两类：一类是差错报文，即通知出错原因的错误消息（如traceroute），另一类是查询报文，即用于诊断的查询消息（如ping）。</p>
+<p>ICMP的功能<br>ICMP的功能是确认IP包是否成功到达目标地址和通知在发送过程中IP包被丢弃的原因。</p>
+<p>连通性测试<br>① 案例背景：某公司业务部拥有3台计算机，该公司的业务员将这3台计算机接入到一台普通交换机，并为每台计算机配置了IP地址，实现了业务部的3台计算机的互联互通。拓扑图如图所示。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oLSa1s"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oLSa1s.png"></a></p>
+<p>② 测试思路：安装好TCP&#x2F;IP，配置3台计算机的IP地址，在3台机器中分别运行【ping IP】命令，测试本机能否访问另外两台计算机。<br>③ 测试结果：结果显示PC2发送了4个ICMP数据包给PC1，并成功接收了4个返回包。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oLp2a8"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oLp2a8.png"></a></p>
+<h1 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h1><h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>什么是TCP协议</strong><br>传输控制协议(Transmission Control Protocol，TCP)是一种基于字节流的传输层通信协议，由IETF的RFC793定义。</p>
+<p><strong>什么是TCP封装</strong><br>TCP是基于两个网络主机之间的端对端通信。TCP从高层协议接收需要传送的字节流，将字节流分成段，然后TCP对段编号和排序以便传递；<br>TCP在IP数据报文中的封装主要包括TCP报头和TCP数据。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oLp5xs"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oLp5xs.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>TCP头部：记录源端与目标端口相关应用程序所用的连接端口号，以及相关的序列号、确认号、窗口大小等。</p>
+<p>TCP数据：转发应用层协议所交付的相关信息，形成TCP数据，值得注意的是，TCP报文段中的数据部分并不是必须的，当一个连接被建立和终止时，交换的报文段只包含了TCP头部而没有数据。</p>
+<hr>
+<p><strong>TCP数据报的头部格式。</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oL9nsI"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oL9nsI.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>源端口号是指发送TCP进程对应的端口号，目标端口号是指目标端接收进程的端口号。</p>
+<p>32位序列号为数据段标记，用于在目的端对到达包的重组，32位确认号对发送端的确认信息，用于告诉发送端这个序号之前的数据段都收到了。</p>
+<p>URG是紧急指针有效位，与16位紧急指针配合使用。</p>
+<p>ACK是确认序列号有效位，表明该数据包包含确认信息。</p>
+<p>PSH通知接收端立即将数据提交给用户进程，不在缓存中停留，等待更多的数据。</p>
+<p>RST为1时，请求重新建立TCP连接，SYN为1时，请求建立连接，FIN为1时，数据发送完毕，请求断开连接。</p>
+<p>滑动窗口的大小，指明本地可接收数据的字节数。</p>
+<hr>
+<p><strong>TCP建立连接的3次握手过程</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oL9lo8"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oL9lo8.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>第1次握手：HostA发送1个SYN信息包给HostB，SYN包含双方的连接端口号、序号、响应序号、SYN Flag和窗口尺寸。</p>
+<p>第2次握手：HostB收到HostA的SYN信息后，向HostA回复一个SYN-ACK信息包，该信息包中包含序号、响应序号、SYN-ACL Flag和窗口尺寸。</p>
+<p>第3次握手：HostA收到HostB的SYN-ACK信息包后，再向HostB发送一个ACK信息包，ACK信息包中包含了序号、响应序号、ACK Flag和窗口尺寸。</p>
+<p>注：SYN:同步序列号请求（当SYN置1时，则表示建立连接）；seq：序列号（发送请求的次数）；ack：确认（TCP协议规定，ack为1时有效；ack&#x3D;seq+1 ）；FIN：请求断开连接；ctl: 当前发送的状态。</p>
+<hr>
+<p><strong>TCP断开连接的4个过程</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oL9ULq"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oL9ULq.png"></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>步骤1：HostA发送第1个FIN-ACK信息包给HostB，FIN-ACK包含序号、响应序号、SYN-ACK  Flag和窗口尺寸。</p>
+<p>步骤2：HostB发送ACK信息包给HostA，ACK中包含序号、响应序号和ACK Flag。</p>
+<p>步骤3：当HostB完成到HostA的传输后，HostB发送FIN-ACK信息包给HostA，FIN-ACK包含序号、响应序号和FIN-ACK Flag。</p>
+<p>步骤4：HostA再发送ACK信息包给HostB。</p>
+<hr>
+<p><strong>基于TCP的应用层协议</strong></p>
+<table>
+<thead>
+<tr>
+<th>端口号</th>
+<th>协议</th>
+<th>简要说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>25</td>
+<td>SMTP</td>
+<td>简单邮件传输协议，用于发送邮件</td>
+</tr>
+<tr>
+<td>23</td>
+<td>TELNET</td>
+<td>选程登录协议，用于远程登录，通过连接目标终端，得到验证后选程控制管理目标终端</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>超文本传输协议，用于超文本的传输</td>
+</tr>
+<tr>
+<td>21</td>
+<td>FTP</td>
+<td>文件传输协议，用于文件的上传和下载</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS</td>
+<td>域名服务，DNS在区域传输的时候使用其他时候使用UDP协议</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>HTTPS是以安全为目标的HTTP通道，简单讲是HTTP的安全版</td>
+</tr>
+<tr>
+<td>110</td>
+<td>POP3</td>
+<td>用于支持使用客户端远程管理在服务器上的电子邮件</td>
+</tr>
+<tr>
+<td>123</td>
+<td>NTP</td>
+<td>用来同步网络中各个计算机时间的协议</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>SSH为建立在应用层和传输层基础上的安全协议</td>
+</tr>
+</tbody></table>
+<h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><p><strong>什么是UDP</strong><br>用户数据报协议（User Datagram Protocol，UDP）是一种无连接的传输层协议，提供面向事务的简单不可靠信息传送服务。</p>
+<p><strong>UDP的特性</strong><br>UDP是面向非连接的传输，UDP报文中包含源端口和目标端口，从而确保UDP报文能够正确地传输到目的地。</p>
+<p><strong>应用场景</strong><br>UDP用于传输效率要求不高的应用，如：DNS服务、TFTP服务等；<br>UDP适用传输方式为一对多的广播传输；<br>UDP用于传输非关键数据或本身具有完整性检查机制的应用程序。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>UDP与网络层的IP一样都是以非连接的方式传输信息，因此，UDP的传输过程比较简单，传输效率较高，但可靠性较低，如果传输发生问题，UDP无法确认、重传及流量控制，必须通过应用层的相关协议进行处理。</p>
+<hr>
+<p><strong>UDP封装</strong><br>源端口号；<br>目标端口号；<br>报文长度；<br>校验和字段。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\沅浅\AppData\Roaming\Typora\typora-user-images\image-20211212230240165.png"></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>（1）UDP源端口号<br>UDP源端口号用来记录源端应用程序所用的连接端口号。如果目的端的应用程序收到报文后必须回复时，由UDP源端口号标识应用程序的连接端口号。<br>（2）UDP目标端口号<br>目标端口号是UDP报文中最重要的信息，用来标识目标端应用程序的连接端口号。<br>（3）UDP报文长度<br>报文长度表示数据报头以及数据的总长度。UDP数据报头长度的最小值是8字节，<br>（4）UDP校验和<br>UDP校验和用于差错控制，检测UDP数据报文在传输过程中是否有错，错误就丢弃。</p>
+<hr>
+<p><strong>基于UDP的应用层协议</strong></p>
+<table>
+<thead>
+<tr>
+<th>端口号</th>
+<th>协议</th>
+<th>简要说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>69</td>
+<td>TFTP</td>
+<td>简单文件传输协议，是在UDP之上上建立一个类似于FIP的仅支持文件上传和下功能的传输协议，所以它不包含FTP中的目录操作和用户权限等内容</td>
+</tr>
+<tr>
+<td>67</td>
+<td>DHCP</td>
+<td>动态主机配置协议，为内部网络或网络服务供应商自动分配IP地址</td>
+</tr>
+<tr>
+<td>161</td>
+<td>SNMP</td>
+<td>是用来管理网络设备的。由于网络设备很多，无连接的服务就体现出其优势</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS</td>
+<td>域名服务，DINS在区域传输的时候使用TCP，其他时候使用UDP</td>
+</tr>
+</tbody></table>
+<h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><p><strong>远程访问应用 - TelNet远程登录</strong><br>定义：TelNet（Telecommunications Network）是用来进行远程访问的重要工具；</p>
+<p>功能：TelNet应用程序的主要功能是远程登录，实现用户与远程计算机进行动态交互；</p>
+<p>通信过程：<br>建立与服务器的TCP连接；<br>从键盘上接收用户输入的字符；<br>把用户输入的字符串变成标准格式并发送给服务器；<br>从远程服务器接收输出的信息；<br>把该信息显示在用户的屏幕上。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>功能举例：用自己的键盘、鼠标等输入设备操纵远程计算机或路由器等网络设备，运行远程计算机上的软件，能远程了解计算机或设备的运行情况，并查看运行结果。<br>TelNet的通信过程，用文本方式远程管理计算机或路由器等网络设备用户的终端实际上与本地的TELNET客户机进行通信，远程主机与远程TelNet服务器进行通信，然后通过TCP进行连接，客户机与服务器之间采用NVT标准进行通信</p>
+<hr>
+<p><strong>网络管理应用 - SNMP</strong><br>定义：SNMP (Simple Network Management Protocol)称为简单网络管理协议；<br>功能：SNMP是用于网络管理的协议，主要对网络中支持SNMP的设备进行管理。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/oLiEJU"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/12/oLiEJU.png" alt=" "></a></p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>SNMP不受设备类型和厂商的限制，只要支持SNMP的设备都提供SNMP统一界面，管理员可以使用统一的操作进行管理。</p>
+<hr>
+<p><strong>Web应用 - HTTP</strong><br>定义：HTTP（HyperText Transfer Protocol）也称为超文本传输协议。</p>
+<p>工作过程：HTTP是一种用于超媒体信息系统的应用层协议，典型的HTTP事务处理有如下过程。<br>客户与服务器建立连接；<br>客户向服务器提出请求；<br>服务器接受请求，并根据请求返回相应的文件作为应答；<br>客户与服务器关闭连接。</p>
+<p><strong>电子邮件应用 - SMTP</strong><br>定义：在互联网中，电子邮件的传送是依靠SMTP进行的。SMTP包括两个标准子集：一个标准定义电子邮件信息的格式，另一个是传输邮件的标准。</p>
+<p>功能：SMTP的主要任务是负责服务器之间的邮件传送，它规定了电子邮件如何在互联网中通过TCP在发送方和接收方之间进行传送。</p>
+<p><strong>局域网IP管理应用 - DHCP</strong><br>定义：DHCP（Dynamic Host Configuration Protocol ）也称为动态主机配置协议；</p>
+<p>功能：在局域网环境集中管理和分配IP地址，使客户机能动态的获得IP地址、Gateway地址、DNS服务器地址等信息，提高IP地址的利用率；</p>
+<p>优势<br>在大型企业网络中，会有大量的主机或设备需要配置IP地址等网络参数。如果采用手工配置，工作量大且不好管理，如果有用户擅自修改网络参数，还有可能会造成IP地址冲突等问题。使用动态主机配置协议DHCP来分配IP地址等网络参数，可以减少管理员的工作量，避免用户手工配置网络参数时造成的地址冲突。</p>
+<hr>
+<p><strong>tip:</strong></p>
+<p>简单来说，DHCP就是一个不需要账号密码登录的、自动给内网机器分配IP地址等信息的协议。</p>
+<hr>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">渊</div><div class="post-copyright__author_desc">乖乖，我永远希望你能开心</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://example.com/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&amp;IP/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://example.com/2021/12/11/华为1+X/1.华为1+X-TCP&amp;IP/')">1.华为1+X/TCP&amp;IP</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/img/reward/wx.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/wx.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/reward/zfb.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/reward/zfb.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div><div class="reward-link mode"><a class="reward-link-button" href="/wechat/"><i class="anzhiyufont anzhiyu-icon-plant-fill"></i>运营模式与责任</a></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://example.com/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&amp;IP/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=1.华为1+X/TCP&amp;IP&amp;url=http://example.com/2021/12/11/%E5%8D%8E%E4%B8%BA1+X/1.%E5%8D%8E%E4%B8%BA1+X-TCP&amp;IP/&amp;pic=https://s4.ax1x.com/2021/12/23/TGe4nf.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">渊</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__category-list"><a class="post-meta__box__categoryes" href="/categories/%E5%8D%8E%E4%B8%BA1-X/"><span class="categoryes-punctuation"> <i class="anzhiyufont anzhiyu-icon-inbox"></i></span>华为1+X<span class="categoryesPageCount">8</span></a></div><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>基础教程<span class="tagsPageCount">33</span></a><a class="post-meta__box__tags" href="/tags/%E5%8D%8E%E4%B8%BA1-X/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>华为1+X<span class="tagsPageCount">8</span></a></div></div><div class="post_share"><div class="social-share" data-image="/img/default_cover1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/18/Python/Python%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB5/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2022/02/15/H2OSYR.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">爬取网页数据</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/13/%E5%8D%8E%E4%B8%BA1+X/2.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">2.华为1+X/网络交换技术</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2021/12/13/%E5%8D%8E%E4%B8%BA1+X/2.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/" title="2.华为1+X&#x2F;网络交换技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-13</div><div class="title">2.华为1+X&#x2F;网络交换技术</div></div></a></div><div><a href="/2021/12/14/%E5%8D%8E%E4%B8%BA1+X/3.%E5%8D%8E%E4%B8%BA1+X-%E8%B7%AF%E7%94%B1%E6%8A%80%E6%9C%AF/" title="3.华为1+X-路由技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-14</div><div class="title">3.华为1+X-路由技术</div></div></a></div><div><a href="/2021/12/15/%E5%8D%8E%E4%B8%BA1+X/4.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%8F%AF%E9%9D%A0%E6%80%A7/" title="4.华为1+X-网络可靠性"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-15</div><div class="title">4.华为1+X-网络可靠性</div></div></a></div><div><a href="/2021/12/16/%E5%8D%8E%E4%B8%BA1+X/5.%E5%8D%8E%E4%B8%BA1+X-%E5%B9%BF%E5%9F%9F%E7%BD%91%E6%8A%80%E6%9C%AF/" title="5.华为1+X-广域网技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-16</div><div class="title">5.华为1+X-广域网技术</div></div></a></div><div><a href="/2021/12/17/%E5%8D%8E%E4%B8%BA1+X/6.%E5%8D%8E%E4%B8%BA1+X-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/" title="6.华为1+X-网络安全技术"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-17</div><div class="title">6.华为1+X-网络安全技术</div></div></a></div><div><a href="/2021/12/18/%E5%8D%8E%E4%B8%BA1+X/7.%E5%8D%8E%E4%B8%BA1+X-IPV6%E5%8D%8F%E8%AE%AE/" title="7.华为1+X-IPV6协议"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2021/12/23/TGEiOU.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-12-18</div><div class="title">7.华为1+X-IPV6协议</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png" alt="status"/></div></div><div class="author-info__description">落魄谷中寒风吹,春秋蝉鸣少年归 荡魂山处石人泪,定仙游走魔向北 逆流河上万仙退,爱情不敌坚持泪 宿命天成命中败,仙尊悔而我不悔</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">渊</h1><div class="author-info__desc">乖乖，我永远希望你能开心</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/updateyuan" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/1807133884" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">天若有情天亦老,大道无情情至公</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E4%B8%8E%E7%BD%91%E7%BB%9C"><span class="toc-number">1.</span> <span class="toc-text">通信与网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.</span> <span class="toc-text">通信的基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%80%9A%E4%BF%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">什么是通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%84%E6%88%90"><span class="toc-number">1.1.2.</span> <span class="toc-text">通信系统的基本组成</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%85%B8%E5%9E%8B%E7%BB%84%E7%BD%91%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.2.</span> <span class="toc-text">数据通信网络典型组网模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%843%E7%A7%8D%E5%85%B8%E5%9E%8B%E7%BB%84%E7%BD%91%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.1.</span> <span class="toc-text">通信网络最常用的3种典型组网模型介绍</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD"><span class="toc-number">1.3.</span> <span class="toc-text">网络通信常见术语</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OSI%E4%B8%8ETCP-IP%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">OSI与TCP&#x2F;IP参考模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E5%92%8C%E6%A0%87%E5%87%86%E6%9C%BA%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text">网络通信协议和标准机构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%89%B9%E6%80%A7"><span class="toc-number">2.1.1.</span> <span class="toc-text">网络通信协议的基本特性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OSI%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text">OSI参考模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.3.</span> <span class="toc-text">TCP&#x2F;IP参考模型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="toc-number">3.</span> <span class="toc-text">数据链路层</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#LLC%E4%B8%8EMAC"><span class="toc-number">3.1.</span> <span class="toc-text">LLC与MAC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E6%A6%82%E8%BF%B0"><span class="toc-number">3.2.</span> <span class="toc-text">以太网概述</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-number">4.</span> <span class="toc-text">网络层</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#IP%E5%9C%B0%E5%9D%80%E4%B8%8E%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86"><span class="toc-number">4.1.</span> <span class="toc-text">IP地址与子网划分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ARP%E4%B8%8EIPv4%E9%80%9A%E4%BF%A1"><span class="toc-number">4.2.</span> <span class="toc-text">ARP与IPv4通信</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="toc-number">5.</span> <span class="toc-text">传输层</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP"><span class="toc-number">5.1.</span> <span class="toc-text">TCP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UDP"><span class="toc-number">5.2.</span> <span class="toc-text">UDP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="toc-number">6.</span> <span class="toc-text">应用层</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="浏览器页面切换快捷键"/></a><div class="content"><a class="title" href="/2024/01/29/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%A1%B5%E9%9D%A2%E5%88%87%E6%8D%A2%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="浏览器页面切换快捷键">浏览器页面切换快捷键</a><time datetime="2024-01-29T10:31:51.596Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/29/hello-world1/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2024/01/29/hello-world1/" title="Hello World">Hello World</a><time datetime="2024-01-29T10:31:51.589Z" title="发表于 2024-01-29 18:31:51">2024-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/31/hello-world/" title="Hello World"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/10/31/hello-world/" title="Hello World">Hello World</a><time datetime="2022-10-31T09:40:41.000Z" title="发表于 2022-10-31 17:40:41">2022-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/default_cover1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="文章"/></a><div class="content"><a class="title" href="/2022/06/27/%E6%96%87%E7%AB%A0/" title="文章">文章</a><time datetime="2022-06-27T09:29:00.000Z" title="发表于 2022-06-27 17:29:00">2022-06-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://s4.ax1x.com/2022/01/02/Toe4Qx.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo添加徽标"/></a><div class="content"><a class="title" href="/2022/03/13/hexo%E7%BE%8E%E5%8C%96/hexo%E6%B7%BB%E5%8A%A0%E5%BE%BD%E6%A0%87/" title="hexo添加徽标">hexo添加徽标</a><time datetime="2022-03-13T08:58:50.000Z" title="发表于 2022-03-13 16:58:50">2022-03-13</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg" alt="距离月入25k也就还差一个大佬带我~" title="距离月入25k也就还差一个大佬带我~"/><div id="runtimeTextTip"></div></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://blog.anheyu.com/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.9/img/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="渊" target="_blank">渊</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">76</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">31</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">21</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://index.anheyu.com/" title="个人主页"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/08/13/64d8c2748ef34.jpg" alt="个人主页"/><span class="back-menu-item-text">个人主页</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://updateyuan.github.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Anaconda/" style="font-size: 0.88rem;">Anaconda<sup>10</sup></a><a href="/tags/Android/" style="font-size: 0.88rem;">Android<sup>2</sup></a><a href="/tags/C%E8%AF%AD%E8%A8%80/" style="font-size: 0.88rem;">C语言<sup>1</sup></a><a href="/tags/FAT32%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F/" style="font-size: 0.88rem;">FAT32文件系统<sup>2</sup></a><a href="/tags/JAVA%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" style="font-size: 0.88rem;">JAVA程序设计<sup>3</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>4</sup></a><a href="/tags/MacOS/" style="font-size: 0.88rem;">MacOS<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>1</sup></a><a href="/tags/SQL/" style="font-size: 0.88rem;">SQL<sup>2</sup></a><a href="/tags/VMware-Workstation/" style="font-size: 0.88rem;">VMware-Workstation<sup>1</sup></a><a href="/tags/Windows/" style="font-size: 0.88rem;">Windows<sup>1</sup></a><a href="/tags/Winhex/" style="font-size: 0.88rem;">Winhex<sup>7</sup></a><a href="/tags/hexo/" style="font-size: 0.88rem;">hexo<sup>13</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>10</sup></a><a href="/tags/%E4%B8%93%E5%8D%87%E6%9C%AC/" style="font-size: 0.88rem;">专升本<sup>1</sup></a><a href="/tags/%E5%8A%9E%E5%85%AC%E8%87%AA%E5%8A%A8%E5%8C%96/" style="font-size: 0.88rem;">办公自动化<sup>1</sup></a><a href="/tags/%E5%8D%8E%E4%B8%BA1-X/" style="font-size: 0.88rem;">华为1+X<sup>8</sup></a><a href="/tags/%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/" style="font-size: 0.88rem;">基础教程<sup>33</sup></a><a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%84%E5%BB%BA%E4%B8%8E%E7%BB%B4%E6%8A%A4/" style="font-size: 0.88rem;">局域网组建与维护<sup>2</sup></a><a href="/tags/%E5%BA%94%E7%94%A8%E5%AF%86%E7%A0%81%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">应用密码技术<sup>3</sup></a><a href="/tags/%E6%80%9D%E7%A7%91/" style="font-size: 0.88rem;">思科<sup>2</sup></a><a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 0.88rem;">数学<sup>1</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 0.88rem;">数据库<sup>2</sup></a><a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" style="font-size: 0.88rem;">数据恢复<sup>13</sup></a><a href="/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 0.88rem;">更新<sup>13</sup></a><a href="/tags/%E6%9D%82%E8%AE%B0/" style="font-size: 0.88rem;">杂记<sup>1</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>10</sup></a><a href="/tags/%E7%A1%AC%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" style="font-size: 0.88rem;">硬件工程师<sup>1</sup></a><a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 0.88rem;">网络<sup>2</sup></a><a href="/tags/%E7%BE%8E%E5%8C%96/" style="font-size: 0.88rem;">美化<sup>13</sup></a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 0.88rem;">计算机基础<sup>1</sup></a></div></div><hr/></div></div><div id="keyboard-tips"><div class="keyboardTitle">博客快捷键</div><div class="keybordList"><div class="keybordItem"><div class="keyGroup"><div class="key">shift K</div></div><div class="keyContent"><div class="content">关闭快捷键功能</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift A</div></div><div class="keyContent"><div class="content">打开/关闭中控台</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift M</div></div><div class="keyContent"><div class="content">播放/暂停音乐</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift D</div></div><div class="keyContent"><div class="content">深色/浅色显示模式</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift S</div></div><div class="keyContent"><div class="content">站内搜索</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift R</div></div><div class="keyContent"><div class="content">随机访问</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift H</div></div><div class="keyContent"><div class="content">返回首页</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift F</div></div><div class="keyContent"><div class="content">友链鱼塘</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift L</div></div><div class="keyContent"><div class="content">友链页面</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift P</div></div><div class="keyContent"><div class="content">关于本站</div></div></div><div class="keybordItem"><div class="keyGroup"><div class="key">shift I</div></div><div class="keyContent"><div class="content">原版/本站右键菜单</div></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.cbd.int/pangu@4.0.7/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 渊 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2021 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg";
+        img.title = "下班了就该开开心心的玩耍，嘿嘿~";
+        img.alt = "下班了就该开开心心的玩耍，嘿嘿~";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.cbd.int/mathjax@3.2.2/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script src="/js/anzhiyu/right_click_menu.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/music/"]):not([href="/no-pjax/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
