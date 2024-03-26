@@ -22,9 +22,11 @@
       
         <tags>
             
-            <tag> Web </tag>
-            
             <tag> 基础 </tag>
+            
+            <tag> 大学 </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -43,6 +45,8 @@
       <categories>
           
           <category> 大学 </category>
+          
+          <category> python </category>
           
       </categories>
       
@@ -1254,9 +1258,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> JAVA程序设计 </tag>
+            
+            <tag> 基础教程 </tag>
             
         </tags>
       
@@ -1371,9 +1375,9 @@
       
         <tags>
             
-            <tag> Android </tag>
-            
             <tag> 基础教程 </tag>
+            
+            <tag> Android </tag>
             
         </tags>
       
@@ -1398,9 +1402,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> JAVA程序设计 </tag>
+            
+            <tag> 基础教程 </tag>
             
         </tags>
       
@@ -1554,9 +1558,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> JAVA程序设计 </tag>
+            
+            <tag> 基础教程 </tag>
             
         </tags>
       
@@ -1778,9 +1782,9 @@
       
         <tags>
             
-            <tag> Android </tag>
-            
             <tag> 基础教程 </tag>
+            
+            <tag> Android </tag>
             
         </tags>
       
