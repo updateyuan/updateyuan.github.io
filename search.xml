@@ -4,6 +4,93 @@
   
     
     <entry>
+      <title>RHCSA</title>
+      <link href="/2024/04/05/RHCSA/"/>
+      <url>/2024/04/05/RHCSA/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 基础 </tag>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HCIP</title>
+      <link href="/2024/04/05/HCIP/"/>
+      <url>/2024/04/05/HCIP/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HCIP </tag>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 华为 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>HCIA</title>
+      <link href="/2024/04/05/HCIA/"/>
+      <url>/2024/04/05/HCIA/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 大学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HCIP </tag>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 华为 </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SQL基础</title>
       <link href="/2024/03/30/SQL%E5%9F%BA%E7%A1%80/"/>
       <url>/2024/03/30/SQL%E5%9F%BA%E7%A1%80/</url>
@@ -20,11 +107,11 @@
       
         <tags>
             
+            <tag> 基础 </tag>
+            
             <tag> SQL </tag>
             
             <tag> 大学 </tag>
-            
-            <tag> 基础 </tag>
             
         </tags>
       
@@ -49,9 +136,9 @@
       
         <tags>
             
-            <tag> 大学 </tag>
-            
             <tag> 基础 </tag>
+            
+            <tag> 大学 </tag>
             
             <tag> Web </tag>
             
@@ -78,9 +165,9 @@
       
         <tags>
             
-            <tag> 大学 </tag>
-            
             <tag> 基础 </tag>
+            
+            <tag> 大学 </tag>
             
             <tag> Python </tag>
             
@@ -1227,9 +1314,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> SQL </tag>
+            
+            <tag> 基础教程 </tag>
             
             <tag> 数据库 </tag>
             
@@ -1256,9 +1343,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 基础教程 </tag>
             
         </tags>
       
@@ -1483,9 +1570,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 基础教程 </tag>
             
         </tags>
       
@@ -1529,9 +1616,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 基础教程 </tag>
             
         </tags>
       
@@ -1637,11 +1724,11 @@
       
         <tags>
             
+            <tag> 网络 </tag>
+            
             <tag> 基础教程 </tag>
             
             <tag> 思科 </tag>
-            
-            <tag> 网络 </tag>
             
         </tags>
       
@@ -1666,11 +1753,11 @@
       
         <tags>
             
+            <tag> 网络 </tag>
+            
             <tag> 基础教程 </tag>
             
             <tag> 思科 </tag>
-            
-            <tag> 网络 </tag>
             
         </tags>
       
@@ -1747,9 +1834,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> SQL </tag>
+            
+            <tag> 基础教程 </tag>
             
             <tag> 数据库 </tag>
             
@@ -1776,9 +1863,9 @@
       
         <tags>
             
-            <tag> 基础教程 </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> 基础教程 </tag>
             
             <tag> 计算机基础 </tag>
             
